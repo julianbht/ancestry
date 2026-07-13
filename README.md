@@ -114,7 +114,10 @@ The images are sorted by estimated age, building a timeline.
 Click on an image for full-size viewing or click on the info button that appears when hovering over the image to get to the step-by-step processing breakdown of that image.
 ![Image Processing Information](presentation/web-image-processing-info.png)
 
-Launch the frontend with `uv run --group web ancestry-web`.
+Launch the frontend with:
+```bash
+uv run --env-file .env.example --group web ancestry-web
+```
 All code for the web application can be found in `src/web`.
 
 ## Developer Setup
