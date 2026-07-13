@@ -1,25 +1,32 @@
-# Quickstart dummy dataset — Curie / Joliot-Curie
+# Quickstart demo — the Curie / Joliot-Curie family
 
-A tiny public stand-in for the private data, so a fresh clone can run the
-pipeline and web app without any real family photos. Everyone here is a public
-historical figure; genealogy facts are public. See `docs/going-public.md` for
-the private/public split this belongs to.
+A small, ready-to-run dataset that lets a fresh clone exercise the whole
+pipeline and the web app without any real photos. Everyone here is a public
+historical figure and the genealogy is public record, so it ships in the repo.
 
-`quickstart/data/` is a drop-in **data root**: point the project at it with the
-`ANCESTRY_DATA_DIR` env var and everything below is read from here instead of
-the real (gitignored) `data/` tree.
+It is **fully populated**: 25 source photos, hand-labelled ground truth for
+faces and print frames, and the pipeline's precomputed outputs.
+
+`quickstart/data/` is a drop-in **data root**: set `ANCESTRY_DATA_DIR` to it and
+every step reads from here instead of the real (gitignored) `data/` tree.
+`config/` is shared and always read from the repo root — only the data root
+switches.
+
+## What's inside
 
 ```
 quickstart/data/
-  originals/album/             # ignored — source photos copied aside
-  raw/album/                     # you add the photos here
-  gramps/database/family-tree-data.csv     # authored — the family tree
+  raw/album/                            # 25 source photos (public-domain Curie portraits)
+  gramps/database/family-tree-data.csv  # the family tree (Gramps CSV export)
   curated/
-    face_annotation/ground_truth.json      # empty skeleton — you fill
-    frame_crop/ground_truth.json           # empty skeleton — you fill
-    frame_crop/table_layouts.json          # generated placements + reusable metadata
-    rotate/rotations.csv                   # header only — you fill
-    photo_backs.csv                        # header only — you fill
+    face_annotation/ground_truth.json   # face boxes + person IDs + ages
+    frame_crop/ground_truth.json        # print-quad labels
+    frame_crop/table_layouts.json       # scene placements + reusable metadata
+    rotate/rotations.csv                # rotation overrides (none needed for this set)
+    photo_backs.csv                     # front → back-note mapping (none for this set)
+  steps/                                # precomputed outputs: frame_crop, face_crop, face_recognition
+  state/                                # per-step progress JSON
+  label_studio/                         # generated annotation tasks + a project export
 ```
 
 ## The family (`gramps/database/family-tree-data.csv`)
@@ -40,21 +47,21 @@ grandparents, aunts/uncles, cousins, and in-laws in the kinship labels:
 ```
 
 The CSV is a Gramps "CSV export" (stacked `Place` / `Person` / `Marriage` /
-`Family` sections). It's authored directly here — no `data.gramps` native file
-is needed, since only the CSV is read by the code.
+`Family` sections), authored directly here — the code only reads the CSV, so no
+native `data.gramps` file is needed.
 
 ## Run it
 
+`.env.example` already sets `ANCESTRY_DATA_DIR=quickstart/data`, so pass it with
+`--env-file` (works the same in bash and PowerShell):
+
 ```bash
 # family tree + web app on the dummy tree
-ANCESTRY_DATA_DIR=quickstart/data uv run ancestry-web
+uv run --env-file .env.example --group web ancestry-web
 
-# or a pipeline step (once you've added photos to raw/album/)
-ANCESTRY_DATA_DIR=quickstart/data uv run ancestry-rotate
-
-# build the table scenes + frame-crop ground truth from the source album
-uv run python scripts/quickstart/compose_album_on_table.py
+# re-run a pipeline step (already-processed files are skipped)
+uv run --env-file .env.example ancestry-rotate
 ```
 
-`config/` is shared, public, and always read from the repo root — only the data
-root switches.
+The committed `steps/` outputs mean the web app has something to show
+immediately; re-running a step just reproduces them.
