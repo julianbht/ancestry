@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/wladyslaw-sklodowski/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/wladyslaw-sklodowski/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/wladyslaw-sklodowski/face_00.jpg",
+      "person_id": null,
+      "distance": 1.34969961643219,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.34969961643219
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.354038119316101
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3705775737762451
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4116259813308716
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.4158841371536255
+        }
+      ],
+      "age": 80,
+      "gender": "M",
+      "det_score": 0.720759928226471,
+      "crop_sha256": "b6609d0d06e4b9207c25d96be43cb540873402a25801f9754cded8271b63f637"
+    }
+  ]
+}

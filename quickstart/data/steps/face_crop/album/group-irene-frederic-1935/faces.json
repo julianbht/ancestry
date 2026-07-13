@@ -1,0 +1,48 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-irene-frederic-1935.jpg",
+  "source_sha256": "a71a1c15895fa05c834ee89c7c19e848dc4d2cf956c10ecc63a9ce9d67834309",
+  "image_size": [
+    2738,
+    1919
+  ],
+  "prompt": "human face",
+  "face_count": 2,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        1203.580078125,
+        677.279296875,
+        1388.9365234375,
+        883.7063598632812
+      ],
+      "score": 0.91015625,
+      "box_xyxy_source": [
+        3510.580078125,
+        1260.279296875,
+        3695.9365234375,
+        1466.7063598632812
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_00.jpg",
+      "sha256": "13d0d4e4f258395f3970c8fae6ab8cdb81e1d1a5fc271fd0b905c7d5650c5104"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        957.5061645507812,
+        745.0216064453125,
+        1124.0736083984375,
+        920.6154174804688
+      ],
+      "score": 0.80078125,
+      "box_xyxy_source": [
+        3264.5061645507812,
+        1328.0216064453125,
+        3431.0736083984375,
+        1503.6154174804688
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_01.jpg",
+      "sha256": "9a48fc0611b2bc0cd8a87f573cccb7dc39b31a5a924b897472d5821a1af9effa"
+    }
+  ]
+}

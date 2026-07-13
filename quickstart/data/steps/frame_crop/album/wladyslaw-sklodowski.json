@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/wladyslaw-sklodowski.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/wladyslaw-sklodowski.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    3651,
+    1439,
+    2137,
+    2521
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.8515625,
+    "box_xyxy": [
+      3596.536376953125,
+      1390.9732666015625,
+      5840.7255859375,
+      4008.381591796875
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        5788.92919921875,
+        4005.55615234375
+      ],
+      [
+        3598.273193359375,
+        3960.9560546875
+      ],
+      [
+        3650.54345703125,
+        1393.53662109375
+      ],
+      [
+        5841.19921875,
+        1438.13671875
+      ]
+    ]
+  },
+  "sha256": "3d128778885bb70cb746eb5808dd105da95b3f6c855f91b2c99c39831caeef58"
+}

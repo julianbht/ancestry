@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/eve-curie.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/eve-curie.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    3635,
+    1624,
+    2119,
+    2442
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.9140625,
+    "box_xyxy": [
+      3601.6708984375,
+      1593.2894287109375,
+      5791.40625,
+      4098.49365234375
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        5754.3427734375,
+        4098.6884765625
+      ],
+      [
+        3598.387939453125,
+        4066.85400390625
+      ],
+      [
+        3634.9326171875,
+        1591.90234375
+      ],
+      [
+        5790.8876953125,
+        1623.73681640625
+      ]
+    ]
+  },
+  "sha256": "f22cbcf8499701c59871b10b786feb5a921b3e1ad271e8911fca11a55f226895"
+}

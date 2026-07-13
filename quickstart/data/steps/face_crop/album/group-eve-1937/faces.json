@@ -1,0 +1,210 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-eve-1937.jpg",
+  "source_sha256": "ea2f0c20216b7759a9191ddd759adca3c202ac932c5a1a8bd59e62513db694fd",
+  "image_size": [
+    2379,
+    1726
+  ],
+  "prompt": "human face",
+  "face_count": 11,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        2021.5906982421875,
+        209.18702697753906,
+        2216.12451171875,
+        464.5928955078125
+      ],
+      "score": 0.93359375,
+      "box_xyxy_source": [
+        3585.5906982421875,
+        1127.187026977539,
+        3780.12451171875,
+        1382.5928955078125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_00.jpg",
+      "sha256": "ca6a7ef91f476323f3a7a82ffbc21e257e6154363db8233163bbc7a2333378a4"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        955.1871337890625,
+        217.908447265625,
+        1187.009765625,
+        494.4139709472656
+      ],
+      "score": 0.9296875,
+      "box_xyxy_source": [
+        2519.1871337890625,
+        1135.908447265625,
+        2751.009765625,
+        1412.4139709472656
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_01.jpg",
+      "sha256": "255b365c7b92269bb085201591f42033f0d733d46b02f9687dc4c7dad141f633"
+    },
+    {
+      "index": 2,
+      "box_xyxy": [
+        81.01433563232422,
+        63.9711799621582,
+        313.9519958496094,
+        268.80816650390625
+      ],
+      "score": 0.92578125,
+      "box_xyxy_source": [
+        1645.0143356323242,
+        981.9711799621582,
+        1877.9519958496094,
+        1186.8081665039062
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_02.jpg",
+      "sha256": "6e04649a930b4d39efc62c44f121d0b176fc1ce154c2385e491ae3f519e8a12a"
+    },
+    {
+      "index": 3,
+      "box_xyxy": [
+        1376.2886962890625,
+        418.4711608886719,
+        1602.7186279296875,
+        671.63623046875
+      ],
+      "score": 0.921875,
+      "box_xyxy_source": [
+        2940.2886962890625,
+        1336.4711608886719,
+        3166.7186279296875,
+        1589.63623046875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_03.jpg",
+      "sha256": "1ba4a697cde9345d1ae090767b170bb853e27383df4d608e159d48255ac27263"
+    },
+    {
+      "index": 4,
+      "box_xyxy": [
+        320.9351501464844,
+        399.3807373046875,
+        582.3286743164062,
+        716.7530517578125
+      ],
+      "score": 0.90625,
+      "box_xyxy_source": [
+        1884.9351501464844,
+        1317.3807373046875,
+        2146.3286743164062,
+        1634.7530517578125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_04.jpg",
+      "sha256": "90458284c58ac5936cfaecfba972896cc5df0bea8483947b8afc510b984d1496"
+    },
+    {
+      "index": 5,
+      "box_xyxy": [
+        1878.9100341796875,
+        460.0718994140625,
+        2092.14013671875,
+        700.4498901367188
+      ],
+      "score": 0.90234375,
+      "box_xyxy_source": [
+        3442.9100341796875,
+        1378.0718994140625,
+        3656.14013671875,
+        1618.4498901367188
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_05.jpg",
+      "sha256": "42f792117d86a3c6f35b512d4e298eefdb48ba899548b3b96a605beade8a368b"
+    },
+    {
+      "index": 6,
+      "box_xyxy": [
+        1702.2408447265625,
+        144.29803466796875,
+        1874.3819580078125,
+        391.7926940917969
+      ],
+      "score": 0.89453125,
+      "box_xyxy_source": [
+        3266.2408447265625,
+        1062.2980346679688,
+        3438.3819580078125,
+        1309.7926940917969
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_06.jpg",
+      "sha256": "b653b9d86ac16f22c790375bfab033ca32e2172ca764d45e2b322df410f14131"
+    },
+    {
+      "index": 7,
+      "box_xyxy": [
+        939.0817260742188,
+        38.12818908691406,
+        1090.519775390625,
+        150.344482421875
+      ],
+      "score": 0.89453125,
+      "box_xyxy_source": [
+        2503.0817260742188,
+        956.1281890869141,
+        2654.519775390625,
+        1068.344482421875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_07.jpg",
+      "sha256": "1b9e6dd80dbd3011f1f5d9fb3518543cb679aed9c7a0b29b807f5c50dc517b3d"
+    },
+    {
+      "index": 8,
+      "box_xyxy": [
+        2254.60302734375,
+        622.3797607421875,
+        2332.496337890625,
+        837.30517578125
+      ],
+      "score": 0.890625,
+      "box_xyxy_source": [
+        3818.60302734375,
+        1540.3797607421875,
+        3896.496337890625,
+        1755.30517578125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_08.jpg",
+      "sha256": "284fb46a2411503e0b8420a64f9a94d92f1e7381181d7b55f42ab9f9fecd7064"
+    },
+    {
+      "index": 9,
+      "box_xyxy": [
+        1507.8734130859375,
+        115.62042236328125,
+        1660.8131103515625,
+        224.31927490234375
+      ],
+      "score": 0.8125,
+      "box_xyxy_source": [
+        3071.8734130859375,
+        1033.6204223632812,
+        3224.8131103515625,
+        1142.3192749023438
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_09.jpg",
+      "sha256": "80b6e81f7ab4f06be634bf82eeab57bd5bb653946380228775031fcc6ca0b247"
+    },
+    {
+      "index": 10,
+      "box_xyxy": [
+        1176.796875,
+        32.04795455932617,
+        1290.8349609375,
+        71.21871185302734
+      ],
+      "score": 0.59375,
+      "box_xyxy_source": [
+        2740.796875,
+        950.0479545593262,
+        2854.8349609375,
+        989.2187118530273
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_10.jpg",
+      "sha256": "34759f0e66dab98460b7e2b1487b3c946d22b31a2ece3224377700badaac9da7"
+    }
+  ]
+}

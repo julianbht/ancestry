@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}{{ profile.person.full_name }} — {{ _("brand") }}{% endblock %}
+
+{% block content %}
+<a class="back-link" href="/?{{ nav_qs }}">{{ _("person.back") }}</a>
+
+<header class="person-head">
+  {% if has_portrait %}
+    <img class="person-portrait" src="/media/portrait/{{ profile.person.id }}"
+         alt="{{ profile.person.full_name }}">
+  {% else %}
+    <span class="person-portrait portrait-placeholder">
+      {{ profile.person.given[:1] }}{{ profile.person.surname[:1] }}
+    </span>
+  {% endif %}
+  <div>
+    <h1 class="person-name">{{ profile.person.full_name }}</h1>
+    {% if relationship %}
+      <p class="person-relation">{{ relationship }}</p>
+    {% endif %}
+    <p class="person-meta">
+      {{ _.plural("photos", profile.photo_count) }}
+      {% if profile.person.birth_year %} · {{ _("person.born", year=profile.person.birth_year) }}{% endif %}
+    </p>
+  </div>
+</header>
+
+<h2 class="section-title">{{ _("person.photos_by_age") }}</h2>
+<p class="legend">
+  <span class="flair flair-human">{{ _("legend.confirmed") }}</span> {{ _("legend.human_age") }} &nbsp;·&nbsp;
+  <span class="flair flair-computed">{{ _("legend.estimated") }}</span> {{ _("legend.ai_age") }} &nbsp;·&nbsp;
+  <span class="flair flair-computed">{{ _("legend.ai") }}</span> {{ _("legend.ai_person") }}
+</p>
+<div class="photo-grid">
+  {% for app in profile.appearances %}
+    <figure class="photo">
+      <div class="photo-img-wrap">
+        <img src="/media/photo/{{ app.photo_id }}" alt="{{ _('photo.alt', name=profile.person.full_name) }}"
+             loading="lazy" tabindex="0" role="button" aria-label="{{ _('photo.enlarge') }}">
+        <button type="button" class="photo-info"
+                data-workflow="/person/{{ profile.person.id }}/workflow/{{ app.photo_id }}?lang={{ locale }}"
+                aria-label="{{ _('photo.how_found') }}"
+                title="{{ _('photo.how_found') }}">i</button>
+      </div>
+      <figcaption>
+        {% if app.age is not none %}
+          <span class="age">{{ _("age.years", age=app.age) }}</span>
+          <span class="flair flair-{{ app.age_source.value }}">
+            {{ _("legend.confirmed") if app.age_source.value == "human" else _("legend.estimated") }}
+          </span>
+        {% else %}
+          <span class="age age-unknown">{{ _("age.unknown") }}</span>
+        {% endif %}
+        {% if app.membership_source.value != "human" %}
+          <span class="flair flair-{{ app.membership_source.value }}" title="{{ _('recognition.source') }}">{{ _("legend.ai") }}</span>
+        {% endif %}
+      </figcaption>
+    </figure>
+  {% endfor %}
+</div>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button type="button" class="lightbox-close" aria-label="{{ _('common.close') }}">×</button>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<div id="workflow" class="wf-overlay" hidden>
+  <div class="wf-dialog" role="dialog" aria-modal="true" aria-label="{{ _('workflow.dialog') }}">
+    <button type="button" class="wf-close" aria-label="{{ _('common.close') }}">×</button>
+    <div class="wf-body"></div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const grid = document.querySelector(".photo-grid");
+    const box = document.getElementById("lightbox");
+    const boxImg = box.querySelector(".lightbox-img");
+
+    function open(src, alt) {
+      boxImg.src = src;
+      boxImg.alt = alt || "";
+      box.hidden = false;
+      document.body.classList.add("lightbox-open");
+    }
+    function close() {
+      box.hidden = true;
+      boxImg.src = "";
+      document.body.classList.remove("lightbox-open");
+    }
+
+    function openFromImg(img) {
+      open(img.src, img.alt);
+    }
+
+    grid.addEventListener("click", function (e) {
+      const img = e.target.closest(".photo img");
+      if (img) openFromImg(img);
+    });
+    grid.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter" && e.key !== " ") return;
+      const img = e.target.closest(".photo img");
+      if (img) { e.preventDefault(); openFromImg(img); }
+    });
+    // A click anywhere on the overlay (backdrop, image, or the × button) closes it.
+    box.addEventListener("click", close);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !box.hidden) close();
+    });
+  })();
+
+  // --- pipeline walkthrough modal (the little "i" button on each photo) ---
+  (function () {
+    const overlay = document.getElementById("workflow");
+    const body = overlay.querySelector(".wf-body");
+    const LOADING = {{ _("common.loading") | tojson }};
+    const LOAD_ERROR = {{ _("workflow.load_error") | tojson }};
+
+    function open(url) {
+      body.innerHTML = '<p class="wf-loading"></p>';
+      body.querySelector(".wf-loading").textContent = LOADING;
+      overlay.hidden = false;
+      document.body.classList.add("lightbox-open");
+      fetch(url)
+        .then((r) => (r.ok ? r.text() : Promise.reject(r.status)))
+        .then((html) => { body.innerHTML = html; })
+        .catch(() => {
+          body.innerHTML = '<p class="wf-loading"></p>';
+          body.querySelector(".wf-loading").textContent = LOAD_ERROR;
+        });
+    }
+    function close() {
+      overlay.hidden = true;
+      body.innerHTML = "";
+      document.body.classList.remove("lightbox-open");
+    }
+
+    document.querySelector(".photo-grid").addEventListener("click", function (e) {
+      const btn = e.target.closest(".photo-info");
+      if (!btn) return;
+      e.stopPropagation();
+      open(btn.dataset.workflow);
+    });
+    // Click on the backdrop or the × closes; clicks inside the dialog don't.
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay || e.target.closest(".wf-close")) close();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !overlay.hidden) close();
+    });
+  })();
+</script>
+{% endblock %}

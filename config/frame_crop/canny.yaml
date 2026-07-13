@@ -1,0 +1,19 @@
+threshold1: 65.26
+threshold2: 99.21
+save_output: true
+annotate: true
+save_contours: true
+
+blur:
+  enabled: true
+  save_output: true
+  kernel_size: 11
+  annotate: true
+
+morphology:
+  enabled: true
+  save_output: true
+  save_diff: true
+  annotate: true
+  kernel_size: 7
+  iterations: 15

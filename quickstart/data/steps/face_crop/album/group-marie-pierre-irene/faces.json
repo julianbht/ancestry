@@ -1,0 +1,66 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-marie-pierre-irene.jpg",
+  "source_sha256": "adc788371ba4945b93ee1161ae5347099a2b3af497e4abfc3455bfb59e71359b",
+  "image_size": [
+    2650,
+    2057
+  ],
+  "prompt": "human face",
+  "face_count": 3,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        1844.193359375,
+        280.0550231933594,
+        2150.3564453125,
+        669.8775634765625
+      ],
+      "score": 0.953125,
+      "box_xyxy_source": [
+        5703.193359375,
+        1751.0550231933594,
+        6009.3564453125,
+        2140.8775634765625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_00.jpg",
+      "sha256": "e1fd529147cfd16314ad9e252293521e7c53a1cf90923824ea5b5914d8e101f9"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        1443.90283203125,
+        796.0549926757812,
+        1682.080078125,
+        1062.9027099609375
+      ],
+      "score": 0.92578125,
+      "box_xyxy_source": [
+        5302.90283203125,
+        2267.0549926757812,
+        5541.080078125,
+        2533.9027099609375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_01.jpg",
+      "sha256": "2cba4f862006f2f7420d1e2249ff15bfca7f1d574b52aafa706896b7cae04531"
+    },
+    {
+      "index": 2,
+      "box_xyxy": [
+        480.94781494140625,
+        171.3974151611328,
+        801.2354125976562,
+        596.6946411132812
+      ],
+      "score": 0.91015625,
+      "box_xyxy_source": [
+        4339.947814941406,
+        1642.3974151611328,
+        4660.235412597656,
+        2067.6946411132812
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_02.jpg",
+      "sha256": "338f5808a2a4de3fbefe709c592291a36d8809f2216469e6f8f2973a306bf66d"
+    }
+  ]
+}

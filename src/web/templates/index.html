@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ _("brand") }}{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ _("home.title") }}</h1>
+<p class="page-intro">{{ _("home.intro") }}</p>
+
+{% for group in groups %}
+  <section class="family">
+    <h2 class="family-name">{{ group.surname }}</h2>
+    <div class="card-grid">
+      {% for card in group.cards %}
+        <a class="card" href="/person/{{ card.person.id }}?{{ nav_qs }}">
+          <div class="card-portrait">
+            {% if card.has_portrait %}
+              <img src="/media/portrait/{{ card.person.id }}" alt="{{ card.person.full_name }}" loading="lazy">
+            {% else %}
+              <span class="portrait-placeholder">{{ card.person.given[:1] }}{{ card.person.surname[:1] }}</span>
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <span class="card-name">{{ card.person.first_name }}</span>
+            {% if card.relationship %}
+              <span class="card-relation">{{ card.relationship }}</span>
+            {% endif %}
+            <span class="card-count">{{ _.plural("photos", card.photo_count) }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
+{% endblock %}

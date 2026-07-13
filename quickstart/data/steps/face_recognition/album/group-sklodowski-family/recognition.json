@@ -1,0 +1,143 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-sklodowski-family/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-sklodowski-family/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_00.jpg",
+      "person_id": "I0010",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.0741673707962036
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2961176633834839
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2972900867462158
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3734363317489624
+        }
+      ],
+      "age": 55,
+      "gender": "M",
+      "det_score": 0.7651990652084351,
+      "crop_sha256": "3b0fbd41bd0cb826a20aedb2a7a8f2b6100f5ac28456663f049ae8bdf0d188f3"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_01.jpg",
+      "person_id": "I0010",
+      "distance": 0.979507327079773,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 0.979507327079773
+        },
+        {
+          "person_id": "I0001",
+          "distance": 0.9970936179161072
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.344485878944397
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3619877099990845
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.366989254951477
+        }
+      ],
+      "age": 56,
+      "gender": "M",
+      "det_score": 0.7895781993865967,
+      "crop_sha256": "6cbba31bb3527d8e4f5ec226cf602cc8f047ee7223b3a569164636ff209e1481"
+    },
+    {
+      "face_index": 2,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_02.jpg",
+      "person_id": null,
+      "distance": 1.1395080089569092,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 1.1395080089569092
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2300390005111694
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3377130031585693
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.356284499168396
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3649452924728394
+        }
+      ],
+      "age": 69,
+      "gender": "M",
+      "det_score": 0.7403077483177185,
+      "crop_sha256": "7999e7828212e7eeb7f044ceb0f0454b53d3f50abf5742b9fd2b69d4bfbbed2f"
+    },
+    {
+      "face_index": 3,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_03.jpg",
+      "person_id": "I0009",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.2447330951690674
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2665483951568604
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.2961176633834839
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4055802822113037
+        }
+      ],
+      "age": 68,
+      "gender": "M",
+      "det_score": 0.7422956824302673,
+      "crop_sha256": "b1a0b53dc6bb37f47236606bdefc1dd8a32203cd0dd47182bee9d878d2ca036a"
+    }
+  ]
+}

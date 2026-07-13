@@ -1,0 +1,48 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-pierre-marie-1895.jpg",
+  "source_sha256": "21138d704a917d153684deb1e70d3a079500c13f4640a87f986793e4c21fbea8",
+  "image_size": [
+    1633,
+    2174
+  ],
+  "prompt": "human face",
+  "face_count": 2,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        1016.144775390625,
+        440.89208984375,
+        1282.34423828125,
+        735.9827880859375
+      ],
+      "score": 0.91796875,
+      "box_xyxy_source": [
+        1445.144775390625,
+        1899.89208984375,
+        1711.34423828125,
+        2194.9827880859375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_00.jpg",
+      "sha256": "7c188613b114987b4400d06d4ab4d2b76fdf73b9475d71ed8a6bf704a6ffd20a"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        459.65899658203125,
+        148.4565887451172,
+        761.5812377929688,
+        537.6519775390625
+      ],
+      "score": 0.88671875,
+      "box_xyxy_source": [
+        888.6589965820312,
+        1607.4565887451172,
+        1190.5812377929688,
+        1996.6519775390625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_01.jpg",
+      "sha256": "f2d410363555e6a9ceafb5f5a92b01c2dc325c4450189c74ebc5e6e8bf506e40"
+    }
+  ]
+}

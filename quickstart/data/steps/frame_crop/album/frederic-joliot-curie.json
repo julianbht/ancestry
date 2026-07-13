@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/frederic-joliot-curie.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/frederic-joliot-curie.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    1513,
+    1948,
+    1525,
+    2102
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.91796875,
+    "box_xyxy": [
+      1438.760009765625,
+      1894.6805419921875,
+      3109.088623046875,
+      4106.53466796875
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        1512.481201171875,
+        4106.525390625
+      ],
+      [
+        1437.305908203125,
+        1947.9246826171875
+      ],
+      [
+        3038.523193359375,
+        1892.1611328125
+      ],
+      [
+        3113.698486328125,
+        4050.76171875
+      ]
+    ]
+  },
+  "sha256": "2d7879b0255d252a0adaa0f9de8f924b697f1f0094c3e98de1608835897e0b20"
+}

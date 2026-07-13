@@ -1,0 +1,24 @@
+method: sam
+
+max_files_to_crop: 5
+only_file: null
+only_ground_truth: false
+ignore_state: false
+skip_state_write: true
+skip_output_write: false
+
+inner_crop: true
+
+margin_px: 0
+
+min_area_fraction: 0.15
+max_area_fraction: 0.95
+
+jpeg_quality: 100
+
+debug:
+  save_quad: false
+  annotate_quad: false
+  annotation:
+    scale: 1.0
+    bold: false

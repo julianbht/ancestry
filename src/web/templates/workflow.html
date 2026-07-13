@@ -1,0 +1,21 @@
+{# Modal fragment: the pipeline walkthrough for one photo, fetched on demand. #}
+<h2 class="wf-title">{{ _("workflow.title", name=workflow.person_name) }}</h2>
+<div class="wf-strip">
+  {% for step in workflow.steps %}
+    <figure class="wf-step">
+      <h3 class="wf-step-title">{{ step.title }}</h3>
+      {% if step.image_url %}
+        <div class="wf-frame">
+          <img src="{{ step.image_url }}" alt="{{ step.title }}" loading="lazy">
+          {% for box in step.boxes %}
+            <span class="wf-box {{ 'wf-box-target' if box.is_target else '' }}"
+                  style="left: {{ box.left }}%; top: {{ box.top }}%; width: {{ box.width }}%; height: {{ box.height }}%;">
+              {% if box.label %}<span class="wf-box-label">{{ box.label }}</span>{% endif %}
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <figcaption class="wf-caption">{{ step.caption }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>

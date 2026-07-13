@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-solvay-1927.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-solvay-1927.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    3075,
+    2498,
+    2495,
+    1761
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.86328125,
+    "box_xyxy": [
+      3076.818603515625,
+      2493.552001953125,
+      5573.27001953125,
+      4264.845703125
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        3074.072021484375,
+        4261.68505859375
+      ],
+      [
+        3072.289794921875,
+        2497.27783203125
+      ],
+      [
+        5570.2578125,
+        2494.75439453125
+      ],
+      [
+        5572.0400390625,
+        4259.16162109375
+      ]
+    ]
+  },
+  "sha256": "c109c49c4e75ddaaf0ddc1869b787b328cb80081643a9b685fd8c93ee52bac77"
+}

@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/marie-and-sister-1886/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/marie-and-sister-1886/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_00.jpg",
+      "person_id": "I0001",
+      "distance": 1.0419856309890747,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 1.0419856309890747
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.1299757957458496
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2849613428115845
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.294909954071045
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3539754152297974
+        }
+      ],
+      "age": 64,
+      "gender": "F",
+      "det_score": 0.7013170719146729,
+      "crop_sha256": "0bf39ad1a3dddcbb4ae8892e1932545267b9ad198f74d7fb426b81074933db11"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_01.jpg",
+      "person_id": "I0010",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.1742455959320068
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.302649736404419
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3181973695755005
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4016340970993042
+        }
+      ],
+      "age": 76,
+      "gender": "F",
+      "det_score": 0.7938351631164551,
+      "crop_sha256": "02612f87825e3b3714740afd7d31eac1b41f872386a665ad81e153ce88f01220"
+    }
+  ]
+}

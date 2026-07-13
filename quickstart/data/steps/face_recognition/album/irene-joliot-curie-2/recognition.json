@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/irene-joliot-curie-2/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/irene-joliot-curie-2/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-2/face_00.jpg",
+      "person_id": "I0002",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2652050256729126
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3181973695755005
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3213218450546265
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.372433066368103
+        }
+      ],
+      "age": 55,
+      "gender": "M",
+      "det_score": 0.8240623474121094,
+      "crop_sha256": "4c9855d2e635d756078c370b7487821f60d270e5370db102f9c8cdcb6de82493"
+    }
+  ]
+}

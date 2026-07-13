@@ -1,0 +1,306 @@
+{
+  "version": 1,
+  "processed": {
+    "album/eve-curie-1937.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/eve-curie-1937/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/eve-curie-1937/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:00.182993+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/eve-curie-1939.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/eve-curie-1939/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/eve-curie-1939/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:01.106386+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/eve-curie.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/eve-curie/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/eve-curie/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:02.052840+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/frederic-joliot-curie-harcourt-1.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-1/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-1/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:02.968987+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/frederic-joliot-curie-harcourt-2.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-2/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-2/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:03.895844+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/frederic-joliot-curie.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/frederic-joliot-curie/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:04.817093+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/group-eve-1937.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_02.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_03.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_04.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_05.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_06.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_07.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_08.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_09.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/face_10.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-eve-1937/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:05.759232+00:00",
+      "error": null,
+      "face_count": 11
+    },
+    "album/group-irene-frederic-1935.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-irene-frederic-1935/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:06.707994+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/group-marie-pierre-irene.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_02.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-marie-pierre-irene/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:07.672600+00:00",
+      "error": null,
+      "face_count": 3
+    },
+    "album/group-pierre-marie-1895.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-1895/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:08.585728+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/group-pierre-marie-at-work.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:09.543257+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/group-pierre-marie-lab.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-lab/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-lab/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie-lab/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:10.476941+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/group-pierre-marie.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-pierre-marie/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:11.410890+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/group-sklodowski-family.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-sklodowski-family/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-sklodowski-family/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-sklodowski-family/face_02.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-sklodowski-family/face_03.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-sklodowski-family/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:12.342866+00:00",
+      "error": null,
+      "face_count": 4
+    },
+    "album/group-solvay-1927.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_02.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_03.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_04.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_05.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_06.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_07.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_08.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_09.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_10.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_11.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_12.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_13.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_14.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_15.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_16.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_17.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_18.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_19.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_20.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_21.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_22.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_23.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_24.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_25.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_26.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_27.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/face_28.jpg",
+        "/app/quickstart/data/steps/face_crop/album/group-solvay-1927/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:13.292648+00:00",
+      "error": null,
+      "face_count": 29
+    },
+    "album/irene-joliot-curie-1.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_02.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:14.216666+00:00",
+      "error": null,
+      "face_count": 3
+    },
+    "album/irene-joliot-curie-1921.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1921/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-1921/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:15.131016+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/irene-joliot-curie-2.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-2/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-2/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:16.086731+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/irene-joliot-curie-c1935.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-c1935/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/irene-joliot-curie-c1935/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:17.008895+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/marie-and-sister-1886.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_01.jpg",
+        "/app/quickstart/data/steps/face_crop/album/marie-and-sister-1886/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:17.960881+00:00",
+      "error": null,
+      "face_count": 2
+    },
+    "album/marie-curie-1.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-1/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-1/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:18.879211+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/marie-curie-2.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-2/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-2/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:19.803607+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/marie-curie-3.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-3/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/marie-curie-3/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:20.716701+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/pierre-curie.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/pierre-curie/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/pierre-curie/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:21.654056+00:00",
+      "error": null,
+      "face_count": 1
+    },
+    "album/wladyslaw-sklodowski.jpg": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_crop/album/wladyslaw-sklodowski/face_00.jpg",
+        "/app/quickstart/data/steps/face_crop/album/wladyslaw-sklodowski/faces.json"
+      ],
+      "timestamp": "2026-07-11T08:15:22.644545+00:00",
+      "error": null,
+      "face_count": 1
+    }
+  }
+}

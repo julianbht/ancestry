@@ -1,0 +1,534 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-solvay-1927.jpg",
+  "source_sha256": "c109c49c4e75ddaaf0ddc1869b787b328cb80081643a9b685fd8c93ee52bac77",
+  "image_size": [
+    2495,
+    1761
+  ],
+  "prompt": "human face",
+  "face_count": 29,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        1707.119384765625,
+        693.6061401367188,
+        1781.40869140625,
+        782.7227172851562
+      ],
+      "score": 0.87890625,
+      "box_xyxy_source": [
+        4782.119384765625,
+        3191.6061401367188,
+        4856.40869140625,
+        3280.7227172851562
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_00.jpg",
+      "sha256": "e9ccb0e490e27cb868da710b5d678881dd05f070cbdcee95136d85e6307b1933"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        1375.7030029296875,
+        689.6442260742188,
+        1447.6075439453125,
+        779.3401489257812
+      ],
+      "score": 0.87109375,
+      "box_xyxy_source": [
+        4450.7030029296875,
+        3187.6442260742188,
+        4522.6075439453125,
+        3277.3401489257812
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_01.jpg",
+      "sha256": "faf338a1a2ed194b57b94cfd435bafcfb4b2ca1ee66f4118236cf3c91f8a3297"
+    },
+    {
+      "index": 2,
+      "box_xyxy": [
+        802.2324829101562,
+        746.3397827148438,
+        877.6243286132812,
+        830.0746459960938
+      ],
+      "score": 0.87109375,
+      "box_xyxy_source": [
+        3877.2324829101562,
+        3244.3397827148438,
+        3952.6243286132812,
+        3328.0746459960938
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_02.jpg",
+      "sha256": "1fb20540ea13b63318b73e333a2611719b5931b7280ef161ba590261018261e2"
+    },
+    {
+      "index": 3,
+      "box_xyxy": [
+        508.65667724609375,
+        631.3491821289062,
+        585.3982543945312,
+        736.7568969726562
+      ],
+      "score": 0.8671875,
+      "box_xyxy_source": [
+        3583.6566772460938,
+        3129.3491821289062,
+        3660.3982543945312,
+        3234.7568969726562
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_03.jpg",
+      "sha256": "ca7025a2953d8db8422849dc24d4f5e8b8906e1965a236978670fe96b2c81e43"
+    },
+    {
+      "index": 4,
+      "box_xyxy": [
+        1864.7174072265625,
+        839.7769165039062,
+        1946.6217041015625,
+        942.8739624023438
+      ],
+      "score": 0.8671875,
+      "box_xyxy_source": [
+        4939.7174072265625,
+        3337.7769165039062,
+        5021.6217041015625,
+        3440.8739624023438
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_04.jpg",
+      "sha256": "5c0cb4571b24a0d314417cf557a93e77f43189e719a6709614fff3f8caef7898"
+    },
+    {
+      "index": 5,
+      "box_xyxy": [
+        2007.8135986328125,
+        613.6585693359375,
+        2078.314453125,
+        708.1502075195312
+      ],
+      "score": 0.86328125,
+      "box_xyxy_source": [
+        5082.8135986328125,
+        3111.6585693359375,
+        5153.314453125,
+        3206.1502075195312
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_05.jpg",
+      "sha256": "73d0032f21be0e112c6a1611c7024492eb6055bad9a162d1fb8a0b4d5d030899"
+    },
+    {
+      "index": 6,
+      "box_xyxy": [
+        471.1629333496094,
+        867.5206909179688,
+        548.4097900390625,
+        957.9253540039062
+      ],
+      "score": 0.86328125,
+      "box_xyxy_source": [
+        3546.1629333496094,
+        3365.5206909179688,
+        3623.4097900390625,
+        3455.9253540039062
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_06.jpg",
+      "sha256": "b235a68bab9b86e25f4320a60f3e25eb18123ff69157b475f308066ddf663c27"
+    },
+    {
+      "index": 7,
+      "box_xyxy": [
+        2080.943603515625,
+        849.5577392578125,
+        2160.22216796875,
+        953.6326904296875
+      ],
+      "score": 0.86328125,
+      "box_xyxy_source": [
+        5155.943603515625,
+        3347.5577392578125,
+        5235.22216796875,
+        3451.6326904296875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_07.jpg",
+      "sha256": "c644a74c57299492900e95373ab18767f7115a2549dc7ab396b0d3ad778f67bc"
+    },
+    {
+      "index": 8,
+      "box_xyxy": [
+        1889.5811767578125,
+        691.2564697265625,
+        1956.3916015625,
+        777.828857421875
+      ],
+      "score": 0.86328125,
+      "box_xyxy_source": [
+        4964.5811767578125,
+        3189.2564697265625,
+        5031.3916015625,
+        3275.828857421875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_08.jpg",
+      "sha256": "f9b7d3226bce392a16a6fb006157bec7d59b57f335eedc95805bb8d027752dcf"
+    },
+    {
+      "index": 9,
+      "box_xyxy": [
+        1205.99267578125,
+        825.9540405273438,
+        1278.1575927734375,
+        921.166748046875
+      ],
+      "score": 0.859375,
+      "box_xyxy_source": [
+        4280.99267578125,
+        3323.9540405273438,
+        4353.1575927734375,
+        3419.166748046875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_09.jpg",
+      "sha256": "1fa98ba23e9d1646263a32a44b91607ed728178d7c2878ab8b262d0da8414e3e"
+    },
+    {
+      "index": 10,
+      "box_xyxy": [
+        684.4192504882812,
+        683.145263671875,
+        752.4085693359375,
+        778.8331909179688
+      ],
+      "score": 0.859375,
+      "box_xyxy_source": [
+        3759.4192504882812,
+        3181.145263671875,
+        3827.4085693359375,
+        3276.8331909179688
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_10.jpg",
+      "sha256": "9b85f53d039f1c14b9672c9c8f533f724df5811aef0797cdfa305ecf81ec75ef"
+    },
+    {
+      "index": 11,
+      "box_xyxy": [
+        1411.100830078125,
+        817.9988403320312,
+        1482.6416015625,
+        915.79345703125
+      ],
+      "score": 0.85546875,
+      "box_xyxy_source": [
+        4486.100830078125,
+        3315.9988403320312,
+        4557.6416015625,
+        3413.79345703125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_11.jpg",
+      "sha256": "834cff33b67aa1ff190e398bc54a08ac550174581a5810fc1e2394b70680c42e"
+    },
+    {
+      "index": 12,
+      "box_xyxy": [
+        1631.9425048828125,
+        831.4314575195312,
+        1703.17626953125,
+        935.4977416992188
+      ],
+      "score": 0.8515625,
+      "box_xyxy_source": [
+        4706.9425048828125,
+        3329.4314575195312,
+        4778.17626953125,
+        3433.4977416992188
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_12.jpg",
+      "sha256": "6d380303068ef9d85a75991770a26e1b3ae957f2a6b4f432fd4e43adbf555e60"
+    },
+    {
+      "index": 13,
+      "box_xyxy": [
+        1343.835205078125,
+        903.3722534179688,
+        1424.6116943359375,
+        1008.626953125
+      ],
+      "score": 0.8515625,
+      "box_xyxy_source": [
+        4418.835205078125,
+        3401.3722534179688,
+        4499.6116943359375,
+        3506.626953125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_13.jpg",
+      "sha256": "60a010b3ca01f73db8849d7c68db4481259e87022027e89c647f84ba3b523699"
+    },
+    {
+      "index": 14,
+      "box_xyxy": [
+        262.678466796875,
+        847.8213500976562,
+        339.7262268066406,
+        944.2778930664062
+      ],
+      "score": 0.84765625,
+      "box_xyxy_source": [
+        3337.678466796875,
+        3345.8213500976562,
+        3414.7262268066406,
+        3442.2778930664062
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_14.jpg",
+      "sha256": "d6efa90e07e72b6414c0770413c5b91a33bad29eb3762f4f1f536f345f9009c5"
+    },
+    {
+      "index": 15,
+      "box_xyxy": [
+        2097.6591796875,
+        689.7081909179688,
+        2170.58984375,
+        781.896484375
+      ],
+      "score": 0.84765625,
+      "box_xyxy_source": [
+        5172.6591796875,
+        3187.7081909179688,
+        5245.58984375,
+        3279.896484375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_15.jpg",
+      "sha256": "bb84cdd081c036531ca696c19854e79e8c68152c5a04a46c50d87e7dca7c0f60"
+    },
+    {
+      "index": 16,
+      "box_xyxy": [
+        935.891845703125,
+        837.87060546875,
+        1013.864501953125,
+        937.8662719726562
+      ],
+      "score": 0.84375,
+      "box_xyxy_source": [
+        4010.891845703125,
+        3335.87060546875,
+        4088.864501953125,
+        3435.8662719726562
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_16.jpg",
+      "sha256": "0e548d933a49f13594a550c5d4fab6de7cd37fe41d1eb4a9f49508a3b8f7c0ca"
+    },
+    {
+      "index": 17,
+      "box_xyxy": [
+        1576.1873779296875,
+        898.1179809570312,
+        1655.32763671875,
+        1002.6578979492188
+      ],
+      "score": 0.84375,
+      "box_xyxy_source": [
+        4651.1873779296875,
+        3396.1179809570312,
+        4730.32763671875,
+        3500.6578979492188
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_17.jpg",
+      "sha256": "9e131d4635883d38d8a3a5e9311c671fd2eae9c8f4a8613c807012c132fff543"
+    },
+    {
+      "index": 18,
+      "box_xyxy": [
+        1543.84912109375,
+        696.8029174804688,
+        1611.672607421875,
+        793.769775390625
+      ],
+      "score": 0.84375,
+      "box_xyxy_source": [
+        4618.84912109375,
+        3194.8029174804688,
+        4686.672607421875,
+        3291.769775390625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_18.jpg",
+      "sha256": "5861cf43d30ffb9d89fa0df5509a8f2a17fbe1b4148b3fdf2e1c89e690e67114"
+    },
+    {
+      "index": 19,
+      "box_xyxy": [
+        2168.984375,
+        927.1087646484375,
+        2252.62548828125,
+        1031.2601318359375
+      ],
+      "score": 0.83984375,
+      "box_xyxy_source": [
+        5243.984375,
+        3425.1087646484375,
+        5327.62548828125,
+        3529.2601318359375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_19.jpg",
+      "sha256": "b2bcd8c29f1ce592adac88d87d84916efaa0f4e841d3a9322189688ebee5dcc6"
+    },
+    {
+      "index": 20,
+      "box_xyxy": [
+        1993.97705078125,
+        903.9629516601562,
+        2073.193603515625,
+        1012.9857177734375
+      ],
+      "score": 0.83203125,
+      "box_xyxy_source": [
+        5068.97705078125,
+        3401.9629516601562,
+        5148.193603515625,
+        3510.9857177734375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_20.jpg",
+      "sha256": "c8e012af440520b903667c4fa8098c63a307893d060f309c38860beadfcb88dc"
+    },
+    {
+      "index": 21,
+      "box_xyxy": [
+        329.0748291015625,
+        920.256103515625,
+        414.0385437011719,
+        1019.3941650390625
+      ],
+      "score": 0.828125,
+      "box_xyxy_source": [
+        3404.0748291015625,
+        3418.256103515625,
+        3489.038543701172,
+        3517.3941650390625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_21.jpg",
+      "sha256": "baad145614a0e9fc35113f5134bddcfca4d290e2de2bddae078a4b35dd0faa8a"
+    },
+    {
+      "index": 22,
+      "box_xyxy": [
+        797.0217895507812,
+        911.4442749023438,
+        879.6837768554688,
+        1013.0252685546875
+      ],
+      "score": 0.828125,
+      "box_xyxy_source": [
+        3872.0217895507812,
+        3409.4442749023438,
+        3954.6837768554688,
+        3511.0252685546875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_22.jpg",
+      "sha256": "b2aff59f3eaca6f9b85b8fe2fba785a764ef49de760e34267370f9ec086884da"
+    },
+    {
+      "index": 23,
+      "box_xyxy": [
+        690.5963745117188,
+        841.5413818359375,
+        764.039306640625,
+        941.117431640625
+      ],
+      "score": 0.828125,
+      "box_xyxy_source": [
+        3765.5963745117188,
+        3339.5413818359375,
+        3839.039306640625,
+        3439.117431640625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_23.jpg",
+      "sha256": "216fba0150c4b6b9db4b5ffa17c865867a7ca9d967ec833c339609f0e806c038"
+    },
+    {
+      "index": 24,
+      "box_xyxy": [
+        1188.623291015625,
+        728.0980834960938,
+        1263.32568359375,
+        818.73779296875
+      ],
+      "score": 0.82421875,
+      "box_xyxy_source": [
+        4263.623291015625,
+        3226.0980834960938,
+        4338.32568359375,
+        3316.73779296875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_24.jpg",
+      "sha256": "858099aa4e8e1d55f36f7a67a8fdfbeb1ee83c9bdd2f27fe2512b260065bb66a"
+    },
+    {
+      "index": 25,
+      "box_xyxy": [
+        998.262939453125,
+        699.3486328125,
+        1070.0263671875,
+        794.5862426757812
+      ],
+      "score": 0.8203125,
+      "box_xyxy_source": [
+        4073.262939453125,
+        3197.3486328125,
+        4145.0263671875,
+        3292.5862426757812
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_25.jpg",
+      "sha256": "4c6d635623c0bb5b4acd80750f103b7dbc18c4b9539acf7d74da9029d17ffc47"
+    },
+    {
+      "index": 26,
+      "box_xyxy": [
+        568.702392578125,
+        918.3646240234375,
+        648.239013671875,
+        1027.8486328125
+      ],
+      "score": 0.796875,
+      "box_xyxy_source": [
+        3643.702392578125,
+        3416.3646240234375,
+        3723.239013671875,
+        3525.8486328125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_26.jpg",
+      "sha256": "fdda87c38bb464145a907d7fbf9cff077ad936bd0fe4284fd729b08a15046119"
+    },
+    {
+      "index": 27,
+      "box_xyxy": [
+        1063.491943359375,
+        917.972900390625,
+        1143.5877685546875,
+        1030.2591552734375
+      ],
+      "score": 0.78515625,
+      "box_xyxy_source": [
+        4138.491943359375,
+        3415.972900390625,
+        4218.5877685546875,
+        3528.2591552734375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_27.jpg",
+      "sha256": "8b497cf280f113cdc705f400319ac9df46dfaf3edf6184201409106c65e8daff"
+    },
+    {
+      "index": 28,
+      "box_xyxy": [
+        1739.2081298828125,
+        892.5151977539062,
+        1820.423583984375,
+        996.3334350585938
+      ],
+      "score": 0.78125,
+      "box_xyxy_source": [
+        4814.2081298828125,
+        3390.5151977539062,
+        4895.423583984375,
+        3494.3334350585938
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_28.jpg",
+      "sha256": "4816adc654f89b3bcd424270f7aee5f6e8d32b0dd2d5d733c46303f3f2f6f3f3"
+    }
+  ]
+}

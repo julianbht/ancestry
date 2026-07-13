@@ -1,0 +1,32 @@
+<View>
+  <Header value="Draw a rectangle around each face, then fill in the attributes."/>
+  <Image name="image" value="$image" zoom="true" rotateControl="true"/>
+  <Rectangle name="face" toName="image" strokeWidth="2"/>
+  <Header value="Person"/>
+  <Taxonomy name="person_id" toName="image" perRegion="true" placeholder="Select person...">
+    <Choice value="unknown"/>
+    <Choice value="Curie">
+      <Choice value="I0007: Eugène Curie (b. 1827)"/>
+      <Choice value="I0001: Marie Curie (b. 1867)"/>
+      <Choice value="I0000: Pierre Curie (b. 1859)"/>
+      <Choice value="I0008: Sophie-Claire Curie (b. 1832)"/>
+      <Choice value="I0004: Ève Curie (b. 1904)"/>
+    </Choice>
+    <Choice value="Joliot-Curie">
+      <Choice value="I0003: Frédéric Joliot-Curie (b. 1900)"/>
+      <Choice value="I0005: Hélène Joliot-Curie (b. 1927)"/>
+      <Choice value="I0002: Irène Joliot-Curie (b. 1897)"/>
+      <Choice value="I0006: Pierre Joliot-Curie (b. 1932)"/>
+    </Choice>
+    <Choice value="I0010: Bronisława Skłodowska (b. 1836)"/>
+    <Choice value="I0009: Władysław Skłodowski (b. 1832)"/>
+  </Taxonomy>
+  <TextArea name="face_note" toName="image" perRegion="true" placeholder="Free note for this face..." rows="1" required="false"/>
+  <Header value="Age in photo"/>
+  <Number name="age" toName="image" perRegion="true" required="false" placeholder="e.g. 25"/>
+  <Header value="Good portrait?"/>
+  <Choices name="is_portrait" toName="image" perRegion="true" choice="single" showInline="true">
+    <Choice value="portrait"/>
+  </Choices>
+  <TextArea name="note" toName="image" placeholder="Optional note..." rows="2" required="false"/>
+</View>

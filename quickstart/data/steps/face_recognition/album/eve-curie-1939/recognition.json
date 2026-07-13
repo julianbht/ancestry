@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/eve-curie-1939/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/eve-curie-1939/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/eve-curie-1939/face_00.jpg",
+      "person_id": "I0004",
+      "distance": 0.9591377377510071,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 0.9591377377510071
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2786247730255127
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.347612977027893
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3750063180923462
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3843262195587158
+        }
+      ],
+      "age": 72,
+      "gender": "M",
+      "det_score": 0.6342551708221436,
+      "crop_sha256": "a159d931226aa18abd592b703112a1bb82d7f777c3c6b3a77975209f71b5fe12"
+    }
+  ]
+}

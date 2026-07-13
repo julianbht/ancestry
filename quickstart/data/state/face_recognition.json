@@ -1,0 +1,230 @@
+{
+  "version": 1,
+  "processed": {
+    "album/eve-curie": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:39.907102+00:00",
+      "error": null
+    },
+    "album/eve-curie-1937": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie-1937/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie-1937/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.027038+00:00",
+      "error": null
+    },
+    "album/eve-curie-1939": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie-1939/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/eve-curie-1939/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.133783+00:00",
+      "error": null
+    },
+    "album/frederic-joliot-curie": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.215807+00:00",
+      "error": null
+    },
+    "album/frederic-joliot-curie-harcourt-1": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie-harcourt-1/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie-harcourt-1/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.298637+00:00",
+      "error": null
+    },
+    "album/frederic-joliot-curie-harcourt-2": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie-harcourt-2/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/frederic-joliot-curie-harcourt-2/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.387528+00:00",
+      "error": null
+    },
+    "album/group-eve-1937": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-eve-1937/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-eve-1937/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.688614+00:00",
+      "error": null
+    },
+    "album/group-irene-frederic-1935": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-irene-frederic-1935/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-irene-frederic-1935/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:40.826643+00:00",
+      "error": null
+    },
+    "album/group-marie-pierre-irene": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-marie-pierre-irene/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-marie-pierre-irene/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.013941+00:00",
+      "error": null
+    },
+    "album/group-pierre-marie": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.149218+00:00",
+      "error": null
+    },
+    "album/group-pierre-marie-1895": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-1895/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-1895/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.263954+00:00",
+      "error": null
+    },
+    "album/group-pierre-marie-at-work": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-at-work/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-at-work/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.405463+00:00",
+      "error": null
+    },
+    "album/group-pierre-marie-lab": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-lab/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-pierre-marie-lab/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.525730+00:00",
+      "error": null
+    },
+    "album/group-sklodowski-family": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-sklodowski-family/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-sklodowski-family/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:41.687003+00:00",
+      "error": null
+    },
+    "album/group-solvay-1927": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/group-solvay-1927/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/group-solvay-1927/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.451385+00:00",
+      "error": null
+    },
+    "album/irene-joliot-curie-1": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-1/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-1/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.583177+00:00",
+      "error": null
+    },
+    "album/irene-joliot-curie-1921": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-1921/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-1921/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.659220+00:00",
+      "error": null
+    },
+    "album/irene-joliot-curie-2": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-2/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-2/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.780639+00:00",
+      "error": null
+    },
+    "album/irene-joliot-curie-c1935": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-c1935/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/irene-joliot-curie-c1935/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.873018+00:00",
+      "error": null
+    },
+    "album/marie-and-sister-1886": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/marie-and-sister-1886/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/marie-and-sister-1886/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:42.996794+00:00",
+      "error": null
+    },
+    "album/marie-curie-1": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-1/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-1/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:43.086033+00:00",
+      "error": null
+    },
+    "album/marie-curie-2": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-2/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-2/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:43.181581+00:00",
+      "error": null
+    },
+    "album/marie-curie-3": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-3/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/marie-curie-3/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:43.260169+00:00",
+      "error": null
+    },
+    "album/pierre-curie": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/pierre-curie/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/pierre-curie/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:43.378943+00:00",
+      "error": null
+    },
+    "album/wladyslaw-sklodowski": {
+      "status": "done",
+      "output": [
+        "/app/quickstart/data/steps/face_recognition/album/wladyslaw-sklodowski/recognition.json",
+        "/app/quickstart/data/steps/face_recognition/album/wladyslaw-sklodowski/embeddings.npy"
+      ],
+      "timestamp": "2026-07-11T09:08:43.525584+00:00",
+      "error": null
+    }
+  }
+}

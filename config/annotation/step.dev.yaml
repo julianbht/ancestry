@@ -1,0 +1,19 @@
+# Label Studio helper configuration for frame-crop annotation workflows.
+
+label_name: photo
+
+build:
+  cases_files:
+    - config/frame_crop/label_cases.txt
+  existing_tasks: null
+  tasks_output: data/label_studio/frame_crop/tasks.json
+
+normalize:
+  # Set to the Label Studio JSON export you want to normalize.
+  export_path: null
+  ground_truth_output: data/curated/frame_crop/ground_truth.json
+
+tracking:
+  enabled: true
+  runs_dir: data/label_studio/frame_crop/runs
+  frame_crop_config_path: config/frame_crop/step.prod.yaml

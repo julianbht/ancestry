@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/marie-and-sister-1886.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/marie-and-sister-1886.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    1101,
+    254,
+    1940,
+    2598
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.8984375,
+    "box_xyxy": [
+      1069.7265625,
+      224.4796142578125,
+      3074.99609375,
+      2884.192138671875
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        1100.200439453125,
+        2881.9169921875
+      ],
+      [
+        1061.245849609375,
+        253.5150604248047
+      ],
+      [
+        3041.314697265625,
+        224.16943359375
+      ],
+      [
+        3080.269287109375,
+        2852.5712890625
+      ]
+    ]
+  },
+  "sha256": "b55f441050a88a0b387d88d32c98aa78d3a5e0b1be0faf140251484712f0274f"
+}

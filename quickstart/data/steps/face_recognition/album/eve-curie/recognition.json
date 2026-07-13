@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/eve-curie/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/eve-curie/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/eve-curie/face_00.jpg",
+      "person_id": "I0004",
+      "distance": 0.9859463572502136,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 0.9859463572502136
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2752763032913208
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3527556657791138
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.384759545326233
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3894377946853638
+        }
+      ],
+      "age": 83,
+      "gender": "M",
+      "det_score": 0.7916925549507141,
+      "crop_sha256": "b005740bb4311926d499e0554990d2d212d7fc7e5b8fd9b760d179a93539bb22"
+    }
+  ]
+}

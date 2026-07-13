@@ -1,0 +1,332 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-eve-1937/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-eve-1937/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_00.jpg",
+      "person_id": null,
+      "distance": 1.356200933456421,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 1.356200933456421
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.421593189239502
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4309784173965454
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.432193636894226
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4400922060012817
+        }
+      ],
+      "age": 67,
+      "gender": "M",
+      "det_score": 0.7343959212303162,
+      "crop_sha256": "ca6a7ef91f476323f3a7a82ffbc21e257e6154363db8233163bbc7a2333378a4"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_01.jpg",
+      "person_id": null,
+      "distance": 1.3383324146270752,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.3383324146270752
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.349226713180542
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3587844371795654
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3717002868652344
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3901461362838745
+        }
+      ],
+      "age": 76,
+      "gender": "M",
+      "det_score": 0.8339537382125854,
+      "crop_sha256": "255b365c7b92269bb085201591f42033f0d733d46b02f9687dc4c7dad141f633"
+    },
+    {
+      "face_index": 2,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_02.jpg",
+      "person_id": null,
+      "distance": 1.3480174541473389,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.3480174541473389
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.361788272857666
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3643234968185425
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3944092988967896
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4039252996444702
+        }
+      ],
+      "age": 71,
+      "gender": "M",
+      "det_score": 0.6145130395889282,
+      "crop_sha256": "6e04649a930b4d39efc62c44f121d0b176fc1ce154c2385e491ae3f519e8a12a"
+    },
+    {
+      "face_index": 3,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_03.jpg",
+      "person_id": null,
+      "distance": 1.3139272928237915,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.3139272928237915
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3549529314041138
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3628228902816772
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3669592142105103
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3849495649337769
+        }
+      ],
+      "age": 58,
+      "gender": "M",
+      "det_score": 0.7412422299385071,
+      "crop_sha256": "1ba4a697cde9345d1ae090767b170bb853e27383df4d608e159d48255ac27263"
+    },
+    {
+      "face_index": 4,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_04.jpg",
+      "person_id": "I0004",
+      "distance": 0.2100980430841446,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 0.2100980430841446
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3081872463226318
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3257439136505127
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3693701028823853
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3724554777145386
+        }
+      ],
+      "age": 28,
+      "gender": "F",
+      "det_score": 0.7653088569641113,
+      "crop_sha256": "90458284c58ac5936cfaecfba972896cc5df0bea8483947b8afc510b984d1496"
+    },
+    {
+      "face_index": 5,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_05.jpg",
+      "person_id": null,
+      "distance": 1.2029420137405396,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.2029420137405396
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2299622297286987
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3266164064407349
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3412748575210571
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.4214894771575928
+        }
+      ],
+      "age": 80,
+      "gender": "M",
+      "det_score": 0.7090625762939453,
+      "crop_sha256": "42f792117d86a3c6f35b512d4e298eefdb48ba899548b3b96a605beade8a368b"
+    },
+    {
+      "face_index": 6,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_06.jpg",
+      "person_id": null,
+      "distance": 1.3543124198913574,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 1.3543124198913574
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.395552158355713
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.4085153341293335
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4163745641708374
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4260166883468628
+        }
+      ],
+      "age": 54,
+      "gender": "M",
+      "det_score": 0.8052247762680054,
+      "crop_sha256": "b653b9d86ac16f22c790375bfab033ca32e2172ca764d45e2b322df410f14131"
+    },
+    {
+      "face_index": 7,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_07.jpg",
+      "person_id": null,
+      "distance": null,
+      "status": "no_embedding",
+      "candidates": [],
+      "age": null,
+      "gender": null,
+      "det_score": null,
+      "crop_sha256": "1b9e6dd80dbd3011f1f5d9fb3518543cb679aed9c7a0b29b807f5c50dc517b3d"
+    },
+    {
+      "face_index": 8,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_08.jpg",
+      "person_id": null,
+      "distance": 1.3288345336914062,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.3288345336914062
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3874034881591797
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.4051729440689087
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.4085062742233276
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4128435850143433
+        }
+      ],
+      "age": 46,
+      "gender": "F",
+      "det_score": 0.554068922996521,
+      "crop_sha256": "284fb46a2411503e0b8420a64f9a94d92f1e7381181d7b55f42ab9f9fecd7064"
+    },
+    {
+      "face_index": 9,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_09.jpg",
+      "person_id": null,
+      "distance": 1.387118935585022,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 1.387118935585022
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3917709589004517
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4184073209762573
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.418616771697998
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.463358998298645
+        }
+      ],
+      "age": 34,
+      "gender": "M",
+      "det_score": 0.10810315608978271,
+      "crop_sha256": "80b6e81f7ab4f06be634bf82eeab57bd5bb653946380228775031fcc6ca0b247"
+    },
+    {
+      "face_index": 10,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-eve-1937/face_10.jpg",
+      "person_id": null,
+      "distance": null,
+      "status": "no_embedding",
+      "candidates": [],
+      "age": null,
+      "gender": null,
+      "det_score": null,
+      "crop_sha256": "34759f0e66dab98460b7e2b1487b3c946d22b31a2ece3224377700badaac9da7"
+    }
+  ]
+}

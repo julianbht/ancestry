@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dsw-ancestry-ssh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dsw-ancestry-ssh
+  template:
+    metadata:
+      labels:
+        app: dsw-ancestry-ssh
+    spec:
+      containers:
+      - name: dsw-ancestry
+        image: julianbht/ancestry-pipeline:ssh
+        imagePullPolicy: Always
+        securityContext:
+          runAsUser: 0  # sshd requires root
+        ports:
+          - containerPort: 22
+        resources:
+          requests:
+            cpu: "1"
+            memory: 16Gi
+            nvidia.com/gpu: 1
+          limits:
+            cpu: "4"
+            memory: 24Gi
+            nvidia.com/gpu: 1
+        env:
+        - name: NEXTCLOUD_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: NEXTCLOUD_PASSWORD
+        - name: ZIP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: ZIP_PASSWORD
+        - name: HF_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: HF_TOKEN
+        - name: GITHUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: GITHUB_TOKEN
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: ANTHROPIC_API_KEY
+        # Git commit identity for interactive work — read by the entrypoint, which
+        # writes /root/.gitconfig (SSH login shells read that file; they don't get
+        # these env vars). Required: the entrypoint aborts boot if either is unset.
+        - name: GIT_USER_NAME
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: GIT_USER_NAME
+        - name: GIT_USER_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: GIT_USER_EMAIL
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+        - name: ssh-key
+          mountPath: /root/.ssh
+        # R2 sync credentials as a dotenv file. subPath mounts a single file into
+        # the git-cloned /app without shadowing the rest of the tree. Read by
+        # load_dotenv() so it works in SSH sessions (unlike the secretKeyRef env
+        # vars above, which sshd drops). Not on the PVC — tmpfs, gone on pod stop.
+        - name: r2-env
+          mountPath: /app/.env
+          subPath: .env
+          readOnly: true
+      nodeSelector:
+        gpu: v100
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: dsw-ancestry-data-pvc
+      - name: ssh-key
+        secret:
+          secretName: ssh-key-secret
+      - name: r2-env
+        secret:
+          secretName: dsw-ancestry-secrets
+          defaultMode: 0400
+          items:
+          - key: R2_DOTENV
+            path: .env

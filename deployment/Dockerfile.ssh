@@ -1,0 +1,42 @@
+FROM python:3.13-slim
+
+# System deps: OpenCV runtime + SSH server + screen + git
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg libsm6 libxext6 \
+    openssh-server screen git curl \
+ && rm -rf /var/lib/apt/lists/*
+
+# SSH setup — authorized_keys is populated at runtime via the ssh-key k8s secret
+RUN mkdir -p /var/run/sshd \
+ && mkdir -p /root/.ssh && chmod 700 /root/.ssh \
+ && touch /root/.ssh/authorized_keys
+
+COPY deployment/sshd_config /etc/ssh/sshd_config
+
+# Git commit identity is NOT baked in here — the entrypoint sets it at runtime
+# from GIT_USER_NAME/GIT_USER_EMAIL (see entrypoint.ssh.sh) so it can differ per
+# deployment without rebuilding the image.
+
+RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# Docker ENV does not reach SSH login shells (sshd rebuilds PATH from
+# /etc/profile + profile.d), so put `claude` on PATH via profile.d.
+RUN echo 'export PATH="/root/.local/bin:$PATH"' > /etc/profile.d/claude-path.sh
+
+# Pipeline environment selector. The ssh image IS the "dev" image: steps load
+# config/<step>/step.dev.yaml. Set via profile.d (not k8s env / Docker ENV)
+# because neither reaches SSH login shells.
+RUN echo 'export ENV=dev' > /etc/profile.d/pipeline-env.sh
+
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+
+WORKDIR /app
+
+COPY deployment/entrypoint.ssh.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+EXPOSE 22
+
+# Clone repo using GITHUB_TOKEN env var, install deps, then start SSH daemon
+CMD ["/entrypoint.sh"]

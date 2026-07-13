@@ -1,0 +1,17 @@
+max_files_to_recognize: 7
+ignore_state: false
+skip_state_write: true
+skip_output_write: true
+
+method: "insightface"
+
+distance_metric: "cosine"
+recognition_threshold: 0.5
+top_k_candidates: 5
+
+gallery_overlap_threshold: 0.30
+
+debug:
+  save_overlay: true
+  font_scale: 3.0
+  abbreviate_surname: false

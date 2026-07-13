@@ -1,0 +1,25 @@
+FROM julianbht/ancestry-pipeline:cuda-base
+# Inherits Python 3.12, uv, ffmpeg, libsm6, libxext6, git from cuda-base.
+# torch is NOT in this image — setup_sam3.py installs it into the PVC venv on first run.
+
+ENV ENV=prod
+ENV UV_PROJECT_ENVIRONMENT=/app/data/.venv
+ENV UV_LINK_MODE=copy
+# UV_NO_SYNC=1 prevents implicit `uv run` syncs from pruning torch/sam3 (installed
+# out-of-band by setup_sam3.py, absent from uv.lock). Explicit sync via CMD uses
+# --inexact to preserve those packages.
+ENV UV_NO_SYNC=1
+
+COPY pyproject.toml uv.lock ./
+COPY src/ src/
+COPY config/ config/
+COPY scripts/ scripts/
+# face_recognition maps person_id -> display name from the family-tree CSV, now
+# under data/gramps/database/ (~100 KB; documents/ scans are skipped).
+# NOTE: /app/data is a runtime PVC mount, so anything baked here can be shadowed
+# at runtime — the family tree should instead land on the PVC (e.g. a
+# sync_private pull). Revisit this before relying on the COPY.
+COPY data/gramps/database/ data/gramps/database/
+
+# No CMD — the run command must be specified in the k8s manifest (command/args).
+# The image is a generic GPU runner; it is not tied to any specific pipeline step.

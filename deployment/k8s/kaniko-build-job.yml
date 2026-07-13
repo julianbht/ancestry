@@ -1,0 +1,67 @@
+# Builds deployment/Dockerfile.ssh-cuda on the cluster and pushes to Docker Hub.
+# FROM cuda-base, so only copies config + entrypoint — fast build, no large downloads.
+# Run whenever sshd_config or the entrypoint changes:
+#   kubectl apply -f deployment/k8s/kaniko-build-job.yml
+#   kubectl logs -f job/kaniko-build-cuda-dev
+#
+# Prerequisites:
+#   - ancestry-pipeline:cuda-base already pushed (kaniko-build-cuda-base-job.yml)
+#   - dsw-ancestry-secrets applied (needs GITHUB_TOKEN)
+#   - dockerhub-creds secret created (see secrets.example.yml)
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kaniko-build-cuda-dev
+spec:
+  ttlSecondsAfterFinished: 3600
+  backoffLimit: 0
+  template:
+    spec:
+      initContainers:
+      - name: git-clone
+        image: alpine/git
+        command:
+        - sh
+        - -c
+        - git clone https://x-access-token:$(GITHUB_TOKEN)@github.com/julianbht/ancestry.git /workspace
+        env:
+        - name: GITHUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: GITHUB_TOKEN
+        volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+      containers:
+      - name: kaniko
+        image: gcr.io/kaniko-project/executor:latest
+        args:
+        - --dockerfile=/workspace/deployment/Dockerfile.ssh-cuda
+        - --context=dir:///workspace
+        - --destination=julianbht/ancestry-pipeline:ssh-cuda
+        - --cache=true
+        - --cache-repo=julianbht/ancestry-pipeline-cache
+        resources:
+          requests:
+            cpu: "2"
+            memory: 4Gi
+          limits:
+            cpu: "4"
+            memory: 8Gi
+        volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+        - name: docker-config
+          mountPath: /kaniko/.docker
+          readOnly: true
+      restartPolicy: Never
+      volumes:
+      - name: workspace
+        emptyDir: {}
+      - name: docker-config
+        secret:
+          secretName: dockerhub-creds
+          items:
+          - key: .dockerconfigjson
+            path: config.json

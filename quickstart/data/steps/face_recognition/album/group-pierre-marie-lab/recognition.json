@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-pierre-marie-lab/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-pierre-marie-lab/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-lab/face_00.jpg",
+      "person_id": "I0001",
+      "distance": 0.849555253982544,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.849555253982544
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.1446913480758667
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.1922847032546997
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3317557573318481
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3324605226516724
+        }
+      ],
+      "age": 59,
+      "gender": "F",
+      "det_score": 0.7810693383216858,
+      "crop_sha256": "24a7f7a330841da2a35a0458e5a0751ed7560bfd240b941bed678112ce449e8c"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-lab/face_01.jpg",
+      "person_id": null,
+      "distance": 1.1486624479293823,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.1486624479293823
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3411628007888794
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.351399302482605
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3576165437698364
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3797816038131714
+        }
+      ],
+      "age": 64,
+      "gender": "M",
+      "det_score": 0.6811528205871582,
+      "crop_sha256": "b3b6b5ddd2922d6ad799dee2e13bdc50f22ea09305a1ab395a1ed5d5ef0de878"
+    }
+  ]
+}

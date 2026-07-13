@@ -1,0 +1,28 @@
+# --- File selection ---
+max_files_to_recognize: null
+ignore_state: false
+skip_state_write: false
+skip_output_write: false
+
+# --- Method ---
+# Which embedding backend to use: "deepface" or "insightface".
+# Method-specific params live in deepface.yaml / insightface.yaml.
+method: "insightface"
+
+# --- Matching ---
+# Metric + threshold from the InsightFace hpopt best trial (Run 2, trial #634,
+# fbeta=0.8582; see src/pipeline/experiments/face_recognition/results/README.md).
+distance_metric: "euclidean_l2"
+# Maximum match distance (euclidean_l2, lower = stricter match).
+recognition_threshold: 1.096825324690873
+# Number of ranked gallery people to record per face in the sidecar.
+top_k_candidates: 5
+
+# --- Gallery ---
+gallery_overlap_threshold: 0.30
+
+# --- Debug output ---
+debug:
+  save_overlay: true
+  font_scale: 3.0
+  abbreviate_surname: false

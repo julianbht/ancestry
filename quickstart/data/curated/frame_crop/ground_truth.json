@@ -1,0 +1,655 @@
+{
+  "version": 1,
+  "items": {
+    "album/eve-curie-1937.jpg": {
+      "image_rel": "raw/album/eve-curie-1937.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3909.55,
+          1386.0
+        ],
+        [
+          6088.04,
+          1467.24
+        ],
+        [
+          5985.49,
+          4217.32
+        ],
+        [
+          3807.0,
+          4136.09
+        ]
+      ]
+    },
+    "album/eve-curie-1939.jpg": {
+      "image_rel": "raw/album/eve-curie-1939.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          4907.0,
+          1455.77
+        ],
+        [
+          6441.82,
+          1374.0
+        ],
+        [
+          6559.45,
+          3581.87
+        ],
+        [
+          5024.63,
+          3663.64
+        ]
+      ]
+    },
+    "album/eve-curie.jpg": {
+      "image_rel": "raw/album/eve-curie.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3595.0,
+          1619.68
+        ],
+        [
+          5758.78,
+          1589.0
+        ],
+        [
+          5793.94,
+          4068.75
+        ],
+        [
+          3630.16,
+          4099.43
+        ]
+      ]
+    },
+    "album/frederic-joliot-curie-harcourt-1.jpg": {
+      "image_rel": "raw/album/frederic-joliot-curie-harcourt-1.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3816.0,
+          1879.87
+        ],
+        [
+          5437.0,
+          1876.0
+        ],
+        [
+          5442.01,
+          3973.99
+        ],
+        [
+          3821.01,
+          3977.87
+        ]
+      ]
+    },
+    "album/frederic-joliot-curie-harcourt-2.jpg": {
+      "image_rel": "raw/album/frederic-joliot-curie-harcourt-2.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          536.89,
+          1323.0
+        ],
+        [
+          2347.87,
+          1332.71
+        ],
+        [
+          2334.97,
+          3736.68
+        ],
+        [
+          524.0,
+          3726.97
+        ]
+      ]
+    },
+    "album/frederic-joliot-curie-harcourt-3.jpg": {
+      "image_rel": "raw/album/frederic-joliot-curie-harcourt-3.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          4272.97,
+          2118.0
+        ],
+        [
+          5826.7,
+          2218.91
+        ],
+        [
+          5692.73,
+          4281.57
+        ],
+        [
+          4139.0,
+          4180.65
+        ]
+      ]
+    },
+    "album/frederic-joliot-curie.jpg": {
+      "image_rel": "raw/album/frederic-joliot-curie.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          1510.64,
+          1890.0
+        ],
+        [
+          3113.68,
+          1945.32
+        ],
+        [
+          3039.05,
+          4108.03
+        ],
+        [
+          1436.0,
+          4052.71
+        ]
+      ]
+    },
+    "album/group-eve-1937.jpg": {
+      "image_rel": "raw/album/group-eve-1937.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          1561.36,
+          835.0
+        ],
+        [
+          4003.01,
+          916.38
+        ],
+        [
+          3942.64,
+          2727.38
+        ],
+        [
+          1501.0,
+          2645.99
+        ]
+      ]
+    },
+    "album/group-irene-frederic-1935.jpg": {
+      "image_rel": "raw/album/group-irene-frederic-1935.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          2301.79,
+          562.0
+        ],
+        [
+          5060.75,
+          577.34
+        ],
+        [
+          5049.96,
+          2518.31
+        ],
+        [
+          2291.0,
+          2502.97
+        ]
+      ]
+    },
+    "album/group-marie-pierre-irene.jpg": {
+      "image_rel": "raw/album/group-marie-pierre-irene.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3732.0,
+          1468.78
+        ],
+        [
+          6510.69,
+          1314.0
+        ],
+        [
+          6634.27,
+          3532.56
+        ],
+        [
+          3855.58,
+          3687.34
+        ]
+      ]
+    },
+    "album/group-pierre-marie-1895.jpg": {
+      "image_rel": "raw/album/group-pierre-marie-1895.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          345.0,
+          1454.53
+        ],
+        [
+          2062.9,
+          1393.0
+        ],
+        [
+          2143.19,
+          3634.56
+        ],
+        [
+          425.29,
+          3696.1
+        ]
+      ]
+    },
+    "album/group-pierre-marie-at-work.jpg": {
+      "image_rel": "raw/album/group-pierre-marie-at-work.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          707.0,
+          1276.95
+        ],
+        [
+          2617.54,
+          1235.0
+        ],
+        [
+          2670.99,
+          3669.41
+        ],
+        [
+          760.45,
+          3711.36
+        ]
+      ]
+    },
+    "album/group-pierre-marie-lab.jpg": {
+      "image_rel": "raw/album/group-pierre-marie-lab.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          556.85,
+          851.0
+        ],
+        [
+          2320.85,
+          954.01
+        ],
+        [
+          2180.99,
+          3348.93
+        ],
+        [
+          417.0,
+          3245.92
+        ]
+      ]
+    },
+    "album/group-pierre-marie.jpg": {
+      "image_rel": "raw/album/group-pierre-marie.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          2872.0,
+          810.77
+        ],
+        [
+          5124.92,
+          792.0
+        ],
+        [
+          5140.28,
+          2634.94
+        ],
+        [
+          2887.35,
+          2653.7
+        ]
+      ]
+    },
+    "album/group-sklodowski-family.jpg": {
+      "image_rel": "raw/album/group-sklodowski-family.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3601.0,
+          625.26
+        ],
+        [
+          5202.05,
+          570.0
+        ],
+        [
+          5270.0,
+          2538.83
+        ],
+        [
+          3668.96,
+          2594.09
+        ]
+      ]
+    },
+    "album/group-solvay-1927.jpg": {
+      "image_rel": "raw/album/group-solvay-1927.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3071.71,
+          2491.0
+        ],
+        [
+          5573.71,
+          2492.01
+        ],
+        [
+          5573.0,
+          4260.01
+        ],
+        [
+          3071.0,
+          4259.0
+        ]
+      ]
+    },
+    "album/irene-joliot-curie-1.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-1.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          1467.96,
+          1521.0
+        ],
+        [
+          3117.0,
+          1577.45
+        ],
+        [
+          3039.03,
+          3855.11
+        ],
+        [
+          1390.0,
+          3798.67
+        ]
+      ]
+    },
+    "album/irene-joliot-curie-1921.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-1921.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          1792.85,
+          703.0
+        ],
+        [
+          3827.57,
+          736.62
+        ],
+        [
+          3800.72,
+          2361.4
+        ],
+        [
+          1766.0,
+          2327.78
+        ]
+      ]
+    },
+    "album/irene-joliot-curie-2.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-2.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          4807.48,
+          909.0
+        ],
+        [
+          6686.0,
+          1038.93
+        ],
+        [
+          6496.51,
+          3778.39
+        ],
+        [
+          4618.0,
+          3648.45
+        ]
+      ]
+    },
+    "album/irene-joliot-curie-c1935.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-c1935.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          287.0,
+          1023.5
+        ],
+        [
+          1845.47,
+          983.0
+        ],
+        [
+          1900.37,
+          3095.29
+        ],
+        [
+          341.89,
+          3135.79
+        ]
+      ]
+    },
+    "album/marie-and-sister-1886.jpg": {
+      "image_rel": "raw/album/marie-and-sister-1886.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          1097.15,
+          219.0
+        ],
+        [
+          3081.94,
+          248.48
+        ],
+        [
+          3042.78,
+          2884.19
+        ],
+        [
+          1058.0,
+          2854.71
+        ]
+      ]
+    },
+    "album/marie-curie-1.jpg": {
+      "image_rel": "raw/album/marie-curie-1.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          2136.0,
+          1431.69
+        ],
+        [
+          3712.77,
+          1405.0
+        ],
+        [
+          3750.93,
+          3658.68
+        ],
+        [
+          2174.15,
+          3685.37
+        ]
+      ]
+    },
+    "album/marie-curie-2.jpg": {
+      "image_rel": "raw/album/marie-curie-2.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          4184.0,
+          1299.73
+        ],
+        [
+          5851.74,
+          1270.0
+        ],
+        [
+          5891.23,
+          3485.65
+        ],
+        [
+          4223.5,
+          3515.38
+        ]
+      ]
+    },
+    "album/marie-curie-3.jpg": {
+      "image_rel": "raw/album/marie-curie-3.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          555.97,
+          2064.0
+        ],
+        [
+          2143.92,
+          2162.43
+        ],
+        [
+          2018.95,
+          4178.56
+        ],
+        [
+          431.0,
+          4080.13
+        ]
+      ]
+    },
+    "album/pierre-curie.jpg": {
+      "image_rel": "raw/album/pierre-curie.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          819.0,
+          491.07
+        ],
+        [
+          2666.57,
+          363.0
+        ],
+        [
+          2842.83,
+          2905.9
+        ],
+        [
+          995.26,
+          3033.96
+        ]
+      ]
+    },
+    "album/wladyslaw-sklodowski.jpg": {
+      "image_rel": "raw/album/wladyslaw-sklodowski.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "quad": [
+        [
+          3595.0,
+          1435.05
+        ],
+        [
+          5792.56,
+          1391.0
+        ],
+        [
+          5844.15,
+          3964.48
+        ],
+        [
+          3646.59,
+          4008.54
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-marie-pierre-irene/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_00.jpg",
+      "person_id": "I0001",
+      "distance": 0.8658525943756104,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.8658525943756104
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.1729040145874023
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.231451153755188
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3166732788085938
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3198497295379639
+        }
+      ],
+      "age": 46,
+      "gender": "M",
+      "det_score": 0.7690648436546326,
+      "crop_sha256": "e1fd529147cfd16314ad9e252293521e7c53a1cf90923824ea5b5914d8e101f9"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_01.jpg",
+      "person_id": null,
+      "distance": 1.2650675773620605,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 1.2650675773620605
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.287306308746338
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3312386274337769
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3826775550842285
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.4159433841705322
+        }
+      ],
+      "age": 24,
+      "gender": "M",
+      "det_score": 0.6422280669212341,
+      "crop_sha256": "2cba4f862006f2f7420d1e2249ff15bfca7f1d574b52aafa706896b7cae04531"
+    },
+    {
+      "face_index": 2,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-marie-pierre-irene/face_02.jpg",
+      "person_id": "I0000",
+      "distance": 0.8892548084259033,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 0.8892548084259033
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2507085800170898
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3383363485336304
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.35857093334198
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3674530982971191
+        }
+      ],
+      "age": 73,
+      "gender": "M",
+      "det_score": 0.7669790387153625,
+      "crop_sha256": "338f5808a2a4de3fbefe709c592291a36d8809f2216469e6f8f2973a306bf66d"
+    }
+  ]
+}

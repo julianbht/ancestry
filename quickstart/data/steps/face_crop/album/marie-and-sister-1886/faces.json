@@ -1,0 +1,48 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/marie-and-sister-1886.jpg",
+  "source_sha256": "b55f441050a88a0b387d88d32c98aa78d3a5e0b1be0faf140251484712f0274f",
+  "image_size": [
+    1940,
+    2598
+  ],
+  "prompt": "human face",
+  "face_count": 2,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        567.1221313476562,
+        405.8736877441406,
+        905.4618530273438,
+        802.1248168945312
+      ],
+      "score": 0.94140625,
+      "box_xyxy_source": [
+        1668.1221313476562,
+        659.8736877441406,
+        2006.4618530273438,
+        1056.1248168945312
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_00.jpg",
+      "sha256": "0bf39ad1a3dddcbb4ae8892e1932545267b9ad198f74d7fb426b81074933db11"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        1020.214111328125,
+        896.75244140625,
+        1357.833984375,
+        1317.06884765625
+      ],
+      "score": 0.9296875,
+      "box_xyxy_source": [
+        2121.214111328125,
+        1150.75244140625,
+        2458.833984375,
+        1571.06884765625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-and-sister-1886/face_01.jpg",
+      "sha256": "02612f87825e3b3714740afd7d31eac1b41f872386a665ad81e153ce88f01220"
+    }
+  ]
+}

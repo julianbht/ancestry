@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-eve-1937.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-eve-1937.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    1564,
+    918,
+    2379,
+    1726
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.90234375,
+    "box_xyxy": [
+      1514.765380859375,
+      838.6039428710938,
+      3995.57470703125,
+      2729.31103515625
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        1563.0146484375,
+        2725.4375
+      ],
+      [
+        1503.26171875,
+        917.9088745117188
+      ],
+      [
+        3943.7763671875,
+        837.230712890625
+      ],
+      [
+        4003.529296875,
+        2644.75927734375
+      ]
+    ]
+  },
+  "sha256": "ea2f0c20216b7759a9191ddd759adca3c202ac932c5a1a8bd59e62513db694fd"
+}

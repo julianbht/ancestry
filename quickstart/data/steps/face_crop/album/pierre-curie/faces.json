@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/pierre-curie.jpg",
+  "source_sha256": "6d3a252797ade58df3669f6a32e4a584704d86fb4987c2c2fb577917a4c2806e",
+  "image_size": [
+    1665,
+    2409
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        551.2916259765625,
+        455.040771484375,
+        1132.7720947265625,
+        1234.6422119140625
+      ],
+      "score": 0.890625,
+      "box_xyxy_source": [
+        1549.2916259765625,
+        949.040771484375,
+        2130.7720947265625,
+        1728.6422119140625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/pierre-curie/face_00.jpg",
+      "sha256": "68f007f27f404a0543003635402c50bd3518720ca1f16e17e0a7f3c6b39243bb"
+    }
+  ]
+}

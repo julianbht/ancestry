@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/pierre-curie/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/pierre-curie/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/pierre-curie/face_00.jpg",
+      "person_id": "I0000",
+      "distance": 0.7578098773956299,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 0.7578098773956299
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2624843120574951
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3346539735794067
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.366868019104004
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3831374645233154
+        }
+      ],
+      "age": 70,
+      "gender": "M",
+      "det_score": 0.8563931584358215,
+      "crop_sha256": "68f007f27f404a0543003635402c50bd3518720ca1f16e17e0a7f3c6b39243bb"
+    }
+  ]
+}

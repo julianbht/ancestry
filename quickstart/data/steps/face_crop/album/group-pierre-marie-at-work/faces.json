@@ -1,0 +1,48 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-pierre-marie-at-work.jpg",
+  "source_sha256": "698b263b493af0309ecd66fbffb6350509b5cc99756c9af3d305ec3c52870a52",
+  "image_size": [
+    1850,
+    2385
+  ],
+  "prompt": "human face",
+  "face_count": 2,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        905.9223022460938,
+        254.08212280273438,
+        1127.47216796875,
+        568.9203491210938
+      ],
+      "score": 0.91015625,
+      "box_xyxy_source": [
+        1670.9223022460938,
+        1535.0821228027344,
+        1892.47216796875,
+        1849.9203491210938
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_00.jpg",
+      "sha256": "0a76aea3c74ebc422bf2e090ebfe48663bf972b48e6e8759011aaef1f795bd1b"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        851.2841186523438,
+        794.9358520507812,
+        1043.727783203125,
+        1061.3782958984375
+      ],
+      "score": 0.875,
+      "box_xyxy_source": [
+        1616.2841186523438,
+        2075.9358520507812,
+        1808.727783203125,
+        2342.3782958984375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_01.jpg",
+      "sha256": "aaa4d706e5319b43c1549df0fbb16af84ad9b0f9f2507bbd64f78da1be52050e"
+    }
+  ]
+}

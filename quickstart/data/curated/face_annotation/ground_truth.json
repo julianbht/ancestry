@@ -1,0 +1,329 @@
+{
+  "version": 1,
+  "items": {
+    "album/eve-curie-1937.jpg": {
+      "image_rel": "raw/album/eve-curie-1937.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            4399.983145027045,
+            1602.1037306831622,
+            1068.069093778925,
+            1486.010697177532
+          ],
+          "person_id": "I0004",
+          "face_note": null,
+          "age": 30,
+          "is_portrait": true
+        }
+      ],
+      "note": null,
+      "task_id": 2409,
+      "annotation_id": 2398
+    },
+    "album/frederic-joliot-curie-harcourt-1.jpg": {
+      "image_rel": "raw/album/frederic-joliot-curie-harcourt-1.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            4204.80099502487,
+            2054.7256087255014,
+            946.6169963084715,
+            1210.0627636153256
+          ],
+          "person_id": "I0003",
+          "face_note": null,
+          "age": 40,
+          "is_portrait": true
+        }
+      ],
+      "note": null,
+      "task_id": 2412,
+      "annotation_id": 2401
+    },
+    "album/group-irene-frederic-1935.jpg": {
+      "image_rel": "raw/album/group-irene-frederic-1935.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            3505.8831921412448,
+            1180.821915252521,
+            203.23960534152127,
+            288.6004313666791
+          ],
+          "person_id": "I0003",
+          "face_note": null,
+          "age": 30,
+          "is_portrait": false
+        },
+        {
+          "bbox_xywh": [
+            3168.505392049734,
+            1217.4050442139917,
+            276.4059430332924,
+            288.6003790625712
+          ],
+          "person_id": "I0002",
+          "face_note": null,
+          "age": 40,
+          "is_portrait": false
+        }
+      ],
+      "note": null,
+      "task_id": 2416,
+      "annotation_id": 2405
+    },
+    "album/group-pierre-marie-1895.jpg": {
+      "image_rel": "raw/album/group-pierre-marie-1895.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            1412.6093848790304,
+            1768.6947603357694,
+            338.6916151599661,
+            424.59166806969495
+          ],
+          "person_id": "I0001",
+          "face_note": null,
+          "age": 25,
+          "is_portrait": true
+        },
+        {
+          "bbox_xywh": [
+            875.3865873443372,
+            1570.5773026299282,
+            325.1832887776085,
+            422.7383791103637
+          ],
+          "person_id": "I0000",
+          "face_note": null,
+          "age": 30,
+          "is_portrait": false
+        }
+      ],
+      "note": null,
+      "task_id": 2418,
+      "annotation_id": 2407
+    },
+    "album/group-pierre-marie.jpg": {
+      "image_rel": "raw/album/group-pierre-marie.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            3342.509873718838,
+            1016.1979596510611,
+            253.26775924653867,
+            393.9722251031859
+          ],
+          "person_id": "I0000",
+          "face_note": null,
+          "age": 48,
+          "is_portrait": true
+        },
+        {
+          "bbox_xywh": [
+            4518.172764899984,
+            1440.5443213295634,
+            335.0103384750357,
+            377.4451154616326
+          ],
+          "person_id": "I0001",
+          "face_note": null,
+          "age": 40,
+          "is_portrait": false
+        }
+      ],
+      "note": null,
+      "task_id": 2421,
+      "annotation_id": 2410
+    },
+    "album/group-sklodowski-family.jpg": {
+      "image_rel": "raw/album/group-sklodowski-family.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            4037.151520503985,
+            1223.2990485599441,
+            219.29553416350203,
+            255.4749782826904
+          ],
+          "person_id": "I0009",
+          "face_note": null,
+          "age": 65,
+          "is_portrait": true
+        },
+        {
+          "bbox_xywh": [
+            3831.734705835308,
+            884.8620487341111,
+            178.2255331090626,
+            243.88751299851612
+          ],
+          "person_id": null,
+          "face_note": null,
+          "age": 25,
+          "is_portrait": false
+        },
+        {
+          "bbox_xywh": [
+            4570.727668085663,
+            838.3053049227851,
+            210.65481604930952,
+            248.95569169463778
+          ],
+          "person_id": "I0010",
+          "face_note": null,
+          "age": 25,
+          "is_portrait": true
+        },
+        {
+          "bbox_xywh": [
+            4891.340993872215,
+            823.4688263745719,
+            194.69611786375563,
+            232.99699350908452
+          ],
+          "person_id": null,
+          "face_note": null,
+          "age": 25,
+          "is_portrait": false
+        }
+      ],
+      "note": null,
+      "task_id": 2422,
+      "annotation_id": 2411
+    },
+    "album/irene-joliot-curie-2.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-2.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            4858.556233027413,
+            1068.0696517412937,
+            1602.1039693808352,
+            2153.5535821775675
+          ],
+          "person_id": "I0002",
+          "face_note": null,
+          "age": 35,
+          "is_portrait": true
+        }
+      ],
+      "note": null,
+      "task_id": 2426,
+      "annotation_id": 2415
+    },
+    "album/irene-joliot-curie-c1935.jpg": {
+      "image_rel": "raw/album/irene-joliot-curie-c1935.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            534.0351763748625,
+            1184.164726852247,
+            1039.0450560139031,
+            1398.938905340612
+          ],
+          "person_id": "I0002",
+          "face_note": null,
+          "age": 30,
+          "is_portrait": true
+        }
+      ],
+      "note": null,
+      "task_id": 2427,
+      "annotation_id": 2416
+    },
+    "album/marie-and-sister-1886.jpg": {
+      "image_rel": "raw/album/marie-and-sister-1886.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            2046.3904624306017,
+            1046.1821218692648,
+            435.3538868282529,
+            473.09279159758734
+          ],
+          "person_id": "I0010",
+          "face_note": null,
+          "age": 28,
+          "is_portrait": true
+        },
+        {
+          "bbox_xywh": [
+            1624.1480454502928,
+            522.1535125758878,
+            415.89358507876125,
+            501.9150043365127
+          ],
+          "person_id": null,
+          "face_note": null,
+          "age": null,
+          "is_portrait": false
+        }
+      ],
+      "note": null,
+      "task_id": 2428,
+      "annotation_id": 2423
+    },
+    "album/marie-curie-2.jpg": {
+      "image_rel": "raw/album/marie-curie-2.jpg",
+      "image_size": [
+        7000,
+        4667
+      ],
+      "faces": [
+        {
+          "bbox_xywh": [
+            4637.97656093652,
+            1520.8383084577106,
+            766.2236878196965,
+            1010.0227366264639
+          ],
+          "person_id": "I0001",
+          "face_note": null,
+          "age": 50,
+          "is_portrait": true
+        }
+      ],
+      "note": null,
+      "task_id": 2430,
+      "annotation_id": 2419
+    }
+  }
+}

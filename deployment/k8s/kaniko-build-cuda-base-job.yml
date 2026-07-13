@@ -1,0 +1,65 @@
+# Builds deployment/Dockerfile.cuda-base and pushes to Docker Hub.
+# Run once, then only again when changing pytorch version or apt packages.
+#   kubectl apply -f deployment/k8s/kaniko-build-cuda-base-job.yml
+#   kubectl logs -f job/kaniko-build-cuda-base
+#
+# Prerequisites:
+#   - dsw-ancestry-secrets applied (needs GITHUB_TOKEN)
+#   - dockerhub-creds secret created (see secrets.example.yml)
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kaniko-build-cuda-base
+spec:
+  ttlSecondsAfterFinished: 3600
+  backoffLimit: 0
+  template:
+    spec:
+      initContainers:
+      - name: git-clone
+        image: alpine/git
+        command:
+        - sh
+        - -c
+        - git clone https://x-access-token:$(GITHUB_TOKEN)@github.com/julianbht/ancestry.git /workspace
+        env:
+        - name: GITHUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: GITHUB_TOKEN
+        volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+      containers:
+      - name: kaniko
+        image: gcr.io/kaniko-project/executor:latest
+        args:
+        - --dockerfile=/workspace/deployment/Dockerfile.cuda-base
+        - --context=dir:///workspace
+        - --destination=julianbht/ancestry-pipeline:cuda-base
+        - --cache=true
+        - --cache-repo=julianbht/ancestry-pipeline-cache
+        resources:
+          requests:
+            cpu: "2"
+            memory: 4Gi
+          limits:
+            cpu: "4"
+            memory: 8Gi
+        volumeMounts:
+        - name: workspace
+          mountPath: /workspace
+        - name: docker-config
+          mountPath: /kaniko/.docker
+          readOnly: true
+      restartPolicy: Never
+      volumes:
+      - name: workspace
+        emptyDir: {}
+      - name: docker-config
+        secret:
+          secretName: dockerhub-creds
+          items:
+          - key: .dockerconfigjson
+            path: config.json

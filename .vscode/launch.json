@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "frame_crop",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.frame_crop.step",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "rotate",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.rotate.step",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "download",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline.download.step",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        },
+        {
+            "name": "full pipeline",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pipeline",
+            "python": "${workspaceFolder}/.venv/Scripts/python.exe",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": true
+        }
+    ]
+}

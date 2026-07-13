@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-2/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/frederic-joliot-curie-harcourt-2/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-2/face_00.jpg",
+      "person_id": "I0003",
+      "distance": 0.5808795094490051,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 0.5808795094490051
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.2941163778305054
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3606901168823242
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3663352727890015
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3754888772964478
+        }
+      ],
+      "age": 42,
+      "gender": "M",
+      "det_score": 0.8156758546829224,
+      "crop_sha256": "39a5cc08b3e0a80b465bddbba7d305e6b04f78925117a7c4663026310d307f36"
+    }
+  ]
+}

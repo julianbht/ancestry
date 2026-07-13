@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-irene-frederic-1935.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-irene-frederic-1935.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    2307,
+    583,
+    2738,
+    1919
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.8515625,
+    "box_xyxy": [
+      2304.91162109375,
+      572.3213500976562,
+      5053.34423828125,
+      2519.427734375
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        2306.1962890625,
+        2519.298095703125
+      ],
+      [
+        2294.1181640625,
+        582.7891845703125
+      ],
+      [
+        5045.900390625,
+        565.626220703125
+      ],
+      [
+        5057.978515625,
+        2502.13525390625
+      ]
+    ]
+  },
+  "sha256": "a71a1c15895fa05c834ee89c7c19e848dc4d2cf956c10ecc63a9ce9d67834309"
+}

@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dsw-ancestry-pipeline-job
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: dsw-ancestry-pipeline
+        image: julianbht/ancestry-pipeline:job-cuda
+        imagePullPolicy: Always
+        env:
+        - name: NEXTCLOUD_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: NEXTCLOUD_PASSWORD
+        - name: ZIP_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: ZIP_PASSWORD
+        volumeMounts:
+        - name: data
+          mountPath: /app/data
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: dsw-ancestry-data-pvc

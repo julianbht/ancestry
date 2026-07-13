@@ -1,0 +1,438 @@
+{
+  "note": "Freely-licensed images from Wikimedia Commons, used as quickstart dummy data. Most are public domain; CC-BY files require the recorded author + licence as attribution. See each commons_page for full terms. No images of living people are included.",
+  "images": [
+    {
+      "file": "group-pierre-marie.jpg",
+      "person_ids": [
+        "I0000",
+        "I0001"
+      ],
+      "title": "File:Pierre and Marie Curie.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Pierre_and_Marie_Curie.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pierre_and_Marie_Curie.jpg/1280px-Pierre_and_Marie_Curie.jpg",
+      "original_size": [
+        2163,
+        1740
+      ],
+      "author": "Unknown photographer",
+      "license": "Public domain",
+      "date": "circa 1904"
+    },
+    {
+      "file": "group-pierre-marie-lab.jpg",
+      "person_ids": [
+        "I0000",
+        "I0001"
+      ],
+      "title": "File:Marie and Pierre Curie Converse.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Marie_and_Pierre_Curie_Converse.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Marie_and_Pierre_Curie_Converse.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Marie_and_Pierre_Curie_Converse.jpg/1280px-Marie_and_Pierre_Curie_Converse.jpg",
+      "original_size": [
+        2693,
+        3742
+      ],
+      "author": "AIP Emilio Segrè Visual Archives, Physics Today Collection",
+      "license": "CC0",
+      "date": "1896-01-01"
+    },
+    {
+      "file": "pierre-curie.jpg",
+      "person_ids": [
+        "I0000"
+      ],
+      "title": "File:Pierre Curie by Dujardin c1906.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Pierre_Curie_by_Dujardin_c1906.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pierre_Curie_by_Dujardin_c1906.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/d/db/Pierre_Curie_by_Dujardin_c1906.jpg",
+      "original_size": [
+        979,
+        1380
+      ],
+      "author": "Dujardin",
+      "license": "Public domain",
+      "date": "circa 1906"
+    },
+    {
+      "file": "marie-curie-1.jpg",
+      "person_ids": [
+        "I0001"
+      ],
+      "title": "File:Marie Curie, portrait, 1900.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Marie_Curie,_portrait,_1900.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Marie_Curie%2C_portrait%2C_1900.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/d/db/Marie_Curie%2C_portrait%2C_1900.jpg",
+      "original_size": [
+        609,
+        894
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "circa 1900"
+    },
+    {
+      "file": "marie-curie-2.jpg",
+      "person_ids": [
+        "I0001"
+      ],
+      "title": "File:Marie Curie c. 1920s.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Marie_Curie_c._1920s.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Marie_Curie_c._1920s.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1280px-Marie_Curie_c._1920s.jpg",
+      "original_size": [
+        1549,
+        2105
+      ],
+      "author": "Henri Manuel",
+      "license": "Public domain",
+      "date": "circa 1920"
+    },
+    {
+      "file": "marie-curie-3.jpg",
+      "person_ids": [
+        "I0001"
+      ],
+      "title": "File:Mariecurie.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Mariecurie.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Mariecurie.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mariecurie.jpg/1280px-Mariecurie.jpg",
+      "original_size": [
+        1536,
+        1987
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "circa 1898"
+    },
+    {
+      "file": "irene-joliot-curie-1.jpg",
+      "person_ids": [
+        "I0002"
+      ],
+      "title": "File:Irène Joliot-Curie 1936.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Ir%C3%A8ne_Joliot-Curie_1936.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ir%C3%A8ne_Joliot-Curie_1936.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Ir%C3%A8ne_Joliot-Curie_1936.jpg",
+      "original_size": [
+        825,
+        1168
+      ],
+      "author": "Agence de presse Meurisse",
+      "license": "Public domain",
+      "date": "1936"
+    },
+    {
+      "file": "irene-joliot-curie-2.jpg",
+      "person_ids": [
+        "I0002"
+      ],
+      "title": "File:Joliot-curie.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Joliot-curie.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Joliot-curie.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/7/79/Joliot-curie.jpg",
+      "original_size": [
+        992,
+        1488
+      ],
+      "author": "Nobel Foundation",
+      "license": "Public domain",
+      "date": "1935"
+    },
+    {
+      "file": "frederic-joliot-curie.jpg",
+      "person_ids": [
+        "I0003"
+      ],
+      "title": "File:Joliot-Curie Harcourt 1948 3.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Joliot-Curie_Harcourt_1948_3.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Joliot-Curie_Harcourt_1948_3.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/9/93/Joliot-Curie_Harcourt_1948_3.jpg",
+      "original_size": [
+        471,
+        650
+      ],
+      "author": "Studio Harcourt",
+      "license": "Public domain",
+      "date": "1948"
+    },
+    {
+      "file": "eve-curie.jpg",
+      "person_ids": [
+        "I0004"
+      ],
+      "title": "File:Ève Curie (1943).jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:%C3%88ve_Curie_(1943).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/%C3%88ve_Curie_%281943%29.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/7/7e/%C3%88ve_Curie_%281943%29.jpg",
+      "original_size": [
+        490,
+        568
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "1943"
+    },
+    {
+      "file": "group-marie-pierre-irene.jpg",
+      "person_ids": [
+        "I0000",
+        "I0001",
+        "I0002"
+      ],
+      "title": "File:Marie Pierre Irene Curie.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Marie_Pierre_Irene_Curie.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Marie_Pierre_Irene_Curie.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/8/80/Marie_Pierre_Irene_Curie.jpg",
+      "original_size": [
+        612,
+        480
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "circa 1902"
+    },
+    {
+      "file": "group-pierre-marie-1895.jpg",
+      "person_ids": [
+        "I0000",
+        "I0001"
+      ],
+      "title": "File:Pierre Curie et Marie Sklodowska Curie 1895.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Pierre_Curie_et_Marie_Sklodowska_Curie_1895.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Pierre_Curie_et_Marie_Sklodowska_Curie_1895.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Pierre_Curie_et_Marie_Sklodowska_Curie_1895.jpg",
+      "original_size": [
+        620,
+        826
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "circa 1895"
+    },
+    {
+      "file": "group-pierre-marie-at-work.jpg",
+      "person_ids": [
+        "I0000",
+        "I0001"
+      ],
+      "title": "File:Pierre and Marie Curie at work.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Pierre_and_Marie_Curie_at_work.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Pierre_and_Marie_Curie_at_work.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Pierre_and_Marie_Curie_at_work.jpg/1280px-Pierre_and_Marie_Curie_at_work.jpg",
+      "original_size": [
+        2452,
+        3185
+      ],
+      "author": "Unknown author",
+      "license": "CC BY 4.0",
+      "date": "Unknown date"
+    },
+    {
+      "file": "group-irene-frederic-1935.jpg",
+      "person_ids": [
+        "I0002",
+        "I0003"
+      ],
+      "title": "File:Irène et Frédéric Joliot-Curie 1935.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Ir%C3%A8ne_et_Fr%C3%A9d%C3%A9ric_Joliot-Curie_1935.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Ir%C3%A8ne_et_Fr%C3%A9d%C3%A9ric_Joliot-Curie_1935.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Ir%C3%A8ne_et_Fr%C3%A9d%C3%A9ric_Joliot-Curie_1935.jpg/1280px-Ir%C3%A8ne_et_Fr%C3%A9d%C3%A9ric_Joliot-Curie_1935.jpg",
+      "original_size": [
+        1334,
+        914
+      ],
+      "author": "Agence de presse Meurisse",
+      "license": "Public domain",
+      "date": "1935"
+    },
+    {
+      "file": "group-solvay-1927.jpg",
+      "person_ids": [
+        "I0001"
+      ],
+      "title": "File:Solvay conference 1927 Version2.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Solvay_conference_1927_Version2.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Solvay_conference_1927_Version2.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Solvay_conference_1927_Version2.jpg/1280px-Solvay_conference_1927_Version2.jpg",
+      "original_size": [
+        2126,
+        1463
+      ],
+      "author": "Benjamin Couprie",
+      "license": "Public domain",
+      "date": "1927"
+    },
+    {
+      "file": "group-eve-1937.jpg",
+      "person_ids": [
+        "I0004"
+      ],
+      "title": "File:Ève Curie, Henri Coutard, Queen Mary, Hilda Runciman 1937.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:%C3%88ve_Curie,_Henri_Coutard,_Queen_Mary,_Hilda_Runciman_1937.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/%C3%88ve_Curie%2C_Henri_Coutard%2C_Queen_Mary%2C_Hilda_Runciman_1937.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/%C3%88ve_Curie%2C_Henri_Coutard%2C_Queen_Mary%2C_Hilda_Runciman_1937.jpg/1280px-%C3%88ve_Curie%2C_Henri_Coutard%2C_Queen_Mary%2C_Hilda_Runciman_1937.jpg",
+      "original_size": [
+        1936,
+        1404
+      ],
+      "author": "Valentine (Photographers)",
+      "license": "CC BY 4.0",
+      "date": "1937-03"
+    },
+    {
+      "file": "wladyslaw-sklodowski.jpg",
+      "person_ids": [
+        "I0009"
+      ],
+      "title": "File:Ś. p. Władysław Skłodowski (55681).jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:%C5%9A._p._W%C5%82adys%C5%82aw_Sk%C5%82odowski_(55681).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/%C5%9A._p._W%C5%82adys%C5%82aw_Sk%C5%82odowski_%2855681%29.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/%C5%9A._p._W%C5%82adys%C5%82aw_Sk%C5%82odowski_%2855681%29.jpg/1280px-%C5%9A._p._W%C5%82adys%C5%82aw_Sk%C5%82odowski_%2855681%29.jpg",
+      "original_size": [
+        3331,
+        3952
+      ],
+      "author": "Unknown",
+      "license": "Public domain",
+      "date": "1902"
+    },
+    {
+      "file": "group-sklodowski-family.jpg",
+      "person_ids": [
+        "I0009",
+        "I0001"
+      ],
+      "title": "File:Sklodowski Family Wladyslaw and his daughters Maria Bronislawa Helena.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Sklodowski_Family_Wladyslaw_and_his_daughters_Maria_Bronislawa_Helena.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sklodowski_Family_Wladyslaw_and_his_daughters_Maria_Bronislawa_Helena.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Sklodowski_Family_Wladyslaw_and_his_daughters_Maria_Bronislawa_Helena.jpg",
+      "original_size": [
+        960,
+        1200
+      ],
+      "author": "Unknown photographer",
+      "license": "Public domain",
+      "date": "1890"
+    },
+    {
+      "file": "marie-and-sister-1886.jpg",
+      "person_ids": [
+        "I0001"
+      ],
+      "title": "File:Maria Sklodowska et sa sœur Bronislawa en 1886.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Maria_Sklodowska_et_sa_s%C5%93ur_Bronislawa_en_1886.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Maria_Sklodowska_et_sa_s%C5%93ur_Bronislawa_en_1886.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/0/07/Maria_Sklodowska_et_sa_s%C5%93ur_Bronislawa_en_1886.jpg",
+      "original_size": [
+        442,
+        600
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "circa 1886"
+    },
+    {
+      "file": "irene-joliot-curie-1921.jpg",
+      "person_ids": [
+        "I0002"
+      ],
+      "title": "File:Irène Joliot-Curie (1897-1956), 1921.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Ir%C3%A8ne_Joliot-Curie_(1897-1956),_1921.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Ir%C3%A8ne_Joliot-Curie_%281897-1956%29%2C_1921.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Ir%C3%A8ne_Joliot-Curie_%281897-1956%29%2C_1921.jpg/1280px-Ir%C3%A8ne_Joliot-Curie_%281897-1956%29%2C_1921.jpg",
+      "original_size": [
+        2800,
+        2196
+      ],
+      "author": "Smithsonian Institution",
+      "license": "No restrictions",
+      "date": "2010-03-01 11:58:15"
+    },
+    {
+      "file": "irene-joliot-curie-c1935.jpg",
+      "person_ids": [
+        "I0002"
+      ],
+      "title": "File:Irène Joliot-Curie (1897-1956), c. 1935.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Ir%C3%A8ne_Joliot-Curie_(1897-1956),_c._1935.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ir%C3%A8ne_Joliot-Curie_%281897-1956%29%2C_c._1935.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/9/99/Ir%C3%A8ne_Joliot-Curie_%281897-1956%29%2C_c._1935.jpg",
+      "original_size": [
+        1200,
+        1664
+      ],
+      "author": "Smithsonian Institution",
+      "license": "No restrictions",
+      "date": "2010-03-01 11:58:13"
+    },
+    {
+      "file": "frederic-joliot-curie-harcourt-1.jpg",
+      "person_ids": [
+        "I0003"
+      ],
+      "title": "File:Frédéric Joliot-Curie Harcourt.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Joliot-Curie_Harcourt.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fr%C3%A9d%C3%A9ric_Joliot-Curie_Harcourt.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/3/35/Fr%C3%A9d%C3%A9ric_Joliot-Curie_Harcourt.jpg",
+      "original_size": [
+        282,
+        379
+      ],
+      "author": "Harcourt",
+      "license": "CC BY 4.0",
+      "date": "Unknown date"
+    },
+    {
+      "file": "frederic-joliot-curie-harcourt-2.jpg",
+      "person_ids": [
+        "I0003"
+      ],
+      "title": "File:Joliot-Curie Harcourt 1948.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Joliot-Curie_Harcourt_1948.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Joliot-Curie_Harcourt_1948.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Joliot-Curie_Harcourt_1948.jpg",
+      "original_size": [
+        492,
+        650
+      ],
+      "author": "Studio Harcourt",
+      "license": "Public domain",
+      "date": "1948"
+    },
+    {
+      "file": "eve-curie-1937.jpg",
+      "person_ids": [
+        "I0004"
+      ],
+      "title": "File:Ève Curie 1937.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:%C3%88ve_Curie_1937.jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/%C3%88ve_Curie_1937.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/7/7c/%C3%88ve_Curie_1937.jpg",
+      "original_size": [
+        434,
+        558
+      ],
+      "author": "Valentine (Photographers)",
+      "license": "CC BY 4.0",
+      "date": "1937-03"
+    },
+    {
+      "file": "eve-curie-1939.jpg",
+      "person_ids": [
+        "I0004"
+      ],
+      "title": "File:Ève Curie (-1939).jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:%C3%88ve_Curie_(-1939).jpg",
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%C3%88ve_Curie_%28-1939%29.jpg",
+      "downloaded_from": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%C3%88ve_Curie_%28-1939%29.jpg",
+      "original_size": [
+        379,
+        560
+      ],
+      "author": "Unknown author",
+      "license": "Public domain",
+      "date": "&gt;1939"
+    }
+  ]
+}

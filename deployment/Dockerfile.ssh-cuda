@@ -1,0 +1,46 @@
+FROM julianbht/ancestry-pipeline:cuda-base
+
+COPY deployment/sshd_config /etc/ssh/sshd_config
+
+# Git commit identity is NOT baked in here — the entrypoint sets it at runtime
+# from GIT_USER_NAME/GIT_USER_EMAIL (see entrypoint.ssh-cuda.sh) so it can differ
+# per deployment without rebuilding the image.
+
+RUN curl -fsSL https://claude.ai/install.sh | bash
+
+# Docker ENV / k8s env do not reach SSH login shells (sshd rebuilds the
+# environment from /etc/profile + profile.d, inheriting nothing from PID 1).
+# Add profile.d scripts so interactive SSH sessions get the same environment
+# as the entrypoint. Keep the ENV too for the entrypoint process.
+ENV PATH="/root/.local/bin:$PATH"
+RUN echo 'export PATH="/root/.local/bin:$PATH"' > /etc/profile.d/claude-path.sh
+
+# UV_PROJECT_ENVIRONMENT makes the entrypoint's `uv sync` build the venv on the
+# PVC (/app/data/.venv). It's a constant tied to this image, so it lives here as
+# an ENV (which reaches the entrypoint/CMD process) instead of in the k8s
+# Deployment. The profile.d re-export below is still needed because Docker ENV
+# does NOT reach SSH login shells — that's what makes `uv run ...` over SSH
+# target the same venv/interpreter instead of a throwaway /app/.venv.
+ENV UV_PROJECT_ENVIRONMENT=/app/data/.venv
+
+# UV_LINK_MODE=copy silences uv's hardlink-fallback warning: the uv cache lives on
+# the container overlay fs while the target venv is on the PVC (/app/data/.venv),
+# so they're on different filesystems and hardlinking can't work anyway.
+ENV UV_LINK_MODE=copy
+
+# UV_NO_SYNC=1 makes interactive `uv run ...` skip the implicit sync. Without it,
+# every `uv run` reconciles the venv to uv.lock and PRUNES torch/sam3 (installed
+# out-of-band by setup_sam3.py, so absent from the lock) — forcing a torch
+# re-download. With it, out-of-band packages on the PVC survive across runs.
+RUN printf 'export UV_PROJECT_ENVIRONMENT=/app/data/.venv\nexport UV_PYTHON=3.12\nexport UV_NO_SYNC=1\nexport UV_LINK_MODE=copy\n' \
+    > /etc/profile.d/uv-env.sh
+
+# Pipeline environment selector. The ssh image IS the "dev" image: steps load
+# config/<step>/step.dev.yaml. Set via profile.d (not k8s env / Docker ENV)
+# because neither reaches SSH login shells.
+RUN echo 'export ENV=dev' > /etc/profile.d/pipeline-env.sh
+
+COPY deployment/entrypoint.ssh-cuda.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+CMD ["/entrypoint.sh"]

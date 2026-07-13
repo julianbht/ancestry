@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-pierre-marie-lab.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-pierre-marie-lab.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    563,
+    960,
+    1616,
+    2282
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.92578125,
+    "box_xyxy": [
+      422.8308410644531,
+      857.5040893554688,
+      2316.55078125,
+      3346.995849609375
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        562.1409301757812,
+        3348.69482421875
+      ],
+      [
+        418.13238525390625,
+        959.6320190429688
+      ],
+      [
+        2179.402099609375,
+        853.4658203125
+      ],
+      [
+        2323.41064453125,
+        3242.528564453125
+      ]
+    ]
+  },
+  "sha256": "347ae348443e6b8cb3f5cb03857d02893667fee1a42d55c9948f23a07766d82c"
+}

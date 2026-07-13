@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/irene-joliot-curie-c1935.jpg",
+  "source_sha256": "9d2a9d40df22ce77d524fc009a6c1c7efb53e5ecaebb33b05998d07970c18136",
+  "image_size": [
+    1497,
+    2066
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        318.3013000488281,
+        532.5089111328125,
+        1060.0506591796875,
+        1512.9481201171875
+      ],
+      "score": 0.953125,
+      "box_xyxy_source": [
+        664.3013000488281,
+        1559.5089111328125,
+        1406.0506591796875,
+        2539.9481201171875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-c1935/face_00.jpg",
+      "sha256": "520f98d0ffd4297b42ca123a728dbe54b7a03ffadc258fa9602cb0609804a615"
+    }
+  ]
+}

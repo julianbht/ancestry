@@ -1,0 +1,50 @@
+# Python
+.venv
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Pipeline data & secrets — the real private tree only (raw photos, curated
+# inputs, derived artifacts). Anchored to the repo root so the committed
+# quickstart/data/ dummy tree is NOT ignored.
+/data/
+.env
+
+# Quickstart is a full worked example: commit the dummy inputs AND the pipeline
+# outputs (steps, state, sidecars, embeddings, label_studio) so a fresh clone can
+# see what the pipeline produces. Ignore only the throwaway run artifacts (logs,
+# debug scratch, the web cache) and the source originals — those are already
+# composed into data/raw/, so committing them too would just duplicate.
+quickstart/data/logs/
+quickstart/data/debug/
+quickstart/data/web_cache/
+quickstart/originals/
+
+# Regenerable artifacts
+quickstart/data/gramps/database/data.augmented.gramps
+quickstart/data/gramps/database/data.gramps
+
+# Files copied from pod to local pc
+podcopy/
+
+# W&B local run cache (synced to cloud — no need to commit)
+wandb/
+deployment/tutorial
+deployment/k8s/secrets.yml
+
+# Microsoft Office Temporary and Lock Files
+~$*
+.~c9_*
+*.tmp
+
+# Specific Office backup extensions
+*.bak
+*.xlk
+
+# Other
+private

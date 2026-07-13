@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/pierre-curie.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/pierre-curie.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    998,
+    494,
+    1665,
+    2409
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.91015625,
+    "box_xyxy": [
+      820.2553100585938,
+      370.2104187011719,
+      2836.9912109375,
+      3029.941650390625
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        2663.10498046875,
+        3032.5634765625
+      ],
+      [
+        820.201416015625,
+        2903.892578125
+      ],
+      [
+        997.451171875,
+        365.21630859375
+      ],
+      [
+        2840.354736328125,
+        493.88720703125
+      ]
+    ]
+  },
+  "sha256": "6d3a252797ade58df3669f6a32e4a584704d86fb4987c2c2fb577917a4c2806e"
+}

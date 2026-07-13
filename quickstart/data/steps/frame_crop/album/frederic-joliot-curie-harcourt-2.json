@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/frederic-joliot-curie-harcourt-2.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/frederic-joliot-curie-harcourt-2.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    543,
+    1338,
+    1788,
+    2383
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.89453125,
+    "box_xyxy": [
+      530.2744750976562,
+      1331.752685546875,
+      2345.7041015625,
+      3735.119140625
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        542.5816040039062,
+        3734.657470703125
+      ],
+      [
+        525.7188110351562,
+        1337.901611328125
+      ],
+      [
+        2331.030517578125,
+        1325.199951171875
+      ],
+      [
+        2347.893310546875,
+        3721.955810546875
+      ]
+    ]
+  },
+  "sha256": "85aa9d8e09ea672248de15c1a5a3f60aa35f08d39f99f16530c468a172f9b178"
+}

@@ -1,0 +1,7 @@
+<View>
+  <Header value="Draw a 4-point polygon around the photo border."/>
+  <PolygonLabels name="photo" toName="image" strokeWidth="2">
+    <Label value="photo"/>
+  </PolygonLabels>
+  <Image name="image" value="$image" zoom="true" rotateControl="true"/>
+</View>

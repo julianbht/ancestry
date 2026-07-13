@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/marie-curie-1/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/marie-curie-1/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-curie-1/face_00.jpg",
+      "person_id": "I0001",
+      "distance": 0.7955359816551208,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.7955359816551208
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.1773607730865479
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.202507495880127
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.317101240158081
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3732918500900269
+        }
+      ],
+      "age": 49,
+      "gender": "M",
+      "det_score": 0.8058041930198669,
+      "crop_sha256": "74ff7e5c659ce0fdaa03a1f86f5780a4e24f99e70a0255a757f5ed2b1236e167"
+    }
+  ]
+}

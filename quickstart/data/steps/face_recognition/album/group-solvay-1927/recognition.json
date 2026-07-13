@@ -1,0 +1,968 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-solvay-1927/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-solvay-1927/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_00.jpg",
+      "person_id": null,
+      "distance": 1.2860050201416016,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 1.2860050201416016
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3178280591964722
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3281880617141724
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3707246780395508
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.4301365613937378
+        }
+      ],
+      "age": 75,
+      "gender": "M",
+      "det_score": 0.7174469828605652,
+      "crop_sha256": "e9ccb0e490e27cb868da710b5d678881dd05f070cbdcee95136d85e6307b1933"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_01.jpg",
+      "person_id": null,
+      "distance": 1.2275309562683105,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.2275309562683105
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3087843656539917
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3283936977386475
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3353698253631592
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3373042345046997
+        }
+      ],
+      "age": 61,
+      "gender": "M",
+      "det_score": 0.7837432622909546,
+      "crop_sha256": "faf338a1a2ed194b57b94cfd435bafcfb4b2ca1ee66f4118236cf3c91f8a3297"
+    },
+    {
+      "face_index": 2,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_02.jpg",
+      "person_id": null,
+      "distance": 1.3599413633346558,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 1.3599413633346558
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3749364614486694
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.39906907081604
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3996325731277466
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4159220457077026
+        }
+      ],
+      "age": 70,
+      "gender": "M",
+      "det_score": 0.7414102554321289,
+      "crop_sha256": "1fb20540ea13b63318b73e333a2611719b5931b7280ef161ba590261018261e2"
+    },
+    {
+      "face_index": 3,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_03.jpg",
+      "person_id": null,
+      "distance": 1.2564365863800049,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0010",
+          "distance": 1.2564365863800049
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3002663850784302
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.314906358718872
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3546761274337769
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3561205863952637
+        }
+      ],
+      "age": 83,
+      "gender": "M",
+      "det_score": 0.8049300909042358,
+      "crop_sha256": "ca7025a2953d8db8422849dc24d4f5e8b8906e1965a236978670fe96b2c81e43"
+    },
+    {
+      "face_index": 4,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_04.jpg",
+      "person_id": null,
+      "distance": 1.3368335962295532,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 1.3368335962295532
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3592748641967773
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.36830472946167
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.386834740638733
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3925557136535645
+        }
+      ],
+      "age": 68,
+      "gender": "M",
+      "det_score": 0.7332185506820679,
+      "crop_sha256": "5c0cb4571b24a0d314417cf557a93e77f43189e719a6709614fff3f8caef7898"
+    },
+    {
+      "face_index": 5,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_05.jpg",
+      "person_id": null,
+      "distance": 1.2438127994537354,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.2438127994537354
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3294086456298828
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3395073413848877
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3765424489974976
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.382899284362793
+        }
+      ],
+      "age": 68,
+      "gender": "M",
+      "det_score": 0.8002113699913025,
+      "crop_sha256": "73d0032f21be0e112c6a1611c7024492eb6055bad9a162d1fb8a0b4d5d030899"
+    },
+    {
+      "face_index": 6,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_06.jpg",
+      "person_id": null,
+      "distance": 1.3427011966705322,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.3427011966705322
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3804911375045776
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3810266256332397
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.4155715703964233
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.417600393295288
+        }
+      ],
+      "age": 79,
+      "gender": "M",
+      "det_score": 0.8048956394195557,
+      "crop_sha256": "b235a68bab9b86e25f4320a60f3e25eb18123ff69157b475f308066ddf663c27"
+    },
+    {
+      "face_index": 7,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_07.jpg",
+      "person_id": null,
+      "distance": 1.3086903095245361,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.3086903095245361
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3271666765213013
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3350476026535034
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3543577194213867
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3722280263900757
+        }
+      ],
+      "age": 61,
+      "gender": "M",
+      "det_score": 0.7469241619110107,
+      "crop_sha256": "c644a74c57299492900e95373ab18767f7115a2549dc7ab396b0d3ad778f67bc"
+    },
+    {
+      "face_index": 8,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_08.jpg",
+      "person_id": null,
+      "distance": 1.2991759777069092,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.2991759777069092
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3779945373535156
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.378378987312317
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3873286247253418
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4117693901062012
+        }
+      ],
+      "age": 53,
+      "gender": "M",
+      "det_score": 0.7497467994689941,
+      "crop_sha256": "f9b7d3226bce392a16a6fb006157bec7d59b57f335eedc95805bb8d027752dcf"
+    },
+    {
+      "face_index": 9,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_09.jpg",
+      "person_id": null,
+      "distance": 1.2925288677215576,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.2925288677215576
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3364808559417725
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3590195178985596
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.383528709411621
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3924555778503418
+        }
+      ],
+      "age": 64,
+      "gender": "M",
+      "det_score": 0.7978754639625549,
+      "crop_sha256": "1fa98ba23e9d1646263a32a44b91607ed728178d7c2878ab8b262d0da8414e3e"
+    },
+    {
+      "face_index": 10,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_10.jpg",
+      "person_id": null,
+      "distance": 1.3407968282699585,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.3407968282699585
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3687329292297363
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3704050779342651
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.402032494544983
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4151930809020996
+        }
+      ],
+      "age": 70,
+      "gender": "M",
+      "det_score": 0.821922779083252,
+      "crop_sha256": "9b85f53d039f1c14b9672c9c8f533f724df5811aef0797cdfa305ecf81ec75ef"
+    },
+    {
+      "face_index": 11,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_11.jpg",
+      "person_id": null,
+      "distance": 1.301969051361084,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.301969051361084
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3086520433425903
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3318407535552979
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.342009425163269
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.368329644203186
+        }
+      ],
+      "age": 64,
+      "gender": "M",
+      "det_score": 0.742130696773529,
+      "crop_sha256": "834cff33b67aa1ff190e398bc54a08ac550174581a5810fc1e2394b70680c42e"
+    },
+    {
+      "face_index": 12,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_12.jpg",
+      "person_id": null,
+      "distance": 1.2794103622436523,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.2794103622436523
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.355699062347412
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.376268982887268
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3859604597091675
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.4189726114273071
+        }
+      ],
+      "age": 61,
+      "gender": "M",
+      "det_score": 0.7816302180290222,
+      "crop_sha256": "6d380303068ef9d85a75991770a26e1b3ae957f2a6b4f432fd4e43adbf555e60"
+    },
+    {
+      "face_index": 13,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_13.jpg",
+      "person_id": null,
+      "distance": 1.3309619426727295,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.3309619426727295
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3775548934936523
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.4165209531784058
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4212632179260254
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.4301894903182983
+        }
+      ],
+      "age": 75,
+      "gender": "M",
+      "det_score": 0.759437620639801,
+      "crop_sha256": "60a010b3ca01f73db8849d7c68db4481259e87022027e89c647f84ba3b523699"
+    },
+    {
+      "face_index": 14,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_14.jpg",
+      "person_id": null,
+      "distance": 1.332013726234436,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.332013726234436
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3658132553100586
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.370298981666565
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4038621187210083
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4135857820510864
+        }
+      ],
+      "age": 71,
+      "gender": "M",
+      "det_score": 0.7604251503944397,
+      "crop_sha256": "d6efa90e07e72b6414c0770413c5b91a33bad29eb3762f4f1f536f345f9009c5"
+    },
+    {
+      "face_index": 15,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_15.jpg",
+      "person_id": null,
+      "distance": 1.3401210308074951,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.3401210308074951
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3566834926605225
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3594069480895996
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3636525869369507
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3668118715286255
+        }
+      ],
+      "age": 62,
+      "gender": "M",
+      "det_score": 0.7469244003295898,
+      "crop_sha256": "bb84cdd081c036531ca696c19854e79e8c68152c5a04a46c50d87e7dca7c0f60"
+    },
+    {
+      "face_index": 16,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_16.jpg",
+      "person_id": null,
+      "distance": 1.315112829208374,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.315112829208374
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3251428604125977
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.331325650215149
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.356794834136963
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3698421716690063
+        }
+      ],
+      "age": 62,
+      "gender": "M",
+      "det_score": 0.770411491394043,
+      "crop_sha256": "0e548d933a49f13594a550c5d4fab6de7cd37fe41d1eb4a9f49508a3b8f7c0ca"
+    },
+    {
+      "face_index": 17,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_17.jpg",
+      "person_id": null,
+      "distance": 1.35043203830719,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 1.35043203830719
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3712066411972046
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3738008737564087
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3835415840148926
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4040426015853882
+        }
+      ],
+      "age": 73,
+      "gender": "M",
+      "det_score": 0.7764992117881775,
+      "crop_sha256": "9e131d4635883d38d8a3a5e9311c671fd2eae9c8f4a8613c807012c132fff543"
+    },
+    {
+      "face_index": 18,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_18.jpg",
+      "person_id": null,
+      "distance": 1.318503975868225,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.318503975868225
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3404227495193481
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.401036024093628
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4290794134140015
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.4392590522766113
+        }
+      ],
+      "age": 74,
+      "gender": "M",
+      "det_score": 0.6792829036712646,
+      "crop_sha256": "5861cf43d30ffb9d89fa0df5509a8f2a17fbe1b4148b3fdf2e1c89e690e67114"
+    },
+    {
+      "face_index": 19,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_19.jpg",
+      "person_id": null,
+      "distance": 1.296709656715393,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 1.296709656715393
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3743300437927246
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3860303163528442
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.386265516281128
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3942424058914185
+        }
+      ],
+      "age": 64,
+      "gender": "M",
+      "det_score": 0.7532030940055847,
+      "crop_sha256": "b2bcd8c29f1ce592adac88d87d84916efaa0f4e841d3a9322189688ebee5dcc6"
+    },
+    {
+      "face_index": 20,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_20.jpg",
+      "person_id": null,
+      "distance": 1.2971984148025513,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.2971984148025513
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.304950475692749
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3605557680130005
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3830342292785645
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4013879299163818
+        }
+      ],
+      "age": 74,
+      "gender": "M",
+      "det_score": 0.7342185974121094,
+      "crop_sha256": "c8e012af440520b903667c4fa8098c63a307893d060f309c38860beadfcb88dc"
+    },
+    {
+      "face_index": 21,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_21.jpg",
+      "person_id": null,
+      "distance": 1.3165676593780518,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0004",
+          "distance": 1.3165676593780518
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3222217559814453
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.342905879020691
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3460544347763062
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3550134897232056
+        }
+      ],
+      "age": 64,
+      "gender": "M",
+      "det_score": 0.7255175113677979,
+      "crop_sha256": "baad145614a0e9fc35113f5134bddcfca4d290e2de2bddae078a4b35dd0faa8a"
+    },
+    {
+      "face_index": 22,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_22.jpg",
+      "person_id": "I0001",
+      "distance": 0.7518141269683838,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.7518141269683838
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2018519639968872
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.2183935642242432
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3391958475112915
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.4137718677520752
+        }
+      ],
+      "age": 82,
+      "gender": "M",
+      "det_score": 0.7599776983261108,
+      "crop_sha256": "b2aff59f3eaca6f9b85b8fe2fba785a764ef49de760e34267370f9ec086884da"
+    },
+    {
+      "face_index": 23,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_23.jpg",
+      "person_id": null,
+      "distance": 1.3333481550216675,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.3333481550216675
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3745837211608887
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3787907361984253
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3855525255203247
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.4242889881134033
+        }
+      ],
+      "age": 63,
+      "gender": "M",
+      "det_score": 0.7338394522666931,
+      "crop_sha256": "216fba0150c4b6b9db4b5ffa17c865867a7ca9d967ec833c339609f0e806c038"
+    },
+    {
+      "face_index": 24,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_24.jpg",
+      "person_id": null,
+      "distance": 1.318359613418579,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 1.318359613418579
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3331856727600098
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3396636247634888
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3583585023880005
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3688595294952393
+        }
+      ],
+      "age": 69,
+      "gender": "M",
+      "det_score": 0.6751881241798401,
+      "crop_sha256": "858099aa4e8e1d55f36f7a67a8fdfbeb1ee83c9bdd2f27fe2512b260065bb66a"
+    },
+    {
+      "face_index": 25,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_25.jpg",
+      "person_id": null,
+      "distance": 1.2817566394805908,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.2817566394805908
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3049119710922241
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3503497838974
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3617033958435059
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3951630592346191
+        }
+      ],
+      "age": 72,
+      "gender": "M",
+      "det_score": 0.6640859842300415,
+      "crop_sha256": "4c6d635623c0bb5b4acd80750f103b7dbc18c4b9539acf7d74da9029d17ffc47"
+    },
+    {
+      "face_index": 26,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_26.jpg",
+      "person_id": null,
+      "distance": 1.313097357749939,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.313097357749939
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3201038837432861
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3360178470611572
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3554061651229858
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3599590063095093
+        }
+      ],
+      "age": 83,
+      "gender": "M",
+      "det_score": 0.7018551230430603,
+      "crop_sha256": "fdda87c38bb464145a907d7fbf9cff077ad936bd0fe4284fd729b08a15046119"
+    },
+    {
+      "face_index": 27,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_27.jpg",
+      "person_id": null,
+      "distance": 1.2360687255859375,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.2360687255859375
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3545629978179932
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3632607460021973
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3664149045944214
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3690159320831299
+        }
+      ],
+      "age": 81,
+      "gender": "M",
+      "det_score": 0.7841806411743164,
+      "crop_sha256": "8b497cf280f113cdc705f400319ac9df46dfaf3edf6184201409106c65e8daff"
+    },
+    {
+      "face_index": 28,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-solvay-1927/face_28.jpg",
+      "person_id": null,
+      "distance": 1.320131778717041,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0009",
+          "distance": 1.320131778717041
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3691482543945312
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3696980476379395
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3886563777923584
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4109801054000854
+        }
+      ],
+      "age": 80,
+      "gender": "M",
+      "det_score": 0.7004506587982178,
+      "crop_sha256": "4816adc654f89b3bcd424270f7aee5f6e8d32b0dd2d5d733c46303f3f2f6f3f3"
+    }
+  ]
+}

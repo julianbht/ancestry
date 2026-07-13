@@ -1,0 +1,31 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dsw-ancestry-pipeline-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: dsw-ancestry-pipeline
+        command: ["sh", "-c"]
+        args:
+          - |
+            uv sync --frozen --no-dev --group experiments --inexact --reinstall-package ancestry &&
+            uv run ancestry-face-recognition-hpopt --method insightface --n-trials 250 --wandb-project ancestry-face-recognition-hpopt-insightface
+        resources:
+          requests:
+            cpu: "1"
+            memory: 8Gi
+            nvidia.com/gpu: 1
+          limits:
+            cpu: "4"
+            memory: 16Gi
+            nvidia.com/gpu: 1
+        env:
+        - name: WANDB_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: WANDB_API_KEY
+      nodeSelector:
+        gpu: v100

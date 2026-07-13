@@ -1,0 +1,84 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/group-sklodowski-family.jpg",
+  "source_sha256": "6f20ebd1dc2a490347b312be1d35b025f182b39d1c97513e4497106664057a2f",
+  "image_size": [
+    1529,
+    1910
+  ],
+  "prompt": "human face",
+  "face_count": 4,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        922.8836669921875,
+        272.4199523925781,
+        1086.5185546875,
+        461.12164306640625
+      ],
+      "score": 0.93359375,
+      "box_xyxy_source": [
+        4594.8836669921875,
+        900.4199523925781,
+        4758.5185546875,
+        1089.1216430664062
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_00.jpg",
+      "sha256": "3b0fbd41bd0cb826a20aedb2a7a8f2b6100f5ac28456663f049ae8bdf0d188f3"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        165.22238159179688,
+        327.0008544921875,
+        330.6966552734375,
+        514.0890502929688
+      ],
+      "score": 0.921875,
+      "box_xyxy_source": [
+        3837.222381591797,
+        955.0008544921875,
+        4002.6966552734375,
+        1142.0890502929688
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_01.jpg",
+      "sha256": "6cbba31bb3527d8e4f5ec226cf602cc8f047ee7223b3a569164636ff209e1481"
+    },
+    {
+      "index": 2,
+      "box_xyxy": [
+        1235.185791015625,
+        270.5218811035156,
+        1380.89208984375,
+        431.5941162109375
+      ],
+      "score": 0.89453125,
+      "box_xyxy_source": [
+        4907.185791015625,
+        898.5218811035156,
+        5052.89208984375,
+        1059.5941162109375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_02.jpg",
+      "sha256": "7999e7828212e7eeb7f044ceb0f0454b53d3f50abf5742b9fd2b69d4bfbbed2f"
+    },
+    {
+      "index": 3,
+      "box_xyxy": [
+        382.4071044921875,
+        619.7984008789062,
+        562.5757446289062,
+        850.372314453125
+      ],
+      "score": 0.89453125,
+      "box_xyxy_source": [
+        4054.4071044921875,
+        1247.7984008789062,
+        4234.575744628906,
+        1478.372314453125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/group-sklodowski-family/face_03.jpg",
+      "sha256": "b1a0b53dc6bb37f47236606bdefc1dd8a32203cd0dd47182bee9d878d2ca036a"
+    }
+  ]
+}

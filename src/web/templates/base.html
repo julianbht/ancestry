@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ _("brand") }}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/?{{ nav_qs }}">
+      <span class="brand-mark">❦</span> {{ _("brand") }}
+    </a>
+    <form class="viewer-picker" method="get" action="/">
+      <label for="you">{{ _("viewer.prompt") }}</label>
+      <select id="you" name="you" onchange="this.form.submit()">
+        {% for option in viewer_options %}
+          <option value="{{ option.id }}" {% if option.id == viewer_id %}selected{% endif %}>
+            {{ option.name }}
+          </option>
+        {% endfor %}
+      </select>
+      <input type="hidden" name="lang" value="{{ locale }}">
+    </form>
+  </header>
+
+  <main class="container">
+    {% if family_tree_enabled and active_view %}
+      <nav class="view-switch">
+        <a href="/?{{ nav_qs }}"
+           class="view-tab {{ 'active' if active_view == 'roster' else '' }}">{{ _("nav.overview") }}</a>
+        <a href="/tree?{{ nav_qs }}"
+           class="view-tab {{ 'active' if active_view == 'tree' else '' }}">{{ _("nav.tree") }}</a>
+      </nav>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <nav class="lang-switch" aria-label="{{ _('lang.aria') }}">
+    {% for l in lang_switch %}
+      {% if l.active %}
+        <span class="lang-option active" aria-current="true">{{ l.label }}</span>
+      {% else %}
+        <a class="lang-option" href="{{ l.url }}">{{ l.label }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</body>
+</html>

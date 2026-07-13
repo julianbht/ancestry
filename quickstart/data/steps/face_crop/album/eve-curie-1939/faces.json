@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/eve-curie-1939.jpg",
+  "source_sha256": "cf821e5cd7e394a554391fdda913d2387a1881d01a68e87da89370aa01a2e760",
+  "image_size": [
+    1413,
+    2120
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        255.48980712890625,
+        440.8273010253906,
+        1004.7044067382812,
+        1454.9813232421875
+      ],
+      "score": 0.953125,
+      "box_xyxy_source": [
+        5281.489807128906,
+        1899.8273010253906,
+        6030.704406738281,
+        2913.9813232421875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/eve-curie-1939/face_00.jpg",
+      "sha256": "a159d931226aa18abd592b703112a1bb82d7f777c3c6b3a77975209f71b5fe12"
+    }
+  ]
+}

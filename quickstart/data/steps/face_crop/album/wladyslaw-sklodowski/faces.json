@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/wladyslaw-sklodowski.jpg",
+  "source_sha256": "3d128778885bb70cb746eb5808dd105da95b3f6c855f91b2c99c39831caeef58",
+  "image_size": [
+    2137,
+    2521
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        798.2509765625,
+        360.3381042480469,
+        1413.4605712890625,
+        1198.3846435546875
+      ],
+      "score": 0.8125,
+      "box_xyxy_source": [
+        4449.2509765625,
+        1799.3381042480469,
+        5064.4605712890625,
+        2637.3846435546875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/wladyslaw-sklodowski/face_00.jpg",
+      "sha256": "b6609d0d06e4b9207c25d96be43cb540873402a25801f9754cded8271b63f637"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Model pack to download and use. "buffalo_l" is the standard high-accuracy
+# choice; "antelopev2" is heavier but potentially more accurate.
+# antelopev2 chosen per hpopt best trial (Run 2, trial #634, fbeta=0.8582, see
+# src/pipeline/experiments/face_recognition/results/README.md).
+model_pack: "antelopev2"
+# Input resolution fed to InsightFace's internal detector (width, height).
+# 480 chosen per the same hpopt best trial.
+det_size: [480, 480]
+# Padding around each face crop before detection (fraction of max side).
+# Needed because InsightFace's detector expects context around the face;
+# tight crops often produce no detection without it.
+pad_ratio: 0.4
+# Detector confidence floor for FaceAnalysis.prepare() (InsightFace default 0.5).
+# hpopt best trial used 0.1, but the objective is essentially flat across
+# ~0.1-0.4: the inputs are already tight face crops that antelopev2 detects at
+# any threshold, so this knob barely moves fbeta (see results/README.md Run 2
+# robustness note).
+det_thresh: 0.1

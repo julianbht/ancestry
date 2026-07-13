@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/frederic-joliot-curie.jpg",
+  "source_sha256": "2d7879b0255d252a0adaa0f9de8f924b697f1f0094c3e98de1608835897e0b20",
+  "image_size": [
+    1525,
+    2102
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        351.9973449707031,
+        360.0309753417969,
+        982.4122924804688,
+        1270.916748046875
+      ],
+      "score": 0.91796875,
+      "box_xyxy_source": [
+        1864.9973449707031,
+        2308.030975341797,
+        2495.4122924804688,
+        3218.916748046875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/frederic-joliot-curie/face_00.jpg",
+      "sha256": "54d70814993eda6d085f458f8164f75d7b3bdbe22ce072baedf6f733ace85e3c"
+    }
+  ]
+}

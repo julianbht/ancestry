@@ -1,0 +1,110 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/irene-joliot-curie-1/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_00.jpg",
+      "person_id": "I0002",
+      "distance": 0.7144104242324829,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 0.7144104242324829
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2353318929672241
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.2797781229019165
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3006073236465454
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3340718746185303
+        }
+      ],
+      "age": 31,
+      "gender": "F",
+      "det_score": 0.7261196374893188,
+      "crop_sha256": "914a2431104dbff5e18f8754569fc6735a3e6b3551d971638e174b2ec4000bb9"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_01.jpg",
+      "person_id": null,
+      "distance": 1.2940735816955566,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 1.2940735816955566
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3011492490768433
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3597917556762695
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.383418321609497
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.4020562171936035
+        }
+      ],
+      "age": 37,
+      "gender": "F",
+      "det_score": 0.5940386056900024,
+      "crop_sha256": "6157e48f6994782fc345543e3162fdce77332e1095ff6848e634f9f8009a8544"
+    },
+    {
+      "face_index": 2,
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_02.jpg",
+      "person_id": null,
+      "distance": 1.338138461112976,
+      "status": "unknown",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 1.338138461112976
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.373142957687378
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.3940880298614502
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3942813873291016
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.4078718423843384
+        }
+      ],
+      "age": 34,
+      "gender": "F",
+      "det_score": 0.17357903718948364,
+      "crop_sha256": "0cc60df09cb175778d7646f2d14bd125f447172028cb4d04a1ca59cbd991cae7"
+    }
+  ]
+}

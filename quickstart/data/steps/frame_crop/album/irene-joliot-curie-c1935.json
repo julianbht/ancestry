@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/irene-joliot-curie-c1935.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/irene-joliot-curie-c1935.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    346,
+    1027,
+    1497,
+    2066
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.93359375,
+    "box_xyxy": [
+      287.04559326171875,
+      985.5833740234375,
+      1899.248046875,
+      3135.5869140625
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        1843.63623046875,
+        3136.0830078125
+      ],
+      [
+        288.2604675292969,
+        3093.57470703125
+      ],
+      [
+        345.906005859375,
+        984.33544921875
+      ],
+      [
+        1901.28173828125,
+        1026.84375
+      ]
+    ]
+  },
+  "sha256": "9d2a9d40df22ce77d524fc009a6c1c7efb53e5ecaebb33b05998d07970c18136"
+}

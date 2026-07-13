@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/eve-curie-1937.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/eve-curie-1937.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    3914,
+    1470,
+    2069,
+    2663
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.9140625,
+    "box_xyxy": [
+      3814.09423828125,
+      1392.33642578125,
+      6085.720703125,
+      4216.9892578125
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        3913.316650390625,
+        4214.962890625
+      ],
+      [
+        3810.909423828125,
+        1469.7855224609375
+      ],
+      [
+        5983.306640625,
+        1388.74560546875
+      ],
+      [
+        6085.7138671875,
+        4133.9228515625
+      ]
+    ]
+  },
+  "sha256": "6097706d13c8173489f3bf168614733a57f60f10830e093a9bf356c866aea992"
+}

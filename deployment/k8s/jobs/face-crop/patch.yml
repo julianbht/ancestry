@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dsw-ancestry-pipeline-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: dsw-ancestry-pipeline
+        command: ["sh", "-c"]
+        args:
+          - |
+            uv sync --frozen --no-dev --inexact --reinstall-package ancestry &&
+            uv run python scripts/setup_sam3.py &&
+            uv run ancestry-face-crop
+        resources:
+          requests:
+            cpu: "1"
+            memory: 8Gi
+            nvidia.com/gpu: 1
+          limits:
+            cpu: "4"
+            memory: 16Gi
+            nvidia.com/gpu: 1
+      nodeSelector:
+        gpu: v100

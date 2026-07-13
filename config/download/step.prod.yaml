@@ -1,0 +1,14 @@
+# Download (ingest) step configuration
+
+# Where raw photos come from:
+#   nextcloud — legacy WebDAV shares (fetched as encrypted zips, extracted in place)
+#   r2        — pull raw photos from Cloudflare R2 (the canonical store)
+#   local     — already present in data/raw (dummy data or drop-locally workflow)
+source: local
+
+# Maximum number of files to fetch in a single run. null = no limit.
+# Useful for smoke testing.
+max_files_to_download: null
+
+# Re-fetch files already fetched (ignore recorded state / existing local files).
+ignore_state: false

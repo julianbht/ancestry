@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-pierre-marie-1895.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-pierre-marie-1895.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    429,
+    1459,
+    1633,
+    2174
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.921875,
+    "box_xyxy": [
+      348.5511474609375,
+      1397.4896240234375,
+      2142.9716796875,
+      3699.583740234375
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        2062.6552734375,
+        3695.208251953125
+      ],
+      [
+        348.642333984375,
+        3633.666748046875
+      ],
+      [
+        428.957275390625,
+        1396.787353515625
+      ],
+      [
+        2142.97021484375,
+        1458.328857421875
+      ]
+    ]
+  },
+  "sha256": "21138d704a917d153684deb1e70d3a079500c13f4640a87f986793e4c21fbea8"
+}

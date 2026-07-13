@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/group-marie-pierre-irene.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/group-marie-pierre-irene.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    3859,
+    1471,
+    2650,
+    2057
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.90625,
+    "box_xyxy": [
+      3738.809814453125,
+      1319.434814453125,
+      6635.9931640625,
+      3687.113525390625
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        6509.2177734375,
+        3683.57080078125
+      ],
+      [
+        3735.294921875,
+        3528.67578125
+      ],
+      [
+        3858.8779296875,
+        1315.50537109375
+      ],
+      [
+        6632.80078125,
+        1470.400390625
+      ]
+    ]
+  },
+  "sha256": "adc788371ba4945b93ee1161ae5347099a2b3af497e4abfc3455bfb59e71359b"
+}

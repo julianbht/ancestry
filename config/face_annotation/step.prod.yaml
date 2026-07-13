@@ -1,0 +1,18 @@
+# Label Studio helper configuration for face annotation workflows.
+# Used to build test sets for face recognition, age estimation, and portrait selection.
+
+gramps_source: csv
+# Generated from the family tree (private person list), so it lives under the
+# data root — regenerable Label Studio working file, not public config.
+template_output: data/label_studio/face_annotation/label_studio.xml
+
+build:
+  existing_tasks: null
+  # Images already in this ground truth are skipped when building a new batch.
+  existing_ground_truth: data/curated/face_annotation/ground_truth.json
+  tasks_output: data/label_studio/face_annotation/tasks.json
+
+normalize:
+  # Set to the Label Studio JSON export you want to normalize.
+  export_path: null
+  ground_truth_output: data/curated/face_annotation/ground_truth.json

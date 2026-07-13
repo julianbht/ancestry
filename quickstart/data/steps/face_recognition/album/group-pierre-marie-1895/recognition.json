@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-pierre-marie-1895/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-pierre-marie-1895/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_00.jpg",
+      "person_id": "I0001",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.0741673707962036
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2585670948028564
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2982847690582275
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3032338619232178
+        }
+      ],
+      "age": 51,
+      "gender": "M",
+      "det_score": 0.7464700937271118,
+      "crop_sha256": "7c188613b114987b4400d06d4ab4d2b76fdf73b9475d71ed8a6bf704a6ffd20a"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-1895/face_01.jpg",
+      "person_id": "I0000",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2447330951690674
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3179247379302979
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.330017328262329
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3513518571853638
+        }
+      ],
+      "age": 48,
+      "gender": "M",
+      "det_score": 0.7941206693649292,
+      "crop_sha256": "f2d410363555e6a9ceafb5f5a92b01c2dc325c4450189c74ebc5e6e8bf506e40"
+    }
+  ]
+}

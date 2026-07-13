@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/irene-joliot-curie-1921.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/irene-joliot-curie-1921.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    1795,
+    740,
+    2004,
+    1585
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.9140625,
+    "box_xyxy": [
+      1776.369873046875,
+      706.103515625,
+      3819.74560546875,
+      2362.463623046875
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        1794.8525390625,
+        2359.160400390625
+      ],
+      [
+        1767.927734375,
+        739.1785278320312
+      ],
+      [
+        3799.4775390625,
+        705.413330078125
+      ],
+      [
+        3826.40234375,
+        2325.395263671875
+      ]
+    ]
+  },
+  "sha256": "4aebb75f585bf3f22bdb5f5444ba75378ba0522784e66889dee8e65fd2be97cc"
+}

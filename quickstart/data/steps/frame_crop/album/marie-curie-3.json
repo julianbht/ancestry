@@ -1,0 +1,41 @@
+{
+  "source_image": "quickstart/data/raw/album/marie-curie-3.jpg",
+  "crop_image": "quickstart/data/steps/frame_crop/album/marie-curie-3.jpg",
+  "crop_found": true,
+  "crop_rect_xywh": [
+    558,
+    2165,
+    1459,
+    1914
+  ],
+  "detection": {
+    "info": "sam",
+    "score": 0.91796875,
+    "box_xyxy": [
+      438.111083984375,
+      2065.30908203125,
+      2146.036865234375,
+      4176.90234375
+    ],
+    "prompt": "rectangular photograph",
+    "quad": [
+      [
+        557.2556762695312,
+        4177.748046875
+      ],
+      [
+        432.05279541015625,
+        2164.776123046875
+      ],
+      [
+        2017.627685546875,
+        2066.15625
+      ],
+      [
+        2142.83056640625,
+        4079.128173828125
+      ]
+    ]
+  },
+  "sha256": "fc550b2b0e69aa972b89a3a4d90c424cde569a8b4720203272889ff78b734ae2"
+}

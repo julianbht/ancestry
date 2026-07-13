@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/frederic-joliot-curie-harcourt-2.jpg",
+  "source_sha256": "85aa9d8e09ea672248de15c1a5a3f60aa35f08d39f99f16530c468a172f9b178",
+  "image_size": [
+    1788,
+    2383
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        594.61376953125,
+        348.3771057128906,
+        1180.0572509765625,
+        1180.943359375
+      ],
+      "score": 0.90625,
+      "box_xyxy_source": [
+        1137.61376953125,
+        1686.3771057128906,
+        1723.0572509765625,
+        2518.943359375
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/frederic-joliot-curie-harcourt-2/face_00.jpg",
+      "sha256": "39a5cc08b3e0a80b465bddbba7d305e6b04f78925117a7c4663026310d307f36"
+    }
+  ]
+}

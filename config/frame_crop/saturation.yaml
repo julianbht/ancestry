@@ -1,0 +1,11 @@
+threshold: 60
+save_output: false
+annotate: true
+
+morphology:
+  enabled: false
+  save_output: false
+  save_diff: false
+  annotate: true
+  kernel_size: 5
+  iterations: 3

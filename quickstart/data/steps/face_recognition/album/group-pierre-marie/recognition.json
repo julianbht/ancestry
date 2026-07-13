@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-pierre-marie/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-pierre-marie/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie/face_00.jpg",
+      "person_id": "I0000",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2584819793701172
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.2769904136657715
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3292614221572876
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3442167043685913
+        }
+      ],
+      "age": 58,
+      "gender": "M",
+      "det_score": 0.7526267170906067,
+      "crop_sha256": "70b94b1b2af7f7a686302d6843a4519c05168f48ffd82c4d4e226f0a16b0fa0b"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie/face_01.jpg",
+      "person_id": "I0001",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.140520453453064
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.2115757465362549
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2665483951568604
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3341460227966309
+        }
+      ],
+      "age": 77,
+      "gender": "M",
+      "det_score": 0.7539346814155579,
+      "crop_sha256": "3614e3af682a479f01f75de48865137f4df77a7b8fd2dba95fc98c7cb6f2cb01"
+    }
+  ]
+}

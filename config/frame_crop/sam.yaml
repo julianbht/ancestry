@@ -1,0 +1,6 @@
+prompt: "rectangular photograph"
+score_threshold: 0.68
+device: cuda
+# checkpoint_path defaults to data/models/sam3/sam3.pt (the SAM 3 image model).
+# Do NOT point this at sam3.1_multiplex.pt — that's the 3.1 multiplex *video*
+# checkpoint and loading it into the image builder is wrong.

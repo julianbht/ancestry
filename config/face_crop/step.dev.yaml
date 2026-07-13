@@ -1,0 +1,41 @@
+# --- File selection ---
+# max_files_to_crop: cap frames processed per run (null = unlimited).
+# only_file: restrict the run to a single frame, e.g. "<folder>/<file>.jpg" (null = all).
+# only_ground_truth: process only frames listed in
+#   data/curated/face_annotation/ground_truth.json (used by the validation experiment).
+# ignore_state: reprocess frames even if already marked done.
+# skip_state_write: don't record results in data/state/ — next run redoes the same frames.
+# skip_output_write: don't write face crops or the faces.json sidecar to disk.
+max_files_to_crop: null
+only_file: null
+only_ground_truth: false
+ignore_state: false
+skip_state_write: false
+skip_output_write: false
+
+# Discard detections whose box covers less than this fraction of the frame area
+# (guards against tiny spurious boxes). 0.0 keeps everything.
+min_area_fraction: 0.0
+
+# Pad each face box outward by this fraction of its size on every side before
+# cropping (0.0 = bare box). Crops are clamped to the frame bounds.
+margin_frac: 0.2
+
+# JPEG quality for saved face crops (1–100).
+jpeg_quality: 100
+
+# --- SAM 3 face detector ---
+# prompt: the text the model segments on.
+# score_threshold: minimum detection confidence to keep a face.
+# device: cuda or cpu.
+# checkpoint_path defaults to data/models/sam3/sam3.pt (the SAM 3 image model);
+#   do NOT point it at the 3.1 multiplex *video* checkpoint — see frame_crop/sam.yaml.
+sam:
+  prompt: "human face"
+  score_threshold: 0.5
+  device: cuda
+
+# --- Debug output ---
+# save_overlay: dump an annotated frame (all boxes + scores) to data/debug/face_crop/.
+debug:
+  save_overlay: true

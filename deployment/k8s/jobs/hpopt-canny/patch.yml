@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: dsw-ancestry-pipeline-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: dsw-ancestry-pipeline
+        command: ["sh", "-c"]
+        args:
+          - |
+            uv sync --frozen --no-dev --group experiments --inexact --reinstall-package ancestry &&
+            uv run ancestry-frame-crop-hpopt --method canny --n-trials 150 --wandb-project ancestry-frame-crop-hpopt-canny
+        resources:
+          requests:
+            cpu: "2"
+            memory: 4Gi
+          limits:
+            cpu: "4"
+            memory: 8Gi
+        env:
+        - name: WANDB_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: dsw-ancestry-secrets
+              key: WANDB_API_KEY

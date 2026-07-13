@@ -1,0 +1,30 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/marie-curie-3.jpg",
+  "source_sha256": "fc550b2b0e69aa972b89a3a4d90c424cde569a8b4720203272889ff78b734ae2",
+  "image_size": [
+    1459,
+    1914
+  ],
+  "prompt": "human face",
+  "face_count": 1,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        456.1778564453125,
+        500.1813049316406,
+        1005.4950561523438,
+        1148.8502197265625
+      ],
+      "score": 0.9375,
+      "box_xyxy_source": [
+        1014.1778564453125,
+        2665.1813049316406,
+        1563.4950561523438,
+        3313.8502197265625
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/marie-curie-3/face_00.jpg",
+      "sha256": "80bdfb602dce66f44b4c901878027e62a492a809cba832c6b6d03ee389ecae52"
+    }
+  ]
+}

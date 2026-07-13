@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-pierre-marie-at-work/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_00.jpg",
+      "person_id": "I0000",
+      "distance": 0.9439064264297485,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0000",
+          "distance": 0.9439064264297485
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.2976086139678955
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.3182522058486938
+        },
+        {
+          "person_id": "I0003",
+          "distance": 1.359445571899414
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3962711095809937
+        }
+      ],
+      "age": 74,
+      "gender": "M",
+      "det_score": 0.7831794023513794,
+      "crop_sha256": "0a76aea3c74ebc422bf2e090ebfe48663bf972b48e6e8759011aaef1f795bd1b"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-pierre-marie-at-work/face_01.jpg",
+      "person_id": "I0001",
+      "distance": 0.954796314239502,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0001",
+          "distance": 0.954796314239502
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.1125842332839966
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.2109081745147705
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3199025392532349
+        },
+        {
+          "person_id": "I0009",
+          "distance": 1.3752033710479736
+        }
+      ],
+      "age": 65,
+      "gender": "M",
+      "det_score": 0.7156782746315002,
+      "crop_sha256": "aaa4d706e5319b43c1549df0fbb16af84ad9b0f9f2507bbd64f78da1be52050e"
+    }
+  ]
+}

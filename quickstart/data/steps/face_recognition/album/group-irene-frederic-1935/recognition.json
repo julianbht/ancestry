@@ -1,0 +1,77 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/group-irene-frederic-1935/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/group-irene-frederic-1935/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_00.jpg",
+      "person_id": "I0003",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.2769904136657715
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.3811107873916626
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.386977195739746
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.4074814319610596
+        }
+      ],
+      "age": 53,
+      "gender": "M",
+      "det_score": 0.6965592503547668,
+      "crop_sha256": "13d0d4e4f258395f3970c8fae6ab8cdb81e1d1a5fc271fd0b905c7d5650c5104"
+    },
+    {
+      "face_index": 1,
+      "crop_image": "quickstart/data/steps/face_crop/album/group-irene-frederic-1935/face_01.jpg",
+      "person_id": "I0002",
+      "distance": 0.0,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0002",
+          "distance": 0.0
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.2115757465362549
+        },
+        {
+          "person_id": "I0010",
+          "distance": 1.325110673904419
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3390374183654785
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3696197271347046
+        }
+      ],
+      "age": 33,
+      "gender": "M",
+      "det_score": 0.693192183971405,
+      "crop_sha256": "9a48fc0611b2bc0cd8a87f573cccb7dc39b31a5a924b897472d5821a1af9effa"
+    }
+  ]
+}

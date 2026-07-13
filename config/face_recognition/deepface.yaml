@@ -1,0 +1,6 @@
+# DeepFace embedding model. Good choices: "ArcFace", "Facenet512", "VGG-Face".
+model_name: "VGG-Face"
+# Face detection/alignment backend used inside each crop before embedding.
+# "skip": treat the whole crop as-is (fastest, no landmark alignment).
+# "opencv" / "retinaface" / "mtcnn": re-detect within the crop for alignment.
+detector_backend: "skip"

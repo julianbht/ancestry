@@ -1,0 +1,66 @@
+{
+  "source_image": "quickstart/data/steps/frame_crop/album/irene-joliot-curie-1.jpg",
+  "source_sha256": "e44b6e10420bd70a99a0b939af37b62a5f7dd8fbe134c15f90a13075c9bf7bf1",
+  "image_size": [
+    1564,
+    2219
+  ],
+  "prompt": "human face",
+  "face_count": 3,
+  "faces": [
+    {
+      "index": 0,
+      "box_xyxy": [
+        638.36181640625,
+        903.1832275390625,
+        748.0283203125,
+        1040.2696533203125
+      ],
+      "score": 0.83203125,
+      "box_xyxy_source": [
+        2109.36181640625,
+        2481.1832275390625,
+        2219.0283203125,
+        2618.2696533203125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_00.jpg",
+      "sha256": "914a2431104dbff5e18f8754569fc6735a3e6b3551d971638e174b2ec4000bb9"
+    },
+    {
+      "index": 1,
+      "box_xyxy": [
+        929.2308349609375,
+        819.6950073242188,
+        1050.8162841796875,
+        946.057861328125
+      ],
+      "score": 0.72265625,
+      "box_xyxy_source": [
+        2400.2308349609375,
+        2397.6950073242188,
+        2521.8162841796875,
+        2524.057861328125
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_01.jpg",
+      "sha256": "6157e48f6994782fc345543e3162fdce77332e1095ff6848e634f9f8009a8544"
+    },
+    {
+      "index": 2,
+      "box_xyxy": [
+        780.1636352539062,
+        678.6822509765625,
+        848.2350463867188,
+        747.57421875
+      ],
+      "score": 0.6015625,
+      "box_xyxy_source": [
+        2251.1636352539062,
+        2256.6822509765625,
+        2319.2350463867188,
+        2325.57421875
+      ],
+      "crop_image": "quickstart/data/steps/face_crop/album/irene-joliot-curie-1/face_02.jpg",
+      "sha256": "0cc60df09cb175778d7646f2d14bd125f447172028cb4d04a1ca59cbd991cae7"
+    }
+  ]
+}

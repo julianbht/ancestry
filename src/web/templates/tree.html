@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}{{ _("nav.tree") }} — {{ _("brand") }}{% endblock %}
+
+{% block content %}
+<h1 class="page-title">{{ _("nav.tree") }}</h1>
+<p class="page-intro">{{ _("tree.intro") }}</p>
+
+<div id="tree-canvas" class="tree-canvas"></div>
+
+<script src="/static/vendor/vis-network.min.js"></script>
+<script>
+  (function () {
+    const graph = {{ graph | tojson }};
+
+    // Muted, theme-matching colours; people with a photo page are saturated,
+    // the rest are dimmed so the structure stays readable without competing.
+    function palette(gender, clickable) {
+      const base = {
+        male:    { bg: "#8fb0c9", border: "#4f7493" },
+        female:  { bg: "#cf9bb4", border: "#a3607f" },
+        unknown: { bg: "#cdb89a", border: "#9c6b3f" },
+      }[gender] || { bg: "#cdb89a", border: "#9c6b3f" };
+      if (clickable) {
+        return { color: { background: base.bg, border: base.border }, font: "#2e2a26" };
+      }
+      return { color: { background: "#ece4d4", border: "#cabfa8" }, font: "#8a8170" };
+    }
+
+    const EDGE_CHILD = "#c9b89a";
+    const EDGE_SPOUSE = "#b9a98c";
+
+    const nodes = graph.nodes.map(function (n) {
+      if (n.kind === "union") {
+        // A tiny faint dot: the parent and child lines meet here, so it reads as
+        // a junction rather than a person.
+        return { id: n.id, shape: "dot", size: 2, color: EDGE_CHILD, label: "" };
+      }
+      const pal = palette(n.gender, n.clickable);
+      const node = {
+        id: n.id,
+        label: n.label,
+        level: n.level,
+        url: n.url,
+        color: pal.color,
+        font: { color: pal.font, size: 14, face: "Georgia" },
+        borderWidth: n.clickable ? 3 : 1,
+        shadow: { enabled: true, size: 6, x: 0, y: 2, color: "rgba(60,45,25,0.18)" },
+      };
+      node.size = 30;  // same footprint whether or not a portrait is shown
+      if (n.image) {
+        node.shape = "circularImage";
+        node.image = n.image;
+      } else {
+        node.shape = "dot";
+      }
+      return node;
+    });
+
+    const edges = graph.edges.map(function (e) {
+      if (e.kind === "spouse") {
+        return {
+          from: e.from, to: e.to,
+          dashes: true, color: { color: EDGE_SPOUSE }, smooth: false,
+        };
+      }
+      return {
+        from: e.from, to: e.to,
+        color: { color: EDGE_CHILD }, arrows: { to: { enabled: false } },
+        smooth: { type: "cubicBezier", forceDirection: "vertical", roundness: 0.55 },
+      };
+    });
+
+    const nodeSet = new vis.DataSet(nodes);
+    const data = { nodes: nodeSet, edges: new vis.DataSet(edges) };
+    const options = {
+      layout: {
+        hierarchical: {
+          enabled: true, direction: "UD", sortMethod: "directed",
+          // Spacing is configurable in web/config.py (FAMILY_TREE_SPACING).
+          // Person rows are 2 levels apart (a union junction sits between them),
+          // so levelSeparation is roughly half a generation.
+          levelSeparation: {{ spacing.level_separation }},
+          nodeSpacing: {{ spacing.node_spacing }},
+          treeSpacing: {{ spacing.tree_spacing }},
+          parentCentralization: true, blockShifting: true, edgeMinimization: true,
+        },
+      },
+      physics: false,
+      interaction: { dragNodes: false, dragView: true, zoomView: true, hover: true },
+    };
+
+    const container = document.getElementById("tree-canvas");
+    const network = new vis.Network(container, data, options);
+
+    network.on("click", function (params) {
+      if (!params.nodes.length) return;
+      const node = nodeSet.get(params.nodes[0]);
+      if (node && node.url) window.location.href = node.url;
+    });
+    network.on("hoverNode", function (params) {
+      const node = nodeSet.get(params.node);
+      container.style.cursor = node && node.url ? "pointer" : "default";
+    });
+    network.on("blurNode", function () {
+      container.style.cursor = "default";
+    });
+  })();
+</script>
+{% endblock %}

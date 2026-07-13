@@ -1,0 +1,44 @@
+{
+  "source_sidecar": "quickstart/data/steps/face_crop/album/frederic-joliot-curie/faces.json",
+  "model": "insightface/antelopev2",
+  "detector_backend": "insightface",
+  "distance_metric": "euclidean_l2",
+  "threshold": 1.096825324690873,
+  "gallery_size": 7,
+  "embeddings_file": "quickstart/data/steps/face_recognition/album/frederic-joliot-curie/embeddings.npy",
+  "recognitions": [
+    {
+      "face_index": 0,
+      "crop_image": "quickstart/data/steps/face_crop/album/frederic-joliot-curie/face_00.jpg",
+      "person_id": "I0003",
+      "distance": 0.7002413272857666,
+      "status": "recognized",
+      "candidates": [
+        {
+          "person_id": "I0003",
+          "distance": 0.7002413272857666
+        },
+        {
+          "person_id": "I0000",
+          "distance": 1.3353544473648071
+        },
+        {
+          "person_id": "I0004",
+          "distance": 1.3441206216812134
+        },
+        {
+          "person_id": "I0002",
+          "distance": 1.368138313293457
+        },
+        {
+          "person_id": "I0001",
+          "distance": 1.3796393871307373
+        }
+      ],
+      "age": 67,
+      "gender": "M",
+      "det_score": 0.7517134547233582,
+      "crop_sha256": "54d70814993eda6d085f458f8164f75d7b3bdbe22ce072baedf6f733ace85e3c"
+    }
+  ]
+}

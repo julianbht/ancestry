@@ -1,0 +1,41 @@
+# Detection method to use. Each method has its own config file (e.g. sam.yaml).
+method: sam
+
+# --- File selection ---
+# max_files_to_crop: cap files processed per run (null = unlimited).
+# only_file: restrict the run to a single raw file (null = all files).
+# only_ground_truth: process only files listed in ground_truth.json.
+# ignore_state: reprocess files even if already marked done.
+# skip_state_write: don't record results in data/state/ — next run redoes the same files.
+# skip_output_write: don't write the cropped image or its sidecar JSON to disk.
+max_files_to_crop: null
+only_file: null
+only_ground_truth: false
+ignore_state: false
+skip_state_write: false
+skip_output_write: false
+
+# --- Crop mode ---
+# inner_crop: largest axis-aligned rect fully inside the quad (clips corners, no background)
+# false: outer axis-aligned bounding box
+inner_crop: true
+
+# Extra pixels to include around the detected crop on all sides.
+margin_px: 0
+
+# Accepted range for the detected quad area as a fraction of total image area.
+min_area_fraction: 0.09
+max_area_fraction: 0.95
+
+# JPEG quality for saved crops (1–100).
+jpeg_quality: 100
+
+# --- Debug output ---
+# save_quad / annotate_quad: dump the detected quad overlay to data/debug/.
+# annotation: text overlay style (scale, bold) for the debug images.
+debug:
+  save_quad: true
+  annotate_quad: true
+  annotation:
+    scale: 1.0
+    bold: false
