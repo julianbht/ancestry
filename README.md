@@ -51,6 +51,9 @@ Note that if you want to run this step with SAM, you need a sufficiently large a
 All code for this step can be found in `src/pipeline/frame_crop`.
 
 ## Step: Face Crop
+In this step, the bounding box of every face in the cropped frame is detected and written to a JSON sidecar.
+The boxes are resolved back into the original source-image coordinate space, so they line up with the earlier steps.
+Note that some facial recognition libraries can detect faces on their own, so this step is not always necessary.
 
 <table border="0">
   <tr>
