@@ -23,8 +23,12 @@ Usage
     uv run python scripts/sync_private.py push --limit 5 --dry-run   # smoke test
     uv run python scripts/sync_private.py pull --only curated   # tree + labels, skip raw photos
     uv run python scripts/sync_private.py push --only derived    # snapshot pipeline output
+    uv run python scripts/sync_private.py push --step face_crop  # just one step's derived output
 
 ``--only {raw,curated,derived}`` restricts any command to one category.
+``--step {frame_crop,face_crop,face_recognition}`` narrows further to a single
+step's derived output (its state file + sidecars), e.g. to re-push just
+``face_recognition`` after rerunning it without touching the other steps.
 ``curated`` is the small hand-made data (Gramps tree, ground truth, CSVs);
 ``raw`` is the bulk of original photos; ``derived`` is the pipeline's regenerable
 output (state + sidecars + embeddings). On a fresh pod that already has the
@@ -74,18 +78,25 @@ CURATED = "curated"
 DERIVED = "derived"
 CATEGORIES = (RAW, CURATED, DERIVED)
 
+# Pipeline steps that produce `derived` output (a state file + sidecars each).
+# `--step` narrows a sync to just one of them; only `derived` roots carry a step.
+STEPS = ("frame_crop", "face_crop", "face_recognition")
+
 
 @dataclass(frozen=True)
 class SyncRoot:
     """A private tree or single file mirrored to R2. `local` is made relative to
     DATA_DIR to form its logical R2 key (and AAD). For a directory, `patterns`
     (rglob globs) restricts which files are walked — empty means every file;
-    `category` is one of CATEGORIES, so `--only` can sync a subset."""
+    `category` is one of CATEGORIES, so `--only` can sync a subset. `step` tags a
+    `derived` root with the pipeline step that produced it (one of STEPS), so
+    `--step` can sync a single step's output; it is None for non-step roots."""
 
     local: Path
     is_dir: bool
     category: str
     patterns: tuple[str, ...] = ()
+    step: str | None = None
 
 
 SYNC_ROOTS: list[SyncRoot] = [
@@ -102,26 +113,33 @@ SYNC_ROOTS: list[SyncRoot] = [
     # Derived pipeline output — regenerable, snapshot to skip recomputation.
     # Per-step state files → "state/..." (r2_sync.json itself is never listed
     # here, so the tool never syncs its own bookkeeping).
-    SyncRoot(STATE_DIR / "frame_crop.json", False, DERIVED),
-    SyncRoot(STATE_DIR / "face_crop.json", False, DERIVED),
-    SyncRoot(STATE_DIR / "face_recognition.json", False, DERIVED),
+    SyncRoot(STATE_DIR / "frame_crop.json", False, DERIVED, step="frame_crop"),
+    SyncRoot(STATE_DIR / "face_crop.json", False, DERIVED, step="face_crop"),
+    SyncRoot(STATE_DIR / "face_recognition.json", False, DERIVED, step="face_recognition"),
     # Step sidecars + embeddings → "steps/..." (crop images excluded via patterns).
-    SyncRoot(STEPS_DIR / "frame_crop", True, DERIVED, patterns=("*.json",)),
-    SyncRoot(STEPS_DIR / "face_crop", True, DERIVED, patterns=("faces.json",)),
+    SyncRoot(STEPS_DIR / "frame_crop", True, DERIVED, patterns=("*.json",), step="frame_crop"),
+    SyncRoot(STEPS_DIR / "face_crop", True, DERIVED, patterns=("faces.json",), step="face_crop"),
     SyncRoot(
         STEPS_DIR / "face_recognition",
         True,
         DERIVED,
         patterns=("recognition.json", "embeddings.npy"),
+        step="face_recognition",
     ),
 ]
 
 
-def _selected_roots(only: str | None) -> list[SyncRoot]:
-    """The sync roots for this run: all of them, or just one category (`--only`)."""
-    if only is None:
-        return SYNC_ROOTS
-    return [root for root in SYNC_ROOTS if root.category == only]
+def _selected_roots(only: str | None, step: str | None) -> list[SyncRoot]:
+    """The sync roots for this run, narrowed by the given filters (both optional
+    and composable): `--only` keeps one category, `--step` keeps one step's
+    `derived` output. A `--step` filter implies `derived`, so non-step roots
+    drop out regardless of `--only`."""
+    roots = SYNC_ROOTS
+    if only is not None:
+        roots = [root for root in roots if root.category == only]
+    if step is not None:
+        roots = [root for root in roots if root.step == step]
+    return roots
 
 STATE_FILE = STATE_DIR / "r2_sync.json"
 
@@ -179,7 +197,7 @@ def cmd_push(args: argparse.Namespace) -> None:
     client = r2.make_client(s)
     state = _load_state()
 
-    pairs = _local_pairs(args.limit, _selected_roots(args.only))
+    pairs = _local_pairs(args.limit, _selected_roots(args.only, args.step))
 
     uploaded = skipped = failed = 0
     for root, local in pairs:
@@ -229,7 +247,7 @@ def cmd_pull(args: argparse.Namespace) -> None:
 
     pairs = [
         (root, key)
-        for root in _selected_roots(args.only)
+        for root in _selected_roots(args.only, args.step)
         for key in r2.list_keys(client, s.bucket, _root_prefix(root))
     ]
     if args.limit:
@@ -283,7 +301,7 @@ def cmd_status(args: argparse.Namespace) -> None:
     s = r2.load_settings()
     client = r2.make_client(s)
 
-    roots = _selected_roots(args.only)
+    roots = _selected_roots(args.only, args.step)
     local_keys = {r2.r2_key(local) for _, local in _local_pairs(0, roots)}
     remote_keys: set[str] = set()
     for root in roots:
@@ -306,12 +324,18 @@ def main() -> None:
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    def add_only(p: argparse.ArgumentParser) -> None:
+    def add_filters(p: argparse.ArgumentParser) -> None:
         p.add_argument(
             "--only",
             choices=CATEGORIES,
             default=None,
             help="sync only one category (e.g. 'curated' = tree + labels, skip raw photos)",
+        )
+        p.add_argument(
+            "--step",
+            choices=STEPS,
+            default=None,
+            help="sync only one step's derived output (its state file + sidecars)",
         )
 
     for name, fn, verb in (
@@ -319,7 +343,7 @@ def main() -> None:
         ("pull", cmd_pull, "download"),
     ):
         p = sub.add_parser(name, help=f"{verb} new/changed files")
-        add_only(p)
+        add_filters(p)
         p.add_argument(
             "--limit", type=int, default=0, help="process at most N files (smoke test)"
         )
@@ -342,7 +366,7 @@ def main() -> None:
         p.set_defaults(func=fn)
 
     sp = sub.add_parser("status", help="show local vs remote counts")
-    add_only(sp)
+    add_filters(sp)
     sp.set_defaults(func=cmd_status)
 
     args = parser.parse_args()
