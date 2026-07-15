@@ -26,6 +26,16 @@ Coordinates: each face's bbox_xywh is in the pixel space of its item's
 the region denominators are always the same image — no pipeline geometry to
 replay here.
 
+Orientation: the raw smartphone photos store their pixels sideways with an EXIF
+orientation tag, while the annotations (bbox_xywh / image_size) are in the
+EXIF-corrected *display* space. Gramps renders the raw pixel buffer and does not
+apply the EXIF orientation tag, so pointing media straight at the raw file shows
+it sideways and the region no longer lines up. We therefore write an EXIF-baked
+copy of each referenced image (orientation applied, tag stripped) under
+data/gramps/media/ and point the media <object> at that upright copy, so pixels
+and regions share one coordinate space. (Baking is a no-op for images already in
+steps/rotate/, which the rotate step has already de-EXIF'd.)
+
 Usage:
     uv run python scripts/gramps_face_media.py [--faces portrait|all]
                                                [--replace-media]
@@ -42,10 +52,17 @@ import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+from PIL import Image, ImageOps
+
 from pipeline.shared.paths import CURATED_DIR, DATA_DIR, GRAMPS_DIR, rel
 
 GRAMPS_NS = "http://gramps-project.org/xml/1.7.2/"
 _NS = f"{{{GRAMPS_NS}}}"
+
+# Upright, EXIF-baked copies of referenced images live here; the media <object>
+# src points at these (never at the raw file) so Gramps shows the same
+# orientation the regions were computed in. See module docstring.
+MEDIA_DIR = GRAMPS_DIR / "media"
 
 # Person child tags that, per the Gramps DTD, come *after* <objref>. We insert
 # our objrefs immediately before the first of these, so the result stays in a
@@ -77,6 +94,20 @@ def _handle_for_image(image_rel: str) -> str:
     """
     digest = hashlib.sha1(image_rel.encode("utf-8")).hexdigest()
     return "_" + digest[:28]  # existing Gramps handles are "_" + 28 hex chars
+
+
+def _bake_oriented(source: Path, dest: Path) -> None:
+    """Write an upright, EXIF-free copy of `source` to `dest`.
+
+    Applies the EXIF orientation to the pixels and drops the tag, so a viewer
+    (Gramps) that ignores EXIF orientation still shows the image the right way
+    up — matching the annotation's display-space coordinates. A no-op re-save
+    for images that already carry no orientation tag (e.g. steps/rotate/ output).
+    """
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    with Image.open(source) as img:
+        img = ImageOps.exif_transpose(img)  # bake orientation into pixels
+        img.save(dest, quality=95, subsampling=0)
 
 
 def _region_percent(
@@ -219,6 +250,7 @@ def main() -> None:
     # Media objects to create, keyed by image_rel (one per photo).
     media_handles: dict[str, str] = {}
     new_media: list[tuple[str, str, str, str]] = []  # (handle, id, src, desc)
+    to_bake: dict[str, tuple[Path, Path]] = {}  # image_rel -> (source, baked dest)
     # objrefs to add, grouped per person handle: (is_portrait, media_handle, region)
     per_person: dict[str, list[tuple[bool, str, tuple[int, int, int, int]]]] = {}
 
@@ -247,9 +279,13 @@ def main() -> None:
                 missing_person_ids.add(pid)
                 continue
 
-            # Resolve (or plan) the media object for this photo.
-            src = (DATA_DIR / image_rel).resolve().as_posix()
-            if not (DATA_DIR / image_rel).exists():
+            # Resolve (or plan) the media object for this photo. The media src
+            # points at an upright, EXIF-baked copy under data/gramps/media/,
+            # not the raw file (see module docstring).
+            source_path = DATA_DIR / image_rel
+            baked_path = MEDIA_DIR / image_rel
+            src = baked_path.resolve().as_posix()
+            if not source_path.exists():
                 missing_files.add(image_rel)
             if image_rel not in media_handles:
                 if src in existing_media_by_src:
@@ -258,6 +294,7 @@ def main() -> None:
                     handle = _handle_for_image(image_rel)
                     media_handles[image_rel] = handle
                     new_media.append((handle, f"O{next_id:04d}", src, image_rel))
+                    to_bake[image_rel] = (source_path, baked_path)
                     next_id += 1
 
             region = _region_percent(face["bbox_xywh"], image_size)
@@ -297,6 +334,15 @@ def main() -> None:
         return
 
     # --- mutate the tree ----------------------------------------------------
+    # Bake an upright, EXIF-free copy of each new photo so Gramps (which ignores
+    # the EXIF orientation tag) shows it the right way up, matching the regions.
+    n_baked = 0
+    for image_rel, (source_path, baked_path) in to_bake.items():
+        if not source_path.exists():
+            continue  # already warned as a missing file above
+        _bake_oriented(source_path, baked_path)
+        n_baked += 1
+
     # Optionally strip existing media refs on the people we touch.
     if args.replace_media:
         for pid in touched_persons:
@@ -358,6 +404,7 @@ def main() -> None:
 
     print(f"\nWrote {rel(args.output)}")
     print(f"  +{len(new_media)} media objects, +{n_faces_attached} face refs")
+    print(f"  baked {n_baked} upright image(s) under {rel(MEDIA_DIR)}")
     if args.replace_media:
         print(f"  pruned {n_pruned} now-unreferenced media object(s)")
     print(
