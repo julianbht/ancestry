@@ -23,7 +23,7 @@ from pipeline.gramps.export import GRAMPS_NS, GrampsExport
 from pipeline.gramps.plan import Plan, build_plan
 from pipeline.gramps.portraits import load_curated_portraits
 
-from tree_fixture import Tree
+from tests.gramps.tree_fixture import Tree
 
 _NS = f"{{{GRAMPS_NS}}}"
 

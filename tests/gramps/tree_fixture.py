@@ -5,8 +5,8 @@ citations carrying their own media, addresses, umlauts, people with
 pre-existing objrefs), hand-cropped portraits, raw photos with real pixels, and
 ground-truth labels over them.
 
-Kept out of conftest.py so the test modules can import `Tree` by name — the test
-tree has no __init__.py, so `tests.gramps.conftest` isn't an importable path.
+Kept out of conftest.py so the test modules can import `Tree` from a module
+whose job is obvious, rather than from pytest's fixture-plumbing file.
 """
 
 from __future__ import annotations

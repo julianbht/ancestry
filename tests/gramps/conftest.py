@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pytest
 
-from tree_fixture import Tree, build_tree
+from tests.gramps.tree_fixture import Tree, build_tree
 
 
 @pytest.fixture

@@ -17,7 +17,7 @@ from pipeline.gramps.config import GrampsConfig
 from pipeline.gramps.export import GRAMPS_NS
 from pipeline.gramps.step import run
 
-from tree_fixture import Tree
+from tests.gramps.tree_fixture import Tree
 
 _NS = f"{{{GRAMPS_NS}}}"
 
