@@ -1,0 +1,29 @@
+# --- What to merge ---
+# include_curated_portraits: attach the hand-cropped portraits from
+#   data/gramps/portraits/ (filenames start with the person id, e.g.
+#   "I0004-hergoss-julian.png"). They always sort first, so they win the
+#   profile thumbnail over anything from the annotations.
+# include_faces: which labelled faces from ground_truth.json to attach.
+#   "portrait" — only faces flagged is_portrait.
+#   "all" — every labelled face, so each photo's "people in this image" is
+#   fully populated.
+include_curated_portraits: true
+include_faces: all
+
+# --- Merge mode ---
+# replace_media: drop each touched person's existing media refs before attaching
+#   ours, then prune media objects left unreferenced. false is additive.
+replace_media: false
+
+# --- Run control ---
+# max_files_to_bake: cap images baked per run (null = unlimited). A capped run
+#   still writes every media object to the XML, so the export will reference
+#   images that aren't on disk yet — smoke tests only.
+# ignore_state: re-bake images even if already marked done.
+# dry_run: report the plan; bake nothing, write no XML.
+max_files_to_bake: null
+ignore_state: false
+dry_run: false
+
+# JPEG quality for baked media copies (1-100). Ignored for PNG sources.
+jpeg_quality: 95

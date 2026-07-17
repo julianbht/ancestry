@@ -2,23 +2,23 @@
 
 The quickstart Curie family lives as a Gramps-CSV-format file at
 quickstart/data/gramps/database/family-tree-data.csv (people, places, marriages,
-children). Gramps can import that CSV directly, but the face-media sync
-(scripts/gramps_face_media.py) augments a .gramps *XML* export — and the
-committed quickstart tree has no XML yet.
+children). Gramps can import that CSV directly, but the gramps step
+(pipeline.gramps) augments a .gramps *XML* export — and the committed quickstart
+tree has no XML yet.
 
 This converter turns the CSV into a minimal-but-valid Gramps XML 1.7.2 export so
 the quickstart is self-contained: no Gramps install needed to produce the base
 tree. It emits people (with gender, birth name, birth event), places, families
 (marriage event + parents + children) — enough for Gramps to show the family and
-for gramps_face_media.py to attach face regions by matching person id (I0000…).
+for the gramps step to attach face regions by matching person id (I0000…).
 
 Output is deterministic (fixed change-times, id-derived handles) so regenerating
 it produces a byte-identical file, suitable for committing under quickstart/.
 
 Usage:
     uv run python scripts/quickstart/build_gramps_export.py
-    # then, to attach the annotated faces:
-    ANCESTRY_DATA_DIR=quickstart/data uv run python scripts/gramps_face_media.py
+    # then, to attach the portraits and annotated faces:
+    ANCESTRY_DATA_DIR=quickstart/data uv run ancestry-gramps
 """
 
 import argparse

@@ -28,6 +28,13 @@ quickstart/originals/
 # Regenerable artifacts
 quickstart/data/gramps/database/data.augmented.gramps
 quickstart/data/gramps/database/data.gramps
+# The gramps step's baked media are re-encoded copies of quickstart/data/raw/,
+# so committing them would just duplicate. Its state file tracks exactly those
+# bakes, so the two must be ignored together — committed state pointing at
+# absent media would make a fresh clone skip the bake and emit an export
+# referencing images that aren't there.
+quickstart/data/gramps/media/
+quickstart/data/state/gramps.json
 
 # Files copied from pod to local pc
 podcopy/
