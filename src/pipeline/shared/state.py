@@ -22,7 +22,9 @@ def load(state_file: Path) -> State:
 
 
 def save(state: State, state_file: Path) -> None:
-    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    # The file's own parent, not STATE_DIR: they're the same for every step, but
+    # honouring the argument means a caller pointing elsewhere (a test) works.
+    state_file.parent.mkdir(parents=True, exist_ok=True)
     with state_file.open("w") as f:
         json.dump(state, f, indent=2)
 

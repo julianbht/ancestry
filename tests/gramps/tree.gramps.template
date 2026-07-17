@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database PUBLIC "-//Gramps//DTD Gramps XML 1.7.2//EN"
+"http://gramps-project.org/xml/1.7.2/grampsxml.dtd">
+<database xmlns="http://gramps-project.org/xml/1.7.2/">
+  <header>
+    <created date="2026-07-17" version="5.2.2"/>
+    <researcher>
+      <resname>Test Researcher</resname>
+      <rescity>Bremen</rescity>
+    </researcher>
+  </header>
+  <events>
+    <event handle="_e0001" change="1700000000" id="E0000">
+      <type>Birth</type>
+      <dateval val="1901-03-04"/>
+      <place hlink="_p0001"/>
+    </event>
+    <event handle="_e0002" change="1700000000" id="E0001">
+      <type>Marriage</type>
+      <datestr val="about 1925"/>
+    </event>
+  </events>
+  <people>
+    <!-- I0000: curated portrait AND an existing objref to that very file.
+         The merge must reuse the media object, not add a second one, and must
+         not duplicate the reference. -->
+    <person handle="_i0000" change="1700000000" id="I0000">
+      <gender>F</gender>
+      <name type="Birth Name">
+        <first>Anna</first>
+        <surname>M&#252;ller</surname>
+      </name>
+      <eventref hlink="_e0001" role="Primary"/>
+      <objref hlink="_o0001"/>
+      <childof hlink="_f0001"/>
+    </person>
+    <!-- I0001: curated portrait, no existing objref, but children that the DTD
+         says must follow an objref. Insertion has to land before <address>. -->
+    <person handle="_i0001" change="1700000000" id="I0001">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>Hans J&#252;rgen</first>
+        <surname>M&#252;ller</surname>
+      </name>
+      <address>
+        <street>Hauptstra&#223;e 1</street>
+        <city>Bremen</city>
+      </address>
+      <citationref hlink="_c0001"/>
+      <noteref hlink="_n0001"/>
+    </person>
+    <!-- I0002: ground-truth faces only, one portrait and one not. -->
+    <person handle="_i0002" change="1700000000" id="I0002">
+      <gender>F</gender>
+      <name type="Birth Name">
+        <first>K&#228;the Maria</first>
+        <surname>Schmidt</surname>
+      </name>
+      <parentin hlink="_f0001"/>
+    </person>
+    <!-- I0003: an umlaut name and an existing objref to a media object that a
+         citation also references. replace_media must not prune it. -->
+    <person handle="_i0003" change="1700000000" id="I0003">
+      <gender>M</gender>
+      <name type="Birth Name">
+        <first>J&#246;rg</first>
+        <surname>Wei&#223;</surname>
+      </name>
+      <objref hlink="_o0002"/>
+    </person>
+    <!-- I0004: nothing to merge. Must come out byte-identical. -->
+    <person handle="_i0004" change="1700000000" id="I0004">
+      <gender>U</gender>
+      <name type="Birth Name">
+        <first>Unlabelled</first>
+        <surname>Person</surname>
+      </name>
+      <noteref hlink="_n0001"/>
+    </person>
+  </people>
+  <families>
+    <family handle="_f0001" change="1700000000" id="F0000">
+      <rel type="Married"/>
+      <father hlink="_i0001"/>
+      <mother hlink="_i0002"/>
+      <eventref hlink="_e0002" role="Family"/>
+      <childref hlink="_i0000"/>
+    </family>
+  </families>
+  <citations>
+    <citation handle="_c0001" change="1700000000" id="C0000">
+      <page>Page 42</page>
+      <confidence>2</confidence>
+      <sourceref hlink="_s0001"/>
+      <objref hlink="_o0002"/>
+      <noteref hlink="_n0001"/>
+    </citation>
+  </citations>
+  <sources>
+    <source handle="_s0001" change="1700000000" id="S0000">
+      <stitle>Kirchenbuch Bremen</stitle>
+      <sauthor>Evangelisches Pfarramt</sauthor>
+    </source>
+  </sources>
+  <places>
+    <placeobj handle="_p0001" change="1700000000" id="P0000" type="City">
+      <pname value="Bremen"/>
+    </placeobj>
+  </places>
+  <objects>
+    <object handle="_o0001" change="1700000000" id="O0000">
+      <file src="{{PORTRAIT_I0000_SRC}}" mime="image/png" description="anna-portrait"/>
+    </object>
+    <object handle="_o0002" change="1700000000" id="O0007">
+      <file src="{{DOCUMENT_SRC}}" mime="image/jpeg" description="a cited document"/>
+    </object>
+  </objects>
+  <notes>
+    <note handle="_n0001" change="1700000000" id="N0000" type="Person Note">
+      <text>A note with an umlaut: Gr&#252;&#223;e aus Bremen</text>
+    </note>
+  </notes>
+</database>

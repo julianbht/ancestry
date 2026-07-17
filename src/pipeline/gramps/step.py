@@ -172,8 +172,8 @@ def run() -> None:
     logger.info(f"Ground truth : {rel(GROUND_TRUTH_FILE)}")
 
     plan = build_plan(
-        annotations=load_face_annotations(),
-        curated_portraits=load_curated_portraits(),
+        annotations=load_face_annotations(GROUND_TRUTH_FILE),
+        curated_portraits=load_curated_portraits(PORTRAITS_DIR),
         known_person_ids=export.person_ids,
         include_faces=config.include_faces,
         include_curated_portraits=config.include_curated_portraits,
