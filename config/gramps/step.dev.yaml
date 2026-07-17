@@ -8,7 +8,7 @@
 #   "all" — every labelled face, so each photo's "people in this image" is
 #   fully populated.
 include_curated_portraits: true
-include_faces: all
+include_faces: portrait
 
 # --- Merge mode ---
 # replace_media: drop each touched person's existing media refs before attaching
@@ -26,4 +26,4 @@ ignore_state: false
 dry_run: false
 
 # JPEG quality for baked media copies (1-100). Ignored for PNG sources.
-jpeg_quality: 95
+jpeg_quality: 100
