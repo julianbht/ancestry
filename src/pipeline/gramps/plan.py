@@ -21,7 +21,7 @@ from enum import IntEnum
 from pathlib import Path
 
 from pipeline.gramps.annotations import FaceAnnotations
-from pipeline.gramps.media import media_handle
+from pipeline.gramps.media import media_handle, media_path
 from pipeline.shared.paths import DATA_DIR
 
 
@@ -50,9 +50,13 @@ class Region:
 class MediaItem:
     """One image to publish into the export, exactly once."""
 
-    key: str  # path under MEDIA_DIR; also the state key and handle seed
-    source: Path  # the original to bake from
+    key: str  # stable identity: the state key and the handle seed
+    path: Path  # the file the export points at
     description: str
+    # The original to bake an upright copy of into `path`, or None to point at
+    # `path` as it already is on disk. Only the raw photos need baking; see
+    # pipeline.gramps.media.
+    bake_from: Path | None
 
     @property
     def handle(self) -> str:
@@ -78,7 +82,8 @@ class PlanStats:
     ground_truth_faces: int = 0
     unlabelled_faces: int = 0  # detected but never named — nothing to attach
     skipped_not_portrait: int = 0  # dropped by include_faces="portrait"
-    unknown_person_ids: set[str] = field(default_factory=set)  # labelled, not in tree
+    # Labelled or given a portrait, but not in the tree — a ref would dangle.
+    unknown_person_ids: set[str] = field(default_factory=set[str])
 
 
 @dataclass
@@ -106,8 +111,8 @@ def region_percent(
 
 
 def _curated_media_key(path: Path) -> str:
-    """Portraits live in their own MEDIA_DIR subtree, so a portrait named after a
-    photo can never collide with that photo's own media key."""
+    """Portraits get their own key namespace, so a portrait named after a photo
+    can never collide with that photo's own media key."""
     return f"portraits/{path.name}"
 
 
@@ -145,8 +150,11 @@ def build_plan(
                 stats.unknown_person_ids.add(person_id)
                 continue
             key = _curated_media_key(path)
+            # Pointed at in place, not baked: these are hand-made crops with no
+            # EXIF orientation to resolve, so a copy would buy nothing and cost
+            # the "replace the file, see the new portrait" property.
             media[key] = MediaItem(
-                key=key, source=path, description=f"Portrait {person_id}"
+                key=key, path=path, description=path.stem, bake_from=None
             )
             # No region: the file is already cropped to the face, so the whole
             # image *is* the portrait.
@@ -165,8 +173,9 @@ def build_plan(
             face.image_rel,
             MediaItem(
                 key=face.image_rel,
-                source=DATA_DIR / face.image_rel,
+                path=media_path(face.image_rel),
                 description=face.image_rel,
+                bake_from=DATA_DIR / face.image_rel,
             ),
         )
         kind = (
