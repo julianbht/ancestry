@@ -58,6 +58,21 @@ def _region_key(region: Region | None) -> RegionKey:
     return (region.corner1_x, region.corner1_y, region.corner2_x, region.corner2_y)
 
 
+def _ref_key(objref: ET.Element) -> RefKey:
+    """The same key, read back off an objref already in the export, so a planned
+    ref can be matched to the element the export already has for it."""
+    region_el = objref.find(f"{_NS}region")
+    region: RegionKey = None
+    if region_el is not None:
+        region = (
+            int(region_el.get("corner1_x", 0)),
+            int(region_el.get("corner1_y", 0)),
+            int(region_el.get("corner2_x", 0)),
+            int(region_el.get("corner2_y", 0)),
+        )
+    return (objref.get("hlink", ""), region)
+
+
 class GrampsExport:
     """An in-memory Gramps XML export, open for editing."""
 
@@ -167,41 +182,44 @@ class GrampsExport:
                 person.remove(ref)
 
     def add_person_media_refs(self, person_id: str, refs: list[MediaRef]) -> int:
-        """Attach media references to a person, in the order given.
+        """Lay out a person's media references in the planned order.
 
-        Refs the person already carries are skipped, so re-merging an export
-        that was itself produced by this step is a no-op rather than a source of
-        duplicates. Returns how many were actually added.
+        The person's objref block is rebuilt rather than inserted into, because
+        priority has to hold over refs the export *already* had — a person whose
+        portrait we merged last time carries that ref already, and appending the
+        rest in front of it would hand the thumbnail to an annotated photo.
+
+        A ref the person already has is reused as-is (never duplicated), just
+        moved into its planned position. Refs the plan says nothing about keep
+        their relative order and follow the planned ones. Returns how many refs
+        were newly created.
         """
         person = self._person_by_id[person_id]
-        already = self._existing_ref_keys(person)
-        elements = [
-            self._objref_element(ref)
-            for ref in refs
-            if (self._handle_for(ref.media_key), _region_key(ref.region)) not in already
-        ]
-        self._insert_objrefs(person, elements)
-        return len(elements)
+        unclaimed = list(person.findall(f"{_NS}objref"))
+        ordered: list[ET.Element] = []
+        added = 0
+
+        for ref in refs:
+            key = (self._handle_for(ref.media_key), _region_key(ref.region))
+            match = next((el for el in unclaimed if _ref_key(el) == key), None)
+            if match is None:
+                ordered.append(self._objref_element(ref))
+                added += 1
+            else:
+                unclaimed.remove(match)
+                ordered.append(match)
+
+        # Anything the plan didn't mention — media attached in Gramps by hand,
+        # or a duplicate the export already carried — survives, after ours.
+        ordered.extend(unclaimed)
+
+        for el in person.findall(f"{_NS}objref"):
+            person.remove(el)
+        self._insert_objrefs(person, ordered)
+        return added
 
     def _handle_for(self, media_key: str) -> str:
         return self._handle_overrides.get(media_key) or media_handle(media_key)
-
-    @staticmethod
-    def _existing_ref_keys(person: ET.Element) -> set[RefKey]:
-        """(media handle, region) of every objref the person already has."""
-        keys: set[RefKey] = set()
-        for objref in person.findall(f"{_NS}objref"):
-            region_el = objref.find(f"{_NS}region")
-            region: RegionKey = None
-            if region_el is not None:
-                region = (
-                    int(region_el.get("corner1_x", 0)),
-                    int(region_el.get("corner1_y", 0)),
-                    int(region_el.get("corner2_x", 0)),
-                    int(region_el.get("corner2_y", 0)),
-                )
-            keys.add((objref.get("hlink", ""), region))
-        return keys
 
     def _objref_element(self, ref: MediaRef) -> ET.Element:
         element = ET.Element(f"{_NS}objref", {"hlink": self._handle_for(ref.media_key)})
@@ -220,17 +238,13 @@ class GrampsExport:
 
     @staticmethod
     def _insert_objrefs(person: ET.Element, objrefs: list[ET.Element]) -> None:
-        """Insert objrefs ahead of any the person already has.
+        """Place a person's whole objref block, in the order given.
 
-        Going first is what makes the priority real: Gramps shows a person's
-        first media reference as their profile thumbnail, so a hand-cropped
-        portrait appended after an existing ref would never be seen. The refs
-        are pre-sorted by priority (see pipeline.gramps.plan), so inserting the
-        whole block at the front preserves that order.
-
-        The position is still schema-correct: before the first existing objref
-        if there is one, else before the first child the DTD says must follow an
-        objref, else at the end.
+        Callers pass the complete block (see add_person_media_refs), so this only
+        has to decide where it goes: before the first existing objref if any
+        survived, else before the first child the DTD says must follow an objref,
+        else at the end. That keeps the output schema-valid and diff-friendly —
+        Gramps' importer is order-tolerant, but the file stays clean.
         """
         children = list(person)
         insert_at = len(children)

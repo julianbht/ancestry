@@ -136,6 +136,45 @@ def test_a_portrait_the_export_already_points_at_is_reused_not_duplicated(
     assert refs.count("_o0001") == 1
 
 
+def test_an_already_present_portrait_keeps_the_thumbnail_slot(
+    tree: Tree, configure
+) -> None:
+    """I0000's portrait ref is already in the export, and they also have an
+    annotated portrait face. Skipping the duplicate must not let the annotated
+    photo be inserted in front of it — that hands Gramps the wrong thumbnail,
+    and it's the shape of every person merged on a previous run."""
+    configure()
+
+    run()
+
+    root = ET.parse(tree.augmented).getroot()
+    refs = _person(root, "I0000").findall(f"{_NS}objref")
+    assert len(refs) > 1, "I0000 should have the portrait plus an annotated face"
+    assert refs[0].get("hlink") == "_o0001", (
+        "the pre-existing hand-cropped portrait must stay first; "
+        f"got {_media_src(root, refs[0].get('hlink'))}"
+    )
+
+
+def test_every_person_with_a_hand_cropped_portrait_shows_it_first(
+    tree: Tree, configure
+) -> None:
+    """The whole point of the step, asserted over everyone at once rather than
+    one hand-picked person — whether or not the ref was already there."""
+    configure()
+
+    run()
+
+    root = ET.parse(tree.augmented).getroot()
+    for person_id in ("I0000", "I0001"):
+        first = _person(root, person_id).find(f"{_NS}objref")
+        assert first is not None, f"{person_id} has no media at all"
+        assert (
+            _media_src(root, first.get("hlink"))
+            == tree.portrait(person_id).resolve().as_posix()
+        ), f"{person_id} does not show their hand-cropped portrait first"
+
+
 def test_running_twice_changes_nothing(tree: Tree, configure) -> None:
     """The second run re-reads the same export, so it must plan the same tree
     and add nothing new — otherwise every run grows the file."""
