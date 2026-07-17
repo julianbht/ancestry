@@ -22,44 +22,23 @@ Usage:
 import argparse
 import csv
 import json
-import random
 from dataclasses import dataclass, field
 from pathlib import Path
 
 import matplotlib.pyplot as plt
-import numpy as np
 from matplotlib.backends.backend_pdf import PdfPages
 from PIL import Image, ImageOps
 
-from pipeline.shared.boxes import box_overlap
-from pipeline.shared.paths import CURATED_DIR, DATA_DIR, GRAMPS_DIR, STEPS_DIR, rel
+from pipeline.shared.paths import CURATED_DIR, DATA_DIR, GRAMPS_DIR, rel
 
 GROUND_TRUTH = CURATED_DIR / "face_annotation" / "ground_truth.json"
 MANUAL_PHOTOS = CURATED_DIR / "person_sheets" / "photos.json"
 PORTRAITS_DIR = GRAMPS_DIR / "portraits"
 FAMILY_TREE_CSV = GRAMPS_DIR / "database" / "family-tree-data.csv"
 DEFAULT_OUT = GRAMPS_DIR / "graphs" / "person_sheets.pdf"
-FACE_CROP_DIR = STEPS_DIR / "face_crop"
-FACE_RECOGNITION_DIR = STEPS_DIR / "face_recognition"
 
 A4_INCHES = (8.27, 11.69)
 CM_PER_INCH = 2.54
-
-# A recognised crop counts as "already in the row" when it covers this much of a
-# ground-truth face box for the same person. box_overlap (intersection over the
-# smaller box) is the right measure here: the detector's tight face box sits
-# inside the hand-drawn ground-truth box, which plain IoU would penalise.
-SAME_FACE_OVERLAP = 0.5
-
-UNVERIFIED_COLOR = "#d98a1e"  # amber border marking an unverified recogniser guess
-
-
-@dataclass
-class Photo:
-    """One image on the sheet. Unverified photos get a marked border."""
-
-    image: Image.Image
-    unverified: bool = False
 
 
 @dataclass
@@ -85,11 +64,6 @@ def parse_args() -> argparse.Namespace:
                    help="fraction of the face box added around it when cropping (default: 0.25)")
     p.add_argument("--manual", type=Path, default=MANUAL_PHOTOS,
                    help=f"curated manual photo picks (default: {rel(MANUAL_PHOTOS)})")
-    p.add_argument("--fill-random", action="store_true",
-                   help="once the portrait and ground-truth faces run out, pad the row with "
-                        "random face_recognition guesses for that person (marked unverified)")
-    p.add_argument("--seed", type=int, default=0,
-                   help="seed for --fill-random; same seed gives the same sheet (default: 0)")
     p.add_argument("--out", type=Path, default=DEFAULT_OUT,
                    help=f"output PDF path (default: {rel(DEFAULT_OUT)})")
     return p.parse_args()
@@ -194,64 +168,6 @@ def load_faces() -> dict[str, list[dict]]:
     return by_person
 
 
-def _photo_key(image_rel: str) -> tuple[str, str]:
-    """Key a photo by (share folder, filename stem).
-
-    Ground truth names a photo by its raw/ or steps/rotate/ path while the crop
-    steps name it by its steps/frame_crop/ path; the share folder and stem are
-    what survive both, so they are what the two sides can be joined on.
-    """
-    path = Path(image_rel)
-    return path.parent.name, path.stem
-
-
-def load_recognised(faces_by_person: dict[str, list[dict]]) -> dict[str, list[Path]]:
-    """Map person id -> face crops the face_recognition step predicted for them.
-
-    These are unverified guesses, so any crop covering one of that person's
-    ground-truth faces is dropped: the row draws those from ground truth first
-    and would otherwise show the same face twice.
-
-    Paths are rebuilt from each sidecar's own location rather than read out of
-    its recorded path strings, which are repo-root-relative and would not follow
-    an ANCESTRY_DATA_DIR redirect.
-    """
-    truth_boxes: dict[tuple[str, str], list[tuple[str, np.ndarray]]] = {}
-    for person_id, faces in faces_by_person.items():
-        for face in faces:
-            x, y, w, h = face["bbox_xywh"]
-            key = _photo_key(face["item"]["image_rel"])
-            truth_boxes.setdefault(key, []).append(
-                (person_id, np.array([x, y, x + w, y + h]))
-            )
-
-    by_person: dict[str, list[Path]] = {}
-    for sidecar in sorted(FACE_RECOGNITION_DIR.rglob("recognition.json")):
-        photo_dir = sidecar.parent.relative_to(FACE_RECOGNITION_DIR)
-        crop_sidecar = FACE_CROP_DIR / photo_dir / "faces.json"
-        if not crop_sidecar.exists():
-            continue
-
-        boxes = {
-            face["index"]: np.array(face["box_xyxy_source"])
-            for face in json.loads(crop_sidecar.read_text())["faces"]
-        }
-        annotated = truth_boxes.get((photo_dir.parent.name, photo_dir.name), [])
-
-        for entry in json.loads(sidecar.read_text())["recognitions"]:
-            person_id = entry["person_id"]
-            box = boxes.get(entry["face_index"])
-            if entry["status"] != "recognized" or not person_id or box is None:
-                continue
-            if any(pid == person_id and box_overlap(box, truth) >= SAME_FACE_OVERLAP
-                   for pid, truth in annotated):
-                continue
-            crop = FACE_CROP_DIR / photo_dir / Path(entry["crop_image"]).name
-            if crop.exists():
-                by_person.setdefault(person_id, []).append(crop)
-    return by_person
-
-
 def load_manual(path: Path) -> dict[str, list]:
     """Read the curated manual photo picks; an absent file just means none.
 
@@ -294,7 +210,7 @@ def crop_face(face: dict, margin: float) -> Image.Image:
 
 
 def manual_photos(person_id: str, entries: list, faces: list[dict],
-                  margin: float) -> tuple[list[Photo], set[int]]:
+                  margin: float) -> tuple[list[Image.Image], set[int]]:
     """Resolve one person's curated picks, and report which faces they used up.
 
     An entry is either a path string (the whole image is used) or
@@ -302,14 +218,14 @@ def manual_photos(person_id: str, entries: list, faces: list[dict],
     Returns the images plus the ids of the face dicts already spent, so the
     automatic fill below does not repeat them.
     """
-    photos: list[Photo] = []
+    photos: list[Image.Image] = []
     used: set[int] = set()
     for entry in entries:
         if isinstance(entry, str):
             path = DATA_DIR / entry
             if not path.exists():
                 raise FileNotFoundError(f"{person_id}: manual photo not found: {rel(path)}")
-            photos.append(Photo(Image.open(path).convert("RGB")))
+            photos.append(Image.open(path).convert("RGB"))
             continue
 
         match = next(
@@ -322,38 +238,29 @@ def manual_photos(person_id: str, entries: list, faces: list[dict],
                 f"{person_id}: manual entry {entry} matches no face annotated for "
                 f"this person in {rel(GROUND_TRUTH)}"
             )
-        photos.append(Photo(crop_face(match, margin).convert("RGB")))
+        photos.append(crop_face(match, margin).convert("RGB"))
         used.add(id(match))
     return photos, used
 
 
 def collect_photos(person_id: str, portrait: Path | None, faces: list[dict], manual: list,
-                   recognised: list[Path], limit: int, margin: float,
-                   rng: random.Random | None) -> list[Photo]:
+                   limit: int, margin: float) -> list[Image.Image]:
     """Fill a person's row, best-known source first.
 
-    Curated picks, then the Gramps portrait, then the annotated faces. Only once
-    all of those are exhausted — and only when random fill is enabled — are the
-    remaining slots padded with random face_recognition guesses, marked
-    unverified because nobody has confirmed they are this person.
+    Curated picks, then the Gramps portrait, then the annotated faces.
     """
     photos, used = manual_photos(person_id, manual, faces, margin)
     if portrait is not None and len(photos) < limit:
-        photos.append(Photo(Image.open(portrait).convert("RGB")))
+        photos.append(Image.open(portrait).convert("RGB"))
     for face in faces:
         if len(photos) >= limit:
             break
         if id(face) not in used:
-            photos.append(Photo(crop_face(face, margin).convert("RGB")))
-
-    if rng is not None and len(photos) < limit and recognised:
-        for crop in rng.sample(recognised, min(limit - len(photos), len(recognised))):
-            photos.append(Photo(Image.open(crop).convert("RGB"), unverified=True))
-
+            photos.append(crop_face(face, margin).convert("RGB"))
     return photos[:limit]
 
 
-def draw_row(fig: plt.Figure, person: Person, lineage: str, photos: list[Photo],
+def draw_row(fig: plt.Figure, person: Person, lineage: str, photos: list[Image.Image],
              row_index: int, args: argparse.Namespace) -> None:
     """Place one person's heading and photo row onto the figure, in figure fractions."""
     cell_w = args.photo_size / CM_PER_INCH / A4_INCHES[0]
@@ -369,14 +276,12 @@ def draw_row(fig: plt.Figure, person: Person, lineage: str, photos: list[Photo],
     photos_top = row_top - 0.038
     for i, photo in enumerate(photos):
         ax = fig.add_axes((0.06 + i * (cell_w + 0.01), photos_top - cell_h, cell_w, cell_h))
-        ax.imshow(photo.image)
+        ax.imshow(photo)
         ax.set_xticks([])
         ax.set_yticks([])
         for spine in ax.spines.values():
-            spine.set_edgecolor(UNVERIFIED_COLOR if photo.unverified else "#bbbbbb")
-            spine.set_linewidth(1.4 if photo.unverified else 0.8)
-            if photo.unverified:
-                spine.set_linestyle((0, (3, 2)))
+            spine.set_edgecolor("#bbbbbb")
+            spine.set_linewidth(0.8)
 
 
 def main() -> None:
@@ -386,27 +291,23 @@ def main() -> None:
     portraits = load_portraits()
     faces_by_person = load_faces()
     manual = load_manual(args.manual)
-    recognised = load_recognised(faces_by_person) if args.fill_random else {}
-    rng = random.Random(args.seed) if args.fill_random else None
 
     unknown = set(manual) - set(people)
     if unknown:
         raise ValueError(f"{rel(args.manual)}: unknown person id(s): {', '.join(sorted(unknown))}")
 
-    person_ids = sorted(set(portraits) | set(faces_by_person) | set(manual) | set(recognised),
+    person_ids = sorted(set(portraits) | set(faces_by_person) | set(manual),
                         key=lambda pid: people[pid].name if pid in people else pid)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     rows_written = 0
-    unverified_total = 0
     with PdfPages(args.out) as pdf:
         fig = None
         for person_id in person_ids:
             photos = collect_photos(person_id, portraits.get(person_id),
                                     faces_by_person.get(person_id, []),
                                     manual.get(person_id, []),
-                                    recognised.get(person_id, []),
-                                    args.photos_per_person, args.face_margin, rng)
+                                    args.photos_per_person, args.face_margin)
             if not photos:
                 continue
 
@@ -415,25 +316,19 @@ def main() -> None:
                     pdf.savefig(fig)
                     plt.close(fig)
                 fig = plt.figure(figsize=A4_INCHES)
-                if args.fill_random:
-                    fig.text(0.06, 0.02, "Dashed amber border: unverified face_recognition "
-                             "guess, not a confirmed identification.",
-                             fontsize=5.5, color=UNVERIFIED_COLOR)
 
             assert fig is not None
             person = people.get(person_id, Person(person_id, "(unknown name)"))
             draw_row(fig, person, lineage_line(person, people), photos,
                      rows_written % args.persons_per_page, args)
             rows_written += 1
-            unverified_total += sum(p.unverified for p in photos)
 
         if fig is not None:
             pdf.savefig(fig)
             plt.close(fig)
 
     pages = -(-rows_written // args.persons_per_page)
-    filled = f", {unverified_total} slot(s) filled with unverified guesses" if args.fill_random else ""
-    print(f"Done — {rows_written} persons on {pages} page(s){filled}: {rel(args.out)}")
+    print(f"Done — {rows_written} persons on {pages} page(s): {rel(args.out)}")
 
 
 if __name__ == "__main__":
