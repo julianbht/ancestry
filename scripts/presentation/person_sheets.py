@@ -23,6 +23,7 @@ import argparse
 import csv
 import json
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -300,6 +301,7 @@ def main() -> None:
                         key=lambda pid: people[pid].name if pid in people else pid)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
+    generated_at = datetime.now().strftime("%Y-%m-%d %H:%M")
     rows_written = 0
     with PdfPages(args.out) as pdf:
         fig = None
@@ -316,6 +318,8 @@ def main() -> None:
                     pdf.savefig(fig)
                     plt.close(fig)
                 fig = plt.figure(figsize=A4_INCHES)
+                fig.text(0.94, 0.02, f"Generated {generated_at}",
+                         fontsize=6, color="#999999", ha="right", va="bottom")
 
             assert fig is not None
             person = people.get(person_id, Person(person_id, "(unknown name)"))
